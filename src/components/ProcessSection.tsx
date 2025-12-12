@@ -2,11 +2,13 @@ import { Sprout, ArrowRight } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Link } from "react-router-dom";
 import mushroomsMacro from "@/assets/mushrooms-closeup.jpg";
+import empresa2 from "@/assets/Empresa2.jpg";
 import hongos2 from "@/assets/hongos2.png";
 import hongos3 from "@/assets/hongos3.png";
 
 const ProcessSection = () => {
   return (
+    <>
     <section className="py-20 md:py-28 lg:py-36 bg-[#F5F1E8] relative overflow-hidden">
       {/* Decorative Background Images */}
       {/* Hongos2 - Top Left, Blue Tinted */}
@@ -127,6 +129,22 @@ const ProcessSection = () => {
         </div>
       </div>
     </section>
+
+    {/* Full Width Image Section - Empresa2 */}
+    <section className="relative overflow-hidden">
+      <AnimateOnScroll animation="fade-up">
+        <div className="relative w-full h-48 md:h-56 lg:h-[550px]">
+          <img
+            src={empresa2}
+            alt="Instalaciones Abrantes"
+            className="w-full h-full object-cover"
+          />
+          {/* Subtle overlay for elegance */}
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent" />
+        </div>
+      </AnimateOnScroll>
+    </section>
+    </>
   );
 };
 

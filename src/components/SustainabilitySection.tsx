@@ -69,50 +69,6 @@ const SustainabilitySection = () => {
               </p>
             </AnimateOnScroll>
 
-            {/* Key Features - More Elegant & Compact */}
-            <AnimateOnScroll animation="fade-up" delay={200}>
-              <div className="grid md:grid-cols-3 gap-6 pt-6 max-w-3xl mx-auto">
-                <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-accent/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-accent/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <Leaf className="w-7 h-7 text-accent" strokeWidth={2} />
-                  </div>
-                  <h3 className="font-heading text-white text-base font-semibold mb-1.5">
-                    Recursos
-                  </h3>
-                  <p className="font-body text-white/60 text-sm">
-                    Optimización constante
-                  </p>
-                </div>
-
-                <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-accent/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-accent/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-white text-base font-semibold mb-1.5">
-                    Residuos
-                  </h3>
-                  <p className="font-body text-white/60 text-sm">
-                    Gestión responsable
-                  </p>
-                </div>
-
-                <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-accent/20 hover:shadow-xl transition-all duration-300">
-                  <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-accent/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-white text-base font-semibold mb-1.5">
-                    Planeta
-                  </h3>
-                  <p className="font-body text-white/60 text-sm">
-                    Compromiso real
-                  </p>
-                </div>
-              </div>
-            </AnimateOnScroll>
 
             {/* CTA Button - More Elegant */}
             <AnimateOnScroll animation="fade-up" delay={300}>

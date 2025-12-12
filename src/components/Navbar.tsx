@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logoAbrantes from "@/assets/logo.png";
+import logoSutil from "@/assets/logo_sutil.png";
 
 interface DropdownItem {
   label: string;
@@ -35,7 +36,6 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Recetas", href: "/recetas" },
-  { label: "Canal de Denuncias", href: "/canal-de-denuncias" },
   { label: "Trabaja con Nosotros", href: "/trabaja-con-nosotros" },
   { label: "Contacto", href: "/contacto" },
 ];
@@ -140,6 +140,31 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Canal de Denuncias - External Link */}
+            <a
+              href="https://empresassutil.eticaenlinea.cl/denuncias"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative text-base xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 text-white hover:text-primary inline-block group"
+            >
+              Canal de Denuncias
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            </a>
+
+            {/* Logo Sutil - External Link */}
+            <a
+              href="https://www.empresassutil.cl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform duration-300 hover:scale-110 ml-2"
+            >
+              <img 
+                src={logoSutil} 
+                alt="Empresas Sutil" 
+                className="h-5 xl:h-7 w-auto"
+              />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -195,6 +220,34 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Canal de Denuncias - Mobile */}
+            <a
+              href="https://empresassutil.eticaenlinea.cl/denuncias"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block py-3 font-heading font-semibold text-base text-white hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Canal de Denuncias
+            </a>
+
+            {/* Logo Sutil - Mobile */}
+            <div className="pt-4 pb-2 flex items-center justify-center border-t border-white/10 mt-4">
+              <a
+                href="https://www.empresassutil.cl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <img 
+                  src={logoSutil} 
+                  alt="Empresas Sutil" 
+                  className="h-6 w-auto"
+                />
+              </a>
+            </div>
           </div>
         </div>
       )}
