@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Abrantes Premium Color System */
+    --background: 39 100% 97%; /* #FFFAF0 Cream */
+    --foreground: 0 0% 23%; /* #3A3A3A Charcoal */
+
+    --card: 30 47% 88%; /* #F3E4D0 Beige */
+    --card-foreground: 0 0% 23%;
+
+    --popover: 39 100% 97%;
+    --popover-foreground: 0 0% 23%;
+
+    --primary: 359 67% 38%; /* #A32122 Red Abrantes */
+    --primary-foreground: 39 100% 97%;
+
+    --secondary: 30 47% 88%; /* Beige */
+    --secondary-foreground: 0 0% 23%;
+
+    --muted: 30 30% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 73 72% 62%; /* #CBE255 Soft Green */
+    --accent-foreground: 0 0% 23%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 39 100% 97%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 359 67% 38%;
+
+    --radius: 0.25rem;
+
+    /* Custom Abrantes tokens */
+    --cream: 39 100% 97%;
+    --beige: 30 47% 88%;
+    --charcoal: 0 0% 23%;
+    --red-abrantes: 359 67% 38%;
+    --green-soft: 73 72% 62%;
+    --petrol-blue: 201 45% 21%;
+
+    /* Sidebar defaults */
+    --sidebar-background: 0 0% 23%;
+    --sidebar-foreground: 39 100% 97%;
+    --sidebar-primary: 359 67% 38%;
+    --sidebar-primary-foreground: 39 100% 97%;
+    --sidebar-accent: 201 45% 21%;
+    --sidebar-accent-foreground: 39 100% 97%;
+    --sidebar-border: 0 0% 30%;
+    --sidebar-ring: 359 67% 38%;
+  }
+
+  .dark {
+    --background: 0 0% 23%;
+    --foreground: 39 100% 97%;
+    --card: 201 45% 21%;
+    --card-foreground: 39 100% 97%;
+    --popover: 0 0% 23%;
+    --popover-foreground: 39 100% 97%;
+    --primary: 359 67% 38%;
+    --primary-foreground: 39 100% 97%;
+    --secondary: 201 45% 21%;
+    --secondary-foreground: 39 100% 97%;
+    --muted: 0 0% 30%;
+    --muted-foreground: 30 30% 75%;
+    --accent: 73 72% 62%;
+    --accent-foreground: 0 0% 23%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 39 100% 97%;
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 359 67% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .leaf-decoration {
+    @apply absolute opacity-[0.08] pointer-events-none;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-scroll-down {
+  animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
