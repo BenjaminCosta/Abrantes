@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logoAbrantes from "@/assets/logo.png";
 import logoSutil from "@/assets/logo_sutil.png";
+import sistemaB from "@/assets/sistema_B.webp";
 
 interface DropdownItem {
   label: string;
@@ -152,19 +153,38 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
 
-            {/* Logo Sutil - External Link */}
-            <a
-              href="https://www.empresassutil.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform duration-300 hover:scale-110 ml-2"
-            >
-              <img 
-                src={logoSutil} 
-                alt="Empresas Sutil" 
-                className="h-5 xl:h-7 w-auto"
-              />
-            </a>
+            {/* Logos - Sistema B y Sutil */}
+            <div className="flex items-center gap-3 ml-2">
+              
+
+              {/* Logo Sutil - External Link */}
+              <a
+                href="https://www.empresassutil.cl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+              >
+                <img 
+                  src={logoSutil} 
+                  alt="Empresas Sutil" 
+                  className="h-5 xl:h-7 w-auto"
+                />
+              </a>
+            </div>
+            {/* Logo Sistema B - External Link */}
+              <a
+                href="https://abrantes.cl/wp-content/uploads/2024/06/Abrantes-Carta-certificacion-Empresa-B-Certificada-1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+                title="Certificación Empresa B"
+              >
+                <img 
+                  src={sistemaB} 
+                  alt="Certificación Sistema B" 
+                  className="h-5 xl:h-7 w-auto"
+                />
+              </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -232,8 +252,22 @@ const Navbar = () => {
               Canal de Denuncias
             </a>
 
-            {/* Logo Sutil - Mobile */}
-            <div className="pt-4 pb-2 flex items-center justify-center border-t border-white/10 mt-4">
+            {/* Logos - Mobile */}
+            <div className="pt-4 pb-2 flex items-center justify-center gap-4 border-t border-white/10 mt-4">
+              <a
+                href="https://abrantes.cl/wp-content/uploads/2024/06/Abrantes-Carta-certificacion-Empresa-B-Certificada-1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+                onClick={() => setMobileMenuOpen(false)}
+                title="Certificación Empresa B"
+              >
+                <img 
+                  src={sistemaB} 
+                  alt="Certificación Sistema B" 
+                  className="h-6 w-auto"
+                />
+              </a>
               <a
                 href="https://www.empresassutil.cl/"
                 target="_blank"

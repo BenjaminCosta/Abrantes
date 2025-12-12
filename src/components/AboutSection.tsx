@@ -35,7 +35,7 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
+      <div className="w-full px-4 md:px-6 lg:pr-12 lg:pl-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             
