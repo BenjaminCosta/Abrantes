@@ -23,81 +23,92 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-beige/90 via-beige/80 to-beige/85" />
       <div className="absolute inset-0 bg-gradient-to-tr from-beige75 via-transparent to-beige/60" />
       
-      {/* Decorative Logo - Top right corner, blue tinted, LARGER */}
-      <div className="absolute top-6 right-6 lg:top-8 lg:right-8 z-0">
+      {/* Decorative Logo - Top right corner, blue tinted, MORE POSITIONED */}
+      <div className="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 z-0">
         <img 
           src={hongos1} 
           alt="" 
-          className="w-56 h-56 lg:w-80 lg:h-80 object-contain opacity-30"
+          className="w-64 h-64 lg:w-96 lg:h-96 object-contain opacity-25"
           style={{ filter: 'brightness(0) saturate(100%) invert(26%) sepia(28%) saturate(1392%) hue-rotate(165deg) brightness(92%) contrast(89%)' }}
         />
       </div>
+      
+      {/* Elegant gradient orbs */}
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-gradient-to-tl from-accent/5 to-transparent rounded-full blur-3xl" />
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center max-w-[1600px] mx-auto">
-          {/* Image - Left Side - Takes 5/8 width */}
-          <AnimateOnScroll animation="fade-right" delay={100} className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center max-w-[1600px] mx-auto">
+          {/* Image - Left Side - Reduced width to 5/12 */}
+          <AnimateOnScroll animation="fade-right" delay={100} className="lg:col-span-6">
             <div className="relative group">
-              {/* Main Image - Rectangular with more width */}
-              <div className="relative aspect-[12/7] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-charcoal/10">
+              {/* Main Image - More compact with elegant shadow */}
+              <div className="relative aspect-[6/4] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/20">
                 <img
                   src={packingImage}
                   alt="Proceso de empaque Abrantes"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                {/* Gradient overlay on image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent" />
+                {/* Elegant gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-charcoal/30 via-transparent to-primary/10" />
+                
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transform transition-all duration-1000" />
               </div>
+
               
               {/* Decorative floating elements */}
-              <div className="absolute -top-6 -right-6 w-40 h-40 bg-primary/5 rounded-full blur-2xl -z-10" />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/10 rounded-full blur-2xl -z-10" />
+              <div className="absolute -top-8 -right-8 w-48 h-48 bg-gradient-to-br from-primary/10 to-accent/5 rounded-full blur-3xl -z-10" />
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-tl from-beige/40 to-transparent rounded-full blur-2xl -z-10" />
               
-              {/* Modern corner accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-4 border-primary/20 rounded-2xl -z-10 group-hover:border-primary/40 transition-colors duration-500" />
+              {/* Modern corner accent with animation */}
+              <div className="absolute -top-3 -right-3 w-20 h-20 border-2 border-primary/30 rounded-3xl -z-10 group-hover:border-primary/50 group-hover:scale-110 transition-all duration-500" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-2 border-accent/20 rounded-2xl -z-10 group-hover:border-accent/40 group-hover:scale-110 transition-all duration-500" />
             </div>
           </AnimateOnScroll>
 
-          {/* Text Content - Right Side - Takes 3/8 width */}
-          <div className="space-y-6 lg:col-span-5">
+          {/* Text Content - Right Side - Expanded to 7/12 */}
+          <div className="space-y-6 lg:col-span-6 lg:pl-8">
             <AnimateOnScroll animation="fade-up">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="p-3 bg-primary/10 rounded-xl">
-                  <Building2 className="w-7 h-7 text-primary" strokeWidth={2} />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3.5 bg-gradient-to-br from-primary/15 to-primary/5 rounded-2xl shadow-lg border border-primary/10">
+                  <Building2 className="w-8 h-8 text-primary" strokeWidth={2} />
                 </div>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Sobre Abrantes
-                </h2>
+                <div>
+                  <p className="text-primary/60 text-sm font-semibold tracking-wider uppercase mb-1">Nuestra Empresa</p>
+                  <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
+                    Sobre Abrantes
+                  </h2>
+                </div>
               </div>
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" delay={100}>
-              <div className="space-y-5 font-body text-base md:text-lg text-charcoal/85 leading-relaxed">
-                <p>
+              <div className="space-y-5 font-body text-base md:text-lg text-charcoal/85 leading-relaxed bg-white/30 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-lg">
+                <p className="relative pl-4 border-l-4 border-primary/30">
                   <span className="font-semibold text-charcoal">Abrantes</span> es una empresa chilena dedicada al <strong>cultivo, producción y distribución</strong> de champiñones frescos, 
                   siguiendo estándares estrictos de <strong>calidad, inocuidad y sustentabilidad</strong>.
-                </p>
-                <p>
-                  Pertenecemos al <span className="font-bold text-primary">Grupo Empresas Sutil</span>, asegurando una gestión responsable, 
-                  cadena de valor sólida y <strong>compromiso permanente</strong> con la sustentabilidad.
                 </p>
               </div>
             </AnimateOnScroll>
 
-            {/* Bullet Points - Same size as text */}
+            {/* Bullet Points - Enhanced design */}
             <AnimateOnScroll animation="fade-up" delay={200}>
-              <div className="space-y-3 mt-6">
+              <div className="space-y-3 mt-8">
                 {bulletPoints.map((item, index) => (
                   <div 
                     key={index} 
-                    className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-white/20 transition-all duration-300 group"
+                    className="flex items-center gap-4 py-3.5 px-4 rounded-xl bg-white/40 backdrop-blur-sm border border-white/50 hover:bg-white/60 hover:border-primary/20 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
                   >
-                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
+                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center group-hover:from-primary/25 group-hover:to-primary/10 group-hover:scale-110 transition-all duration-300 shadow-md">
                       <item.icon className="w-5 h-5 text-primary" strokeWidth={2.5} />
                     </div>
-                    <p className="font-body text-charcoal/90 font-medium text-base md:text-lg">
+                    <p className="font-body text-charcoal font-semibold text-base md:text-lg">
                       {item.text}
                     </p>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Check className="w-5 h-5 text-primary" strokeWidth={2.5} />
+                    </div>
                   </div>
                 ))}
               </div>

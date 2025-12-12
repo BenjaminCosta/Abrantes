@@ -15,8 +15,8 @@ export default {
     extend: {
       fontFamily: {
         heading: ['"Source Sans 3"', 'sans-serif'],
-        accent: ['"Libre Baskerville"', 'serif'],
-        body: ['Lora', 'serif'],
+        accent: ['"Libre Baskerville"', 'serif' ],
+        body: ['"Source Sans 3"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
