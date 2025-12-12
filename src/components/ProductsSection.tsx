@@ -22,7 +22,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-24 md:py-28 lg:py-32 bg-white relative overflow-hidden">
       {/* Decorative Background Images */}
       {/* Hongos1 - Top Left, Subtle */}
       <div className="absolute -top-12 -left-12 lg:-top-6 lg:-left-16 z-0 opacity-8">
@@ -73,7 +73,7 @@ const ProductsSection = () => {
                   to="/productos"
                   className="group block"
                 >
-                  <div className="relative">
+                  <div className="relative max-w-[280px] md:max-w-none mx-auto">
                     {/* Image Container - Clean, no background */}
                     <div className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                       <div className="aspect-square overflow-hidden">

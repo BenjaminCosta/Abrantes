@@ -91,7 +91,7 @@ const RecipesSection = () => {
                   to="/recetas"
                   className="group block"
                 >
-                  <article className="relative">
+                  <article className="relative max-w-[280px] md:max-w-none mx-auto">
                     {/* Image Container */}
                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 mb-4">
                       <img
@@ -110,7 +110,7 @@ const RecipesSection = () => {
                     </div>
                     
                     {/* Text Content - Outside image */}
-                    <div className="space-y-2">
+                    <div className="space-y-2 text-center md:text-left">
                       <h3 className="font-heading text-xl md:text-2xl text-charcoal font-semibold group-hover:text-primary transition-colors duration-300">
                         {recipe.title}
                       </h3>

@@ -133,7 +133,7 @@ const ProcessSection = () => {
     {/* Full Width Image Section - Empresa2 */}
     <section className="relative overflow-hidden">
       <AnimateOnScroll animation="fade-up">
-        <div className="relative w-full h-48 md:h-56 lg:h-[550px]">
+        <div className="relative w-full h-[280px] lg:h-[550px]">
           <img
             src={empresa2}
             alt="Instalaciones Abrantes"

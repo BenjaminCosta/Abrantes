@@ -134,13 +134,30 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Dos chevrones animados con brillo */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream/50 hover:text-cream/80 transition-colors duration-300 z-10"
+        className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-10 group"
         aria-label="Desplazarse hacia abajo"
       >
-        <ChevronDown className="w-8 h-8 animate-bounce" />
+        <div className="relative flex flex-col items-center">
+          {/* Glow effect permanente */}
+          <div className="absolute inset-0 -z-10 blur-xl rounded-full scale-150" />
+          
+          {/* Contenedor de chevrones */}
+          <div className="relative flex flex-col gap-1">
+            {/* Chevron 1 */}
+            <ChevronDown 
+              className="w-8 h-8 text-white/90 animate-[bounce_2s_ease-in-out_infinite]" 
+              strokeWidth={2.5}
+            />
+            {/* Chevron 2 - con delay */}
+            <ChevronDown 
+              className="w-8 h-8 text-white/60 -mt-4 animate-[bounce_2s_ease-in-out_0.3s_infinite]" 
+              strokeWidth={2.5}
+            />
+          </div>
+        </div>
       </button>
     </section>
   );
