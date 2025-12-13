@@ -8,6 +8,7 @@ import Nosotros from "./pages/Nosotros";
 import Sustentabilidad from "./pages/Sustentabilidad";
 import Productos from "./pages/Productos";
 import Recetas from "./pages/Recetas";
+import RecetaDetalle from "./pages/RecetaDetalle";
 import CanalDenuncias from "./pages/CanalDenuncias";
 import TrabajaConNosotros from "./pages/TrabajaConNosotros";
 import Contacto from "./pages/Contacto";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/sustentabilidad" element={<Sustentabilidad />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/recetas" element={<Recetas />} />
+          <Route path="/recetas/:id" element={<RecetaDetalle />} />
           <Route path="/canal-de-denuncias" element={<CanalDenuncias />} />
           <Route path="/trabaja-con-nosotros" element={<TrabajaConNosotros />} />
           <Route path="/contacto" element={<Contacto />} />

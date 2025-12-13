@@ -20,20 +20,22 @@ const navItems: NavItem[] = [
   {
     label: "Nosotros",
     dropdown: [
-      { label: "Empresa", href: "/nosotros" },
-      { label: "Misión y Visión", href: "/nosotros#mision" },
+      { label: "Empresa", href: "/nosotros#empresa" },
+      { label: "Misión / Visión", href: "/nosotros#mision-vision" },
       { label: "Certificaciones", href: "/nosotros#certificaciones" },
-      { label: "Proceso Productivo", href: "/nosotros#proceso" },
-      { label: "Responsabilidad Social", href: "/nosotros#responsabilidad" },
+      { label: "Proceso Productivo", href: "/nosotros#proceso-productivo" },
+      { label: "Responsabilidad Social Empresarial", href: "/nosotros#responsabilidad-social" },
+      { label: "Código de Ética y Conducta Empresas Sutil", href: "/nosotros#codigo-etica" },
+      { label: "Política de seguridad de la información", href: "/nosotros#politica-seguridad" },
     ],
   },
   { label: "Sustentabilidad", href: "/sustentabilidad" },
   {
     label: "Productos",
     dropdown: [
-      { label: "Catálogo", href: "/productos" },
-      { label: "Formatos", href: "/productos#formatos" },
-      { label: "Fichas Técnicas", href: "/productos#fichas" },
+      { label: "Champiñones", href: "/productos#champinones" },
+      { label: "Sustrato vegetal orgánico", href: "/productos#sustrato" },
+      { label: "Información nutricional", href: "/productos#informacion-nutricional" },
     ],
   },
   { label: "Recetas", href: "/recetas" },
@@ -127,11 +129,20 @@ const Navbar = () => {
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className={`block px-5 py-3 text-base transition-all duration-150 ${
-                            isActive(subItem.href.split('#')[0]) 
-                              ? 'text-primary bg-primary/10 border-l-4 border-primary font-semibold' 
-                              : 'text-white/90 hover:text-primary hover:bg-primary/5 hover:border-l-4 hover:border-primary hover:pl-6'
-                          }`}
+                          onClick={(e) => {
+                            // Handle anchor navigation
+                            if (subItem.href.includes('#')) {
+                              const [path, hash] = subItem.href.split('#');
+                              if (location.pathname === path) {
+                                e.preventDefault();
+                                const element = document.getElementById(hash);
+                                if (element) {
+                                  element.scrollIntoView({ behavior: 'smooth' });
+                                }
+                              }
+                            }
+                          }}
+                          className="relative block px-5 py-3 text-base text-white/90 hover:text-primary hover:bg-primary/5 border-l-4 border-transparent hover:border-primary transition-all duration-150 group"
                         >
                           {subItem.label}
                         </Link>
@@ -218,8 +229,23 @@ const Navbar = () => {
                           <Link
                             key={subItem.label}
                             to={subItem.href}
+                            onClick={(e) => {
+                              setMobileMenuOpen(false);
+                              // Handle anchor navigation
+                              if (subItem.href.includes('#')) {
+                                const [path, hash] = subItem.href.split('#');
+                                if (location.pathname === path) {
+                                  e.preventDefault();
+                                  setTimeout(() => {
+                                    const element = document.getElementById(hash);
+                                    if (element) {
+                                      element.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                  }, 100);
+                                }
+                              }
+                            }}
                             className="block py-2.5 text-base text-white/80 hover:text-primary transition-colors duration-150 border-l-2 border-transparent hover:border-primary pl-3"
-                            onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.label}
                           </Link>
