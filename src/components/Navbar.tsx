@@ -80,7 +80,10 @@ const Navbar = () => {
               src={logoAbrantes} 
               alt="Abrantes - La calidad tiene nombre" 
               className="h-14 lg:h-20 w-auto transition-all duration-300"
-              style={{ filter: 'brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(2465%) hue-rotate(347deg) brightness(84%) contrast(92%)' }}
+              style={{
+  filter: 'brightness(0) saturate(100%) invert(19%) sepia(72%) saturate(2100%) hue-rotate(355deg) brightness(90%) contrast(102%)'
+}}
+
             />
           </Link>
 

@@ -11,9 +11,21 @@ const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
 
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    // Si hay un hash en la URL, hacer scroll al elemento
+    if (location.hash) {
+      // Pequeño delay para asegurar que el DOM esté listo
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Solo hacer scroll to top si no hay hash
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="min-h-screen flex flex-col">
