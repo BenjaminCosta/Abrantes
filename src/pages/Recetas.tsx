@@ -4,6 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Clock, Users, ChevronRight } from "lucide-react";
 import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
 import hongos2 from "@/assets/hongos2.png";
+import heroCultivation from "@/assets/hero-cultivation.jpg";
 
 interface RecetaCard {
   id: string;
@@ -70,6 +71,44 @@ const Recetas = () => {
 
   return (
     <Layout>
+      {/* Hero Section con Imagen de Fondo */}
+      <section className="relative h-[580px] overflow-hidden -mt-20">
+        {/* Background Image - Full Height including Navbar */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroCultivation})` }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        {/* Content */}
+        <div className="relative h-full flex items-center justify-center pt-20">
+          <div className="w-full px-4 md:px-6 lg:px-12">
+            <div className="max-w-4xl mx-auto text-center">
+              
+              <AnimateOnScroll animation="fade-up">
+                {/* Simple Top Line - Centered */}
+                <div className="mb-6 flex justify-center">
+                  <div className="h-1 w-44 bg-white" />
+                </div>
+
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
+                  Recetas
+                </h1>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll animation="fade-up" delay={100}>
+                <p className="font-accent italic text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto">
+                  Inspiración culinaria para disfrutar nuestros champiñones
+                </p>
+              </AnimateOnScroll>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-24 lg:py-32 bg-gradient-to-br from-beige via-white to-beige/50 relative overflow-hidden">
         
         {/* Decorative Background */}
