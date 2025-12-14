@@ -2,7 +2,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Clock, Users, ChevronLeft } from "lucide-react";
-import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
+import cevicheImg from "@/assets/recetas/Ceviche-de-champiñones.jpg";
+import ensaladaImg from "@/assets/recetas/Ensalada-fresca-mediterranea.jpg";
+import delMarImg from "@/assets/recetas/Champiñon-del-mar.jpg";
+import orientalImg from "@/assets/recetas/Champiñon-Oriental.jpg";
+import naturistaImg from "@/assets/recetas/Champiñon-Naturista.jpg";
+import capresseImg from "@/assets/recetas/Champiñon-Capresse.jpg";
 
 interface Recipe {
   id: string;
@@ -25,7 +30,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Con cilantro y pimentón",
     tiempo: "25 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: cevicheImg,
     ingredientes: [
       {
         items: [
@@ -60,7 +65,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Con champiñones, tocino crispy, pimentón y roquefort",
     tiempo: "15 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: ensaladaImg,
     ingredientes: [
       {
         categoria: "Para la vinagreta:",
@@ -94,7 +99,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Rellenos con jaiba y queso brie",
     tiempo: "15 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: delMarImg,
     ingredientes: [
       {
         items: [
@@ -121,7 +126,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Rellenos con pollo al curry",
     tiempo: "20 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: orientalImg,
     ingredientes: [
       {
         items: [
@@ -147,7 +152,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Rellenos con espinaca y queso",
     tiempo: "20 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: naturistaImg,
     ingredientes: [
       {
         items: [
@@ -173,7 +178,7 @@ const recetas: Record<string, Recipe> = {
     descripcion: "Rellenos con tomate cherry, albahaca y mozzarella",
     tiempo: "15 minutos",
     porciones: "4 porciones",
-    imagen: mushroomsCloseup,
+    imagen: capresseImg,
     ingredientes: [
       {
         items: [

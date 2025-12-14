@@ -1,8 +1,14 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Factory, Thermometer, Sprout, Eye, Flower2, Scissors, Package } from "lucide-react";
-import productionFacility from "@/assets/production-facility.jpg";
-import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
-import hongos5 from "@/assets/hongos5.png";
+import hongos5 from "@/assets/hongos7.png";
+import hongos8 from "@/assets/hongos8.png";
+import proceso1 from "@/assets/proceso/1..jpg";
+import proceso2 from "@/assets/proceso/2..jpg";
+import proceso3 from "@/assets/proceso/3..jpg";
+import proceso4 from "@/assets/proceso/4..jpg";
+import proceso5 from "@/assets/proceso/5..jpg";
+import proceso6 from "@/assets/proceso/6..jpg";
+import proceso7 from "@/assets/proceso/7.jpg";
 
 const ProcesoProductivoSection = () => {
   const processSteps = [
@@ -11,62 +17,69 @@ const ProcesoProductivoSection = () => {
       icon: Factory,
       title: "Preparación del Sustrato",
       description: "Elaboración de compost específico con nutrientes óptimos para cada etapa del cultivo.",
-      image: productionFacility,
+      image: proceso1,
     },
     {
       number: "II",
       icon: Thermometer,
       title: "Pasteurización",
       description: "Control térmico preciso para eliminar patógenos y garantizar un ambiente ideal.",
-      image: productionFacility,
+      image: proceso2,
     },
     {
       number: "III",
       icon: Sprout,
       title: "Siembra",
       description: "Inoculación del micelio en condiciones asépticas y controladas.",
-      image: mushroomsCloseup,
+      image: proceso3,
     },
     {
       number: "IV",
       icon: Eye,
       title: "Incubación",
       description: "Monitoreo constante durante el desarrollo del micelio.",
-      image: productionFacility,
+      image: proceso4,
     },
     {
       number: "V",
       icon: Flower2,
       title: "Inducción",
       description: "Ajuste de condiciones ambientales para estimular la fructificación.",
-      image: mushroomsCloseup,
+      image: proceso5,
     },
     {
       number: "VI",
       icon: Scissors,
       title: "Cosecha",
       description: "Recolección manual en el punto óptimo de maduración.",
-      image: mushroomsCloseup,
+      image: proceso6,
     },
     {
       number: "VII",
       icon: Package,
       title: "Empaque",
       description: "Empaque y distribución bajo estrictas normas de calidad e higiene.",
-      image: productionFacility,
+      image: proceso7,
     },
   ];
 
   return (
     <section id="proceso-productivo" className="py-20 md:py-24 lg:py-28 bg-gradient-to-br from-white via-beige/30 to-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute bottom-0 -right-20 z-0 opacity-6">
-        <img 
-          src={hongos5} 
-          alt="" 
-          className="w-[600px] h-[600px] lg:w-[700px] lg:h-[700px] object-contain transform rotate-45"
-        />
-      </div>
+        <div className="absolute top-0 -left-20 z-0 opacity-6">
+          <img 
+            src={hongos5} 
+            alt="" 
+            className="w-[600px] h-[600px] lg:w-[700px] lg:h-[700px] object-contain transform "
+          />
+        </div>
+        <div className="absolute -bottom-10 -right-20 z-0 opacity-6">
+          <img 
+            src={hongos8} 
+            alt="" 
+            className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] object-contain transform "
+          />
+        </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">

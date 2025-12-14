@@ -1,44 +1,50 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Package } from "lucide-react";
-import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
 import hongos1 from "@/assets/hongos1.png";
 import hongos2 from "@/assets/hongos2.png";
+import blanco200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
+import blanco400g from "@/assets/productos/Champiñon-Blanco-400-gramos.jpg";
+import blancoRoyal from "@/assets/productos/Champiñon-Blanco-Royal-clamshell.jpg";
+import blancoClamshell from "@/assets/productos/Champiñon-Blanco-clamshell-1.5-e1539093512171.jpg";
+import blancoPrimera from "@/assets/productos/Champiñon-Blanco-granel-primera-selección.jpg";
+import blancoSegunda from "@/assets/productos/Champiñon-Blanco-granel-segunda-selección.jpg";
+import blancoGrandeGranel from "@/assets/productos/Champiñon-Blanco-granel-grande.jpg";
 
 const productos = [
   {
     nombre: "Champiñón Blanco",
     formato: "200 gramos",
-    image: mushroomsCloseup,
+    image: blanco200g,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "400 gramos",
-    image: mushroomsCloseup,
+    image: blanco400g,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "Royal clamshell (8 unidades)",
-    image: mushroomsCloseup,
+    image: blancoRoyal,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "Clamshell 1.5 KG",
-    image: mushroomsCloseup,
+    image: blancoClamshell,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "Granel primera selección",
-    image: mushroomsCloseup,
+    image: blancoPrimera,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "Granel segunda selección",
-    image: mushroomsCloseup,
+    image: blancoSegunda,
   },
   {
     nombre: "Champiñón Blanco",
     formato: "Granel Royal",
-    image: mushroomsCloseup,
+    image: blancoGrandeGranel,
   },
 ];
 
@@ -46,7 +52,7 @@ const ChampinonesSection = () => {
   return (
     <section id="champinones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute -top-20 -left-20 z-0 opacity-6">
+      <div className="absolute hidden -top-20 -left-20 z-0 opacity-6">
         <img 
           src={hongos1} 
           alt="" 

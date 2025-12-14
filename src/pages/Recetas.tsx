@@ -2,9 +2,14 @@ import { useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Clock, Users, ChevronRight } from "lucide-react";
-import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
 import hongos2 from "@/assets/hongos2.png";
 import heroCultivation from "@/assets/hero-cultivation.jpg";
+import cevicheImg from "@/assets/recetas/Ceviche-de-champiñones.jpg";
+import ensaladaImg from "@/assets/recetas/Ensalada-fresca-mediterranea.jpg";
+import delMarImg from "@/assets/recetas/Champiñon-del-mar.jpg";
+import orientalImg from "@/assets/recetas/Champiñon-Oriental.jpg";
+import naturistaImg from "@/assets/recetas/Champiñon-Naturista.jpg";
+import capresseImg from "@/assets/recetas/Champiñon-Capresse.jpg";
 
 interface RecetaCard {
   id: string;
@@ -22,7 +27,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Con cilantro y pimentón",
     tiempo: "25 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: cevicheImg
   },
   {
     id: "ensalada-mediterranea",
@@ -30,7 +35,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Con champiñones, tocino crispy, pimentón y roquefort",
     tiempo: "15 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: ensaladaImg
   },
   {
     id: "champinones-del-mar",
@@ -38,7 +43,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Rellenos con jaiba y queso brie",
     tiempo: "15 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: delMarImg
   },
   {
     id: "champinones-orientales",
@@ -46,7 +51,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Rellenos con pollo al curry",
     tiempo: "20 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: orientalImg
   },
   {
     id: "champinones-naturista",
@@ -54,7 +59,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Rellenos con espinaca y queso",
     tiempo: "20 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: naturistaImg
   },
   {
     id: "champinones-capresse",
@@ -62,7 +67,7 @@ const recetas: RecetaCard[] = [
     descripcion: "Rellenos con tomate cherry, albahaca y mozzarella",
     tiempo: "15 min",
     porciones: "4",
-    imagen: mushroomsCloseup
+    imagen: capresseImg
   }
 ];
 

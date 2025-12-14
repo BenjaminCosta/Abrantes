@@ -1,7 +1,7 @@
 import { Sprout, ArrowRight } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Link } from "react-router-dom";
-import mushroomsMacro from "@/assets/mushrooms-closeup.jpg";
+import mushroomsMacro from "@/assets/proceso/2..jpg";
 import empresa2 from "@/assets/Empresa2.jpg";
 import hongos2 from "@/assets/hongos2.png";
 import hongos3 from "@/assets/hongos3.png";
@@ -91,9 +91,9 @@ const ProcessSection = () => {
 
             {/* Right Side - Image (Smaller & Subtle) */}
             <AnimateOnScroll animation="fade-left" delay={100}>
-              <div className="relative group max-w-md mx-auto lg:ml-auto lg:mr-0">
+              <div className="relative group max-w-md xl:max-w-[580px] mx-auto lg:ml-auto lg:mr-0">
                 {/* Main Image - Smaller and more subtle */}
-                <div className="relative aspect-square overflow-hidden rounded-3xl shadow-xl ring-1 ring-white/20">
+                <div className="relative aspect-[4/3]  overflow-hidden rounded-3xl shadow-xl ring-1 ring-white/20">
                   <img
                     src={mushroomsMacro}
                     alt="Detalle macro del cultivo de champiñones"
@@ -103,18 +103,6 @@ const ProcessSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-tr from-charcoal/10 via-transparent to-primary/5" />
                 </div>
               
-                {/* Floating badge - Smaller */}
-                <div className="absolute -bottom-6 -left-6 bg-white/55 backdrop-blur-sm rounded-2xl shadow-xl p-4 border border-primary/10">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center">
-                      <Sprout className="w-5 h-5 text-primary" strokeWidth={2} />
-                    </div>
-                    <div>
-                      <p className="font-heading font-bold text-charcoal text-sm">Cultivo Premium</p>
-                      <p className="font-body text-xs text-charcoal/60">100% Trazable</p>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Subtle decorative elements */}
                 <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-primary/8 to-transparent rounded-full blur-2xl -z-10" />

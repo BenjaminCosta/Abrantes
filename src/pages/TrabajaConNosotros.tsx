@@ -7,12 +7,6 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import trabajaNosotros from "@/assets/trabaja_nosotros.jpg";
 
-const benefits = [
-  { icon: Heart, title: "Bienestar", description: "Seguro de salud y programas de bienestar" },
-  { icon: TrendingUp, title: "Desarrollo", description: "Capacitación continua y oportunidades de crecimiento" },
-  { icon: Users, title: "Equipo", description: "Ambiente colaborativo y respetuoso" },
-  { icon: Briefcase, title: "Estabilidad", description: "Empresa sólida con más de 30 años de trayectoria" },
-];
 
 const TrabajaConNosotros = () => {
   const { toast } = useToast();
@@ -76,30 +70,6 @@ const TrabajaConNosotros = () => {
               </AnimateOnScroll>
 
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="font-heading text-3xl text-foreground text-center mb-12">
-              ¿Por qué trabajar en Abrantes?
-            </h2>
-          </AnimateOnScroll>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <AnimateOnScroll key={benefit.title} animation="fade-up" delay={index * 80}>
-                <div className="text-center p-6 bg-secondary rounded-sm">
-                  <div className="w-12 h-12 bg-primary/10 rounded-sm flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-heading text-lg text-foreground mb-2">{benefit.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
           </div>
         </div>
       </section>

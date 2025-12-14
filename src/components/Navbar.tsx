@@ -72,14 +72,18 @@ const Navbar = () => {
         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50 transition-opacity duration-200" />
       )}
       
-      <div className="w-full px-8 md:px-10 lg:px-16 xl:px-20">
+      <div className="w-full px-8 md:px-10 lg:px-4 xl:px-10 2xl:px-20">
         <div className="flex items-center justify-between h-24 lg:h-28 w-full">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex-shrink-0 transition-transform duration-300 hover:scale-105"
+          >
             <img 
               src={logoAbrantes} 
               alt="Abrantes - La calidad tiene nombre" 
-              className="h-14 lg:h-20 w-auto transition-all duration-300"
+              className="h-12 lg:h-12 xl:h-14 2xl:h-20 w-auto transition-all duration-300"
               style={{
   filter: 'brightness(0) saturate(100%) invert(19%) sepia(72%) saturate(2100%) hue-rotate(355deg) brightness(90%) contrast(102%)'
 }}
@@ -88,7 +92,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-7 xl:gap-10 flex-1 justify-end">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-7 2xl:gap-10 flex-1 justify-end">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -98,21 +102,21 @@ const Navbar = () => {
               >
                 {item.dropdown ? (
                   <button 
-                    className={`relative flex items-center gap-1.5 text-base xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
+                    className={`relative flex items-center gap-1 xl:gap-1.5 text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
                       item.dropdown.some(sub => isActive(sub.href.split('#')[0])) 
                         ? 'text-primary' 
                         : 'text-white hover:text-primary'
                     }`}
                   >
                     {item.label}
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="w-3.5 xl:w-4 2xl:w-4 h-3.5 xl:h-4 2xl:h-4 transition-transform duration-300 group-hover:rotate-180" />
                     {/* Underline effect */}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                   </button>
                 ) : (
                   <Link
                     to={item.href || "/"}
-                    className={`relative text-base xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
+                    className={`relative text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
                       isActive(item.href || '/') ? 'text-primary' : 'text-white hover:text-primary'
                     } inline-block group`}
                   >
@@ -161,14 +165,14 @@ const Navbar = () => {
               href="https://empresassutil.eticaenlinea.cl/denuncias"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative text-base xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 text-white hover:text-primary inline-block group"
+              className="relative text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 text-white hover:text-primary inline-block group whitespace-nowrap"
             >
               Canal de Denuncias
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
 
             {/* Logos - Sistema B y Sutil */}
-            <div className="flex items-center gap-3 ml-2">
+            <div className="flex items-center gap-1.5 xl:gap-2 2xl:gap-3 ml-0.5 xl:ml-1 2xl:ml-2">
               
 
               {/* Logo Sutil - External Link */}
@@ -181,7 +185,7 @@ const Navbar = () => {
                 <img 
                   src={logoSutil} 
                   alt="Empresas Sutil" 
-                  className="h-5 xl:h-7 w-auto"
+                  className="h-4 xl:h-5 2xl:h-7 w-auto"
                 />
               </a>
             </div>
@@ -196,7 +200,7 @@ const Navbar = () => {
                 <img 
                   src={sistemaB} 
                   alt="Certificación Sistema B" 
-                  className="h-5 xl:h-7 w-auto"
+                  className="h-4 xl:h-5 2xl:h-7 w-auto"
                 />
               </a>
           </div>

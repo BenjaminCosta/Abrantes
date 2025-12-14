@@ -27,7 +27,7 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-beige/98 via-beige/96 to-beige/92" />
       
       {/* Decorative Logo - Top right corner, very subtle */}
-      <div className="absolute -top-8 -right-8 lg:-top-6 lg:-right-12 z-0">
+      <div className="absolute hidden lg:block lg:-top-6 lg:-right-16 z-0">
         <img 
           src={hongos1} 
           alt="" 
@@ -39,8 +39,28 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             
-            {/* Left Side - Navigation Menu */}
-            <div className="lg:col-span-5">
+            {/* Right Side - Title & Subtitle (Editorial Style) - Primero en mobile */}
+            <div className="lg:col-span-7 lg:order-2 text-center lg:text-left">
+              <AnimateOnScroll animation="fade-up">
+                <div className="space-y-6">
+                  {/* Title - Editorial Style */}
+                  <h2 className="font-heading text-6xl md:text-7xl lg:text-8xl text-charcoal font-bold tracking-tight leading-none">
+                    NOSOTROS
+                  </h2>
+                  
+                  {/* Decorative Line */}
+                  <div className="w-24 h-1 bg-primary mx-auto lg:mx-0" />
+                  
+                  {/* Subtitle - Italic & Elegant */}
+                  <p className="font-accent italic text-2xl md:text-3xl lg:text-4xl text-charcoal/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Calidad que se cultiva cada día.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            </div>
+
+            {/* Left Side - Navigation Menu - Segundo en mobile */}
+            <div className="lg:col-span-5 lg:order-1">
               <AnimateOnScroll animation="fade-right">
                 <nav className="space-y-1">
                   {menuItems.map((item, index) => (
@@ -57,26 +77,6 @@ const AboutSection = () => {
                     </AnimateOnScroll>
                   ))}
                 </nav>
-              </AnimateOnScroll>
-            </div>
-
-            {/* Right Side - Title & Subtitle (Editorial Style) */}
-            <div className="lg:col-span-7 text-center lg:text-left">
-              <AnimateOnScroll animation="fade-up">
-                <div className="space-y-6">
-                  {/* Title - Editorial Style */}
-                  <h2 className="font-heading text-6xl md:text-7xl lg:text-8xl text-charcoal font-bold tracking-tight leading-none">
-                    NOSOTROS
-                  </h2>
-                  
-                  {/* Decorative Line */}
-                  <div className="w-24 h-1 bg-primary mx-auto lg:mx-0" />
-                  
-                  {/* Subtitle - Italic & Elegant */}
-                  <p className="font-accent italic text-2xl md:text-3xl lg:text-4xl text-charcoal/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Calidad que se cultiva cada día.
-                  </p>
-                </div>
               </AnimateOnScroll>
             </div>
 

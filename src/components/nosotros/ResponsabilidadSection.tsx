@@ -1,6 +1,4 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { Play } from "lucide-react";
-import videoPlaceholder from "@/assets/hero-video.mp4";
 
 const ResponsabilidadSection = () => {
   return (
@@ -12,36 +10,30 @@ const ResponsabilidadSection = () => {
           <div className="text-center mb-16 lg:mb-20">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-3">
-                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
+                <p className="font-accent italic text-beige/70 text-sm md:text-base tracking-wide">
                   Compromiso con la Comunidad
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight">
-                  Responsabilidad Social <span className="font-accent italic text-primary">Empresarial.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream font-bold leading-tight">
+                  Responsabilidad Social <span className="font-accent italic text-cream">Empresarial.</span>
                 </h2>
               </div>
             </AnimateOnScroll>
           </div>
 
-          {/* Video Container */}
+          {/* YouTube Video Container */}
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl group max-w-4xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
               <div className="aspect-video bg-charcoal/50">
-                {/* Video placeholder - Por ahora muestra el hero video como ejemplo */}
-                <video
-                  className="w-full h-full object-cover"
-                  poster=""
-                  controls
-                  preload="metadata"
-                >
-                  <source src={videoPlaceholder} type="video/mp4" />
-                </video>
-                
-                {/* Play Button Overlay (opcional, se oculta cuando se reproduce) */}
-                <div className="absolute inset-0 flex items-center justify-center bg-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
-                  </div>
-                </div>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/dqmlsWMJnpY"
+                  title="Responsabilidad Social Abrantes"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </AnimateOnScroll>
@@ -49,7 +41,7 @@ const ResponsabilidadSection = () => {
           {/* Description */}
           <AnimateOnScroll animation="fade-up" delay={150}>
             <div className="mt-12 text-center max-w-3xl mx-auto">
-              <p className="font-body text-lg text-white/80 leading-relaxed">
+              <p className="font-body text-lg text-beige/80 leading-relaxed">
                 En Abrantes creemos firmemente en retribuir a nuestra comunidad. Nuestro compromiso 
                 con la responsabilidad social empresarial se refleja en cada una de nuestras acciones, 
                 desde el trato con nuestros colaboradores hasta nuestro impacto en el entorno.

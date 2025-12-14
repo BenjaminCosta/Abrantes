@@ -2,7 +2,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Heart, Zap, Shield, TrendingUp, Droplet, Sun } from "lucide-react";
 import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
 import hongos4 from "@/assets/hongos4.png";
-import hongos5 from "@/assets/hongos5.png";
+import hongos5 from "@/assets/hongos9.png";
 
 const nutritionalData = [
   { label: "ENERGÍA (kcal)", per100g: "25", per50g: "12,5" },
@@ -84,7 +84,7 @@ const InformacionNutricionalSection = () => {
   return (
     <section id="informacion-nutricional" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute top-0 -right-20 z-0 opacity-6">
+      <div className="absolute hidden md:block top-0 -right-20 z-0 opacity-6">
         <img 
           src={hongos4} 
           alt="" 
@@ -92,7 +92,7 @@ const InformacionNutricionalSection = () => {
         />
       </div>
       
-      <div className="absolute bottom-0 -left-20 z-0 opacity-6">
+      <div className="absolute hidden md:block bottom-0 -left-20 z-0 opacity-6">
         <img 
           src={hongos5} 
           alt="" 

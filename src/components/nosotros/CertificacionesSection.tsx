@@ -6,7 +6,7 @@ const CertificacionesSection = () => {
   return (
     <section id="certificaciones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 -translate-y-1/2 -right-24 z-0 opacity-6">
+      <div className="absolute hidden md:block top-1/2 -translate-y-1/2 -right-24 z-0 opacity-6">
         <img 
           src={hongos4} 
           alt="" 
