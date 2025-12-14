@@ -7,7 +7,7 @@ import ProcesoProductivoSection from "@/components/nosotros/ProcesoProductivoSec
 import ResponsabilidadSection from "@/components/nosotros/ResponsabilidadSection";
 import CodigoEticaSection from "@/components/nosotros/CodigoEticaSection";
 import PoliticaSeguridadSection from "@/components/nosotros/PoliticaSeguridadSection";
-import empresa3 from "@/assets/empresa3.jpg";
+import empresa3 from "@/assets/Empresa3.jpg";
 
 const Nosotros = () => {
   return (
