@@ -7,6 +7,7 @@ import SustainabilitySection from "@/components/SustainabilitySection";
 import RecipesSection from "@/components/RecipesSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 const Index = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Index = () => {
       <SustainabilitySection />
       <RecipesSection />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };

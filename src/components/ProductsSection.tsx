@@ -1,22 +1,24 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import mushroomsCloseup from "@/assets/mushrooms-closeup.jpg";
+import champinonGranel from "@/assets/productos/Champiñon-Blanco-granel-primera-selección.jpg";
+import champinonClamshell from "@/assets/productos/Champiñon-Blanco-Royal-clamshell.jpg";
+import champiñon200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
 import hongos1 from "@/assets/hongos1.png";
 import hongos4 from "@/assets/hongos5.png";
 
 const products = [
   {
-    name: "Champiñón Blanco",
-    image: mushroomsCloseup,
+    name: "Champiñón Granel",
+    image: champinonGranel,
   },
   {
-    name: "Portobello",
-    image: mushroomsCloseup,
+    name: "Champiñón Royal",
+    image: champinonClamshell,
   },
   {
-    name: "Laminado",
-    image: mushroomsCloseup,
+    name: "Champiñón 200g",
+    image: champiñon200g,
   },
 ];
 

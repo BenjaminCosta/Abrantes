@@ -2,6 +2,7 @@ import { ReactNode, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 interface LayoutProps {
   children: ReactNode;
@@ -34,6 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 };

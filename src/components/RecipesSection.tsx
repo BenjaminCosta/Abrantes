@@ -1,32 +1,33 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import recipeRisotto from "@/assets/recipe-risotto.jpg";
-import recipeSoup from "@/assets/recipe-soup.jpg";
-import recipeStuffed from "@/assets/recipe-stuffed.jpg";
+import cevicheImg from "@/assets/recetas/Ceviche-de-champiñones.jpg";
+import ensaladaImg from "@/assets/recetas/Ensalada-fresca-mediterranea.jpg";
+import delMarImg from "@/assets/recetas/Champiñon-del-mar.jpg";
+import orientalImg from "@/assets/recetas/Champiñon-Oriental.jpg";
 import hongosTexture from "@/assets/hongos_texture.png";
 import hongosHoja from "@/assets/hongos_hoja.png";
 
 const recipes = [
   {
-    title: "Risotto de Champiñones",
-    image: recipeRisotto,
-    subtitle: "Cremoso y elegante",
+    title: "Ceviche de Champiñones",
+    image: cevicheImg,
+    subtitle: "Fresco y original",
   },
   {
-    title: "Crema de Champiñones",
-    image: recipeSoup,
-    subtitle: "Suave y reconfortante",
+    title: "Ensalada Mediterránea",
+    image: ensaladaImg,
+    subtitle: "Saludable y deliciosa",
   },
   {
-    title: "Champiñones Rellenos",
-    image: recipeStuffed,
-    subtitle: "Perfectos para compartir",
+    title: "Champiñón del Mar",
+    image: delMarImg,
+    subtitle: "Sabor único",
   },
   {
-    title: "Salteado Rápido",
-    image: recipeRisotto,
-    subtitle: "Ideal para el día a día",
+    title: "Champiñón Oriental",
+    image: orientalImg,
+    subtitle: "Exótico y aromático",
   },
 ];
 
