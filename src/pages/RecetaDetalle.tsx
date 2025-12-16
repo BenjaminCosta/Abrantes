@@ -250,7 +250,7 @@ const RecetaDetalle = () => {
                 <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-4">
                   {receta.nombre}
                 </h1>
-                <p className="font-body text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto">
                   {receta.descripcion}
                 </p>
               </AnimateOnScroll>
@@ -261,7 +261,7 @@ const RecetaDetalle = () => {
               
               {/* Image */}
               <AnimateOnScroll animation="fade-right">
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-primary/10">
+                <div className="aspect-[4/3] overflow-hidden shadow-2xl border border-primary/10">
                   <img
                     src={receta.imagen}
                     alt={receta.nombre}
@@ -309,7 +309,7 @@ const RecetaDetalle = () => {
                             {grupo.items.map((item, itemIdx) => (
                               <li key={itemIdx} className="flex items-start gap-2">
                                 <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                                <span className="font-body text-sm text-charcoal/70">{item}</span>
+                                <span className="text-sm text-charcoal/70">{item}</span>
                               </li>
                             ))}
                           </ul>
@@ -331,7 +331,7 @@ const RecetaDetalle = () => {
                       <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         <span className="font-heading text-lg text-primary font-bold">{index + 1}</span>
                       </div>
-                      <p className="font-body text-base text-charcoal/80 leading-relaxed flex-1 pt-1.5">
+                      <p className="text-base text-charcoal/80 leading-relaxed flex-1 pt-1.5">
                         {paso}
                       </p>
                     </div>

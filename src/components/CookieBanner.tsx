@@ -80,7 +80,7 @@ const CookieBanner = () => {
                     <h3 className="font-heading text-lg md:text-xl text-white font-bold mb-1">
                       Utilizamos Cookies
                     </h3>
-                    <p className="font-body text-sm text-white/80 leading-relaxed max-w-2xl">
+                    <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
                       Usamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas su uso.{" "}
                       <a 
                         href="/politica-privacidad" 
@@ -109,7 +109,7 @@ const CookieBanner = () => {
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="px-5 py-2 bg-primary text-white font-heading font-semibold text-sm rounded-lg hover:bg-primary/90 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className="px-5 py-2 bg-primary text-white font-sans text-sm tracking-wide font-semibold hover:bg-primary/90 hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     Aceptar
                   </button>
@@ -140,7 +140,7 @@ const CookieBanner = () => {
                 </button>
               </div>
 
-              <p className="font-body text-sm text-white/70 mb-5">
+              <p className="text-sm text-white/70 mb-5">
                 Gestiona tus preferencias de cookies. Las cookies necesarias son esenciales para el funcionamiento del sitio.
               </p>
 
@@ -158,7 +158,7 @@ const CookieBanner = () => {
                       </span>
                     </div>
                   </div>
-                  <p className="font-body text-sm text-white/60">
+                  <p className="text-sm text-white/60">
                     Esenciales para el funcionamiento del sitio web.
                   </p>
                 </div>
@@ -180,7 +180,7 @@ const CookieBanner = () => {
                       }`} />
                     </button>
                   </div>
-                  <p className="font-body text-sm text-white/60">
+                  <p className="text-sm text-white/60">
                     Ayudan a entender cómo interactúas con el sitio.
                   </p>
                 </div>
@@ -202,7 +202,7 @@ const CookieBanner = () => {
                       }`} />
                     </button>
                   </div>
-                  <p className="font-body text-sm text-white/60">
+                  <p className="text-sm text-white/60">
                     Muestran anuncios relevantes según tus intereses.
                   </p>
                 </div>
@@ -212,7 +212,7 @@ const CookieBanner = () => {
               <div className="flex flex-col sm:flex-row gap-2">
                 <button
                   onClick={handleSavePreferences}
-                  className="flex-1 px-5 py-2.5 bg-primary text-white font-heading font-semibold text-sm rounded-lg hover:bg-primary/90 hover:shadow-lg transition-all duration-300"
+                  className="flex-1 px-5 py-2.5 bg-primary text-white font-sans text-sm tracking-wide font-semibold hover:bg-primary/90 hover:shadow-lg transition-all duration-300"
                 >
                   Guardar Preferencias
                 </button>

@@ -46,7 +46,7 @@ const MisionVisionSection = () => {
                     Misión
                   </h3>
                 </div>
-                <p className="font-body text-lg text-charcoal/80 leading-relaxed">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
                   Satisfacer a los clientes con champiñones de primera calidad cultivados de manera 
                   cuidadosa con el medio ambiente, valorizando subproductos de otras actividades agrícolas 
                   y haciendo un uso sostenible de agua.
@@ -65,7 +65,7 @@ const MisionVisionSection = () => {
                     Visión
                   </h3>
                 </div>
-                <p className="font-body text-lg text-charcoal/80 leading-relaxed">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
                   Ser líderes de nuestra industria en calidad y servicio, así como en el uso de 
                   tecnologías de vanguardia en eficiencia productiva, y relación con nuestro entorno.
                 </p>

@@ -40,7 +40,7 @@ const Footer = () => {
               alt="Abrantes"
               className="h-10 lg:h-12 w-auto mb-8 brightness-0 invert"
             />
-            <p className="font-body text-white/60 leading-relaxed max-w-md mb-12 text-sm lg:text-base">
+            <p className="text-white/60 leading-relaxed max-w-md mb-12 text-sm lg:text-base">
               Cultivando excelencia desde 1989. Champiñones premium que transforman 
               cada platillo en una experiencia única.
             </p>
@@ -54,7 +54,7 @@ const Footer = () => {
                   className="h-12 w-auto"
                 />
                 <div>
-                  <p className="font-heading font-semibold text-white text-sm">
+                  <p className="font-heading text-white text-sm">
                     Empresa Certificada
                   </p>
                   <p className="font-accent italic text-white/60 text-xs">
@@ -62,7 +62,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <p className="font-body text-white/50 text-xs leading-relaxed">
+              <p className="text-white/50 text-xs leading-relaxed">
                 Comprometidos con generar un impacto positivo en la sociedad y el medio ambiente.
               </p>
             </div>
@@ -71,7 +71,7 @@ const Footer = () => {
           {/* Middle Column - Links */}
           <div className="lg:col-span-4 lg:px-8 grid grid-cols-2 gap-8 lg:gap-12">
             <div>
-              <h4 className="font-heading font-semibold text-white mb-6 text-sm tracking-wider uppercase">
+              <h4 className="font-heading text-white mb-6 text-sm tracking-wider uppercase">
                 Navegación
               </h4>
               <ul className="space-y-3">
@@ -79,7 +79,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="font-body text-sm text-white/60 hover:text-white transition-colors duration-300 block"
+                      className="text-sm text-white/60 hover:text-white transition-colors duration-300 block"
                     >
                       {link.label}
                     </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold text-white mb-6 text-sm tracking-wider uppercase">
+              <h4 className="font-heading text-white mb-6 text-sm tracking-wider uppercase">
                 Información
               </h4>
               <ul className="space-y-3">
@@ -100,14 +100,14 @@ const Footer = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-body text-sm text-white/60 hover:text-white transition-colors duration-300 block"
+                        className="text-sm text-white/60 hover:text-white transition-colors duration-300 block"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         to={link.href}
-                        className="font-body text-white/60 hover:text-white transition-colors duration-300 block text-sm"
+                        className="text-white/60 hover:text-white transition-colors duration-300 block text-sm"
                       >
                         {link.label}
                       </Link>
@@ -120,7 +120,7 @@ const Footer = () => {
 
           {/* Right Column - Social & Contact */}
           <div className="lg:col-span-3 lg:pl-8 lg:border-l border-white/10">
-            <h4 className="font-heading font-semibold text-white mb-6 text-sm tracking-wider uppercase">
+            <h4 className="font-heading text-white mb-6 text-sm tracking-wider uppercase">
               Síguenos
             </h4>
             <div className="flex items-center gap-3 mb-8">
@@ -140,19 +140,19 @@ const Footer = () => {
 
             <div className="space-y-4 mb-8">
               <div>
-                <p className="font-body text-white/40 text-xs mb-1">Email</p>
+                <p className="text-white/40 text-xs mb-1">Email</p>
                 <a 
                   href="mailto:contacto@abrantes.cl"
-                  className="font-body text-white/80 hover:text-white text-sm transition-colors duration-300"
+                  className="text-white/80 hover:text-white text-sm transition-colors duration-300"
                 >
                   contacto@abrantes.cl
                 </a>
               </div>
               <div>
-                <p className="font-body text-white/40 text-xs mb-1">Teléfono</p>
+                <p className="text-white/40 text-xs mb-1">Teléfono</p>
                 <a 
                   href="tel:+56000000000"
-                  className="font-body text-white/80 hover:text-white text-sm transition-colors duration-300"
+                  className="text-white/80 hover:text-white text-sm transition-colors duration-300"
                 >
                   +56 (00) 000 0000
                 </a>
@@ -163,7 +163,7 @@ const Footer = () => {
 
             {/* Grupo Sutil - Esquinado a la derecha */}
             <div className="flex items-center justify-end gap-2">
-              <p className="font-body text-white/40 text-xs">Parte de</p>
+              <p className="text-white/40 text-xs">Parte de</p>
               <a 
                 href="https://www.empresassutil.cl/"
                 target="_blank"
@@ -185,19 +185,19 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 xl:px-16 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-body text-white/40 text-xs">
+            <p className="text-white/40 text-xs">
               © {new Date().getFullYear()} Abrantes Premium. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link 
                 to="/privacidad"
-                className="font-body text-white/40 hover:text-white/60 text-xs transition-colors duration-300"
+                className="text-white/40 hover:text-white/60 text-xs transition-colors duration-300"
               >
                 Privacidad
               </Link>
               <Link 
                 to="/terminos"
-                className="font-body text-white/40 hover:text-white/60 text-xs transition-colors duration-300"
+                className="text-white/40 hover:text-white/60 text-xs transition-colors duration-300"
               >
                 Términos
               </Link>

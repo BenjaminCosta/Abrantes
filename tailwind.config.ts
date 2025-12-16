@@ -24,11 +24,11 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Paleta Abrantes (solo estos 5 colores)
         cream: "hsl(var(--cream))",
         beige: "hsl(var(--beige))",
         charcoal: "hsl(var(--charcoal))",
-        "red-abrantes": "hsl(var(--red-abrantes))",
-        "green-soft": "hsl(var(--green-soft))",
+        "abrantes-red": "hsl(var(--abrantes-red))",
         "petrol-blue": "hsl(var(--petrol-blue))",
         primary: {
           DEFAULT: "hsl(var(--primary))",

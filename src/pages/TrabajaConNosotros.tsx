@@ -37,7 +37,7 @@ const TrabajaConNosotros = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[580px] overflow-hidden -mt-20">
+      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -45,10 +45,10 @@ const TrabajaConNosotros = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center pt-20">
+        <div className="relative h-full flex items-center justify-center">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -96,21 +96,21 @@ const TrabajaConNosotros = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Nombre completo */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Nombre completo <span className="text-primary">*</span>
                   </label>
                   <Input
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
-                    className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                    className="h-12 font-normal text-base border-charcoal/20 focus:border-primary bg-white"
                     placeholder="Ingresa tu nombre completo"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Email <span className="text-primary">*</span>
                   </label>
                   <Input
@@ -118,56 +118,56 @@ const TrabajaConNosotros = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                    className="h-12 font-normal text-base border-charcoal/20 focus:border-primary bg-white"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 {/* Dirección completa */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Dirección completa <span className="text-primary">*</span>
                   </label>
                   <Input
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                     required
-                    className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                    className="h-12 font-normal text-base border-charcoal/20 focus:border-primary bg-white"
                     placeholder="Calle, número, depto/casa"
                   />
                 </div>
 
                 {/* Comuna */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Comuna <span className="text-primary">*</span>
                   </label>
                   <Input
                     value={formData.comuna}
                     onChange={(e) => setFormData({ ...formData, comuna: e.target.value })}
                     required
-                    className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                    className="h-12 font-normal text-base border-charcoal/20 focus:border-primary bg-white"
                     placeholder="Tu comuna"
                   />
                 </div>
 
                 {/* Teléfono */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Teléfono
                   </label>
                   <Input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                    className="h-12 font-normal text-base border-charcoal/20 focus:border-primary bg-white"
                     placeholder="+56 9 1234 5678"
                   />
                 </div>
 
                 {/* Subir CV */}
                 <div>
-                  <label className="block font-heading text-sm text-charcoal mb-2">
+                  <label className="block text-sm text-charcoal mb-2">
                     Subir CV
                   </label>
                   <div className="relative">
@@ -183,10 +183,10 @@ const TrabajaConNosotros = () => {
                       className="flex flex-col items-center justify-center h-32 border-2 border-dashed border-charcoal/20 rounded-sm bg-beige/30 hover:bg-beige/50 transition-colors cursor-pointer"
                     >
                       <Upload className="w-8 h-8 text-primary mb-2" />
-                      <span className="font-body text-sm text-charcoal/70">
+                      <span className="text-sm text-charcoal/70">
                         {formData.cv ? formData.cv.name : "Click or drag a file to this area to upload"}
                       </span>
-                      <span className="font-body text-xs text-charcoal/50 mt-1">
+                      <span className="text-xs text-charcoal/50 mt-1">
                         PDF, DOC, DOCX (Máx. 5MB)
                       </span>
                     </label>
@@ -196,7 +196,7 @@ const TrabajaConNosotros = () => {
                 {/* Submit Button */}
                 <Button 
                   type="submit" 
-                  className="w-full h-14 font-heading text-lg bg-primary hover:bg-primary/90 text-white transition-all duration-300"
+                  className="w-full h-14 text-lg bg-primary hover:bg-primary/90 text-white transition-all duration-300 font-sans tracking-wide font-semibold"
                 >
                   Enviar
                 </Button>

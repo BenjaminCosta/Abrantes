@@ -22,7 +22,7 @@ const ResponsabilidadSection = () => {
 
           {/* YouTube Video Container */}
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+            <div className="relative overflow-hidden shadow-2xl max-w-4xl mx-auto">
               <div className="aspect-video bg-charcoal/50">
                 <iframe
                   width="100%"
@@ -41,7 +41,7 @@ const ResponsabilidadSection = () => {
           {/* Description */}
           <AnimateOnScroll animation="fade-up" delay={150}>
             <div className="mt-12 text-center max-w-3xl mx-auto">
-              <p className="font-body text-lg text-beige/80 leading-relaxed">
+              <p className="text-lg text-beige/80 leading-relaxed">
                 En Abrantes creemos firmemente en retribuir a nuestra comunidad. Nuestro compromiso 
                 con la responsabilidad social empresarial se refleja en cada una de nuestras acciones, 
                 desde el trato con nuestros colaboradores hasta nuestro impacto en el entorno.

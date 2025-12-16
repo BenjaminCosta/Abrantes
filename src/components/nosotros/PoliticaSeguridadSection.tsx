@@ -57,18 +57,18 @@ const PoliticaSeguridadSection = () => {
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
             <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
-              <p className="font-body text-lg text-charcoal/80 leading-relaxed mb-6">
-                La presente política describe pautas y disposiciones de <span className="font-semibold text-primary">Champiñones 
+              <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+                La presente política describe pautas y disposiciones de <span className="text-primary">Champiñones 
                 Abrantes S.A.</span> para reservar la seguridad de su infraestructura de datos y tecnología.
               </p>
-              <p className="font-body text-base text-charcoal/70 leading-relaxed mb-6">
+              <p className="text-base text-charcoal/70 leading-relaxed mb-6">
                 Cuanto más dependemos de la tecnología para recopilar, almacenar y administrar información, más vulnerables 
                 nos volvemos a sufrir graves violaciones de seguridad. Los errores humanos, los ataques de piratas informáticos 
                 y el mal funcionamiento del sistema podrían causar un gran daño financiero y poner en peligro la reputación de 
                 nuestra empresa.
               </p>
-              <p className="font-body text-base text-charcoal/70 leading-relaxed">
-                Por esta razón, hemos implementado una serie de <span className="font-semibold text-primary">medidas de seguridad</span>. 
+              <p className="text-base text-charcoal/70 leading-relaxed">
+                Por esta razón, hemos implementado una serie de <span className="text-primary">medidas de seguridad</span>. 
                 También hemos preparado instrucciones que pueden ayudar a mitigar los riesgos de seguridad. Hemos esbozado 
                 ambas disposiciones en esta política.
               </p>
@@ -86,7 +86,7 @@ const PoliticaSeguridadSection = () => {
                   <h3 className="font-heading text-lg text-charcoal font-semibold mb-2">
                     {point.title}
                   </h3>
-                  <p className="font-body text-sm text-charcoal/60 leading-relaxed">
+                  <p className="text-sm text-charcoal/60 leading-relaxed">
                     {point.description}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ const PoliticaSeguridadSection = () => {
             <div className="flex justify-center">
               <a
                 href="#"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-heading font-semibold text-base md:text-lg rounded-2xl hover:bg-primary/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-charcoal border border-charcoal/20 hover:border-charcoal/40 font-sans text-base md:text-lg tracking-wide hover:bg-white/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group shadow-sm"
               >
                 <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" strokeWidth={2.5} />
                 <span>Descargar Política de Seguridad de la Información</span>

@@ -50,21 +50,15 @@ const productos = [
 
 const ChampinonesSection = () => {
   return (
-    <section id="champinones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background */}
-      <div className="absolute hidden -top-20 -left-20 z-0 opacity-6">
-        <img 
-          src={hongos1} 
-          alt="" 
-          className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform rotate-12"
-        />
-      </div>
+    <section id="champinones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-y-hidden">
+      {/* Anchor for Procesos (same section) */}
+      <div id="procesos" className="absolute top-0" />
       
-      <div className="absolute bottom-0 -right-24 z-0 opacity-6">
+      <div className="absolute bottom-0 -right-24 opacity-3 pointer-events-none z-0">
         <img 
           src={hongos2} 
           alt="" 
-          className="w-80 h-80 lg:w-[450px] lg:h-[450px] object-contain transform -rotate-12"
+          className="w-[450px] h-[450px] object-contain transform -rotate-12"
         />
       </div>
 
@@ -81,7 +75,7 @@ const ChampinonesSection = () => {
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
                   Champiñones <span className="font-accent italic text-primary">Premium.</span>
                 </h2>
-                <p className="font-body text-lg text-charcoal/70 max-w-3xl mx-auto pt-2">
+                <p className="text-lg text-charcoal/70 max-w-3xl mx-auto pt-2">
                   Frescura y calidad en cada formato para satisfacer todas tus necesidades
                 </p>
               </div>
@@ -92,7 +86,7 @@ const ChampinonesSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {productos.map((producto, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 50}>
-                <div className="group bg-white border border-primary/10 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="group bg-white border border-primary/10 overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-500 hover:-translate-y-2">
                   {/* Image */}
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
@@ -112,7 +106,7 @@ const ChampinonesSection = () => {
                         <h3 className="font-heading text-xl text-charcoal font-bold mb-1">
                           {producto.nombre}
                         </h3>
-                        <p className="font-body text-base text-charcoal/60">
+                        <p className="text-base text-charcoal/60">
                           {producto.formato}
                         </p>
                       </div>

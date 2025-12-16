@@ -29,7 +29,7 @@ const Contacto = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[580px] overflow-hidden -mt-20">
+      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -37,10 +37,10 @@ const Contacto = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center pt-20">
+        <div className="relative h-full flex items-center justify-center">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -79,7 +79,7 @@ const Contacto = () => {
                   <h2 className="font-heading text-3xl md:text-4xl text-charcoal mb-3">
                     Contacto
                   </h2>
-                  <p className="font-body text-charcoal/70">
+                  <p className="text-charcoal/70">
                     Completa el formulario y nos pondremos en contacto contigo
                   </p>
                 </div>
@@ -87,21 +87,21 @@ const Contacto = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Nombre */}
                   <div>
-                    <label className="block font-heading text-sm text-charcoal mb-2">
+                    <label className="block text-sm text-charcoal mb-2">
                       Nombre
                     </label>
                     <Input
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                      className="h-12 text-base border-charcoal/20 focus:border-primary bg-white"
                       placeholder="Tu nombre"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block font-heading text-sm text-charcoal mb-2">
+                    <label className="block text-sm text-charcoal mb-2">
                       Email
                     </label>
                     <Input
@@ -109,14 +109,14 @@ const Contacto = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="h-12 font-body text-base border-charcoal/20 focus:border-primary bg-white"
+                      className="h-12 text-base border-charcoal/20 focus:border-primary bg-white"
                       placeholder="tu@email.com"
                     />
                   </div>
 
                   {/* Mensaje */}
                   <div>
-                    <label className="block font-heading text-sm text-charcoal mb-2">
+                    <label className="block text-sm text-charcoal mb-2">
                       Mensaje
                     </label>
                     <Textarea
@@ -124,7 +124,7 @@ const Contacto = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                       rows={6}
-                      className="font-body text-base border-charcoal/20 focus:border-primary resize-none bg-white"
+                      className="text-base border-charcoal/20 focus:border-primary resize-none bg-white"
                       placeholder="Escribe tu mensaje aquí..."
                     />
                   </div>
@@ -132,7 +132,7 @@ const Contacto = () => {
                   {/* Submit Button */}
                   <Button 
                     type="submit" 
-                    className="w-full sm:w-auto h-12 px-10 font-heading text-base bg-primary hover:bg-primary/90 text-white transition-all duration-300"
+                    className="w-full sm:w-auto h-12 px-10 text-base bg-white hover:bg-white/90 text-charcoal border border-charcoal/20 hover:border-charcoal/40 transition-all duration-300 font-sans tracking-wide font-semibold"
                   >
                     Enviar
                   </Button>
@@ -151,7 +151,7 @@ const Contacto = () => {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-body text-charcoal leading-relaxed">
+                        <p className="text-charcoal leading-relaxed">
                           RESERVA PERALILLO, HIJUELA 4 Y 5, PAINE
                         </p>
                       </div>
@@ -159,13 +159,13 @@ const Contacto = () => {
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-body text-charcoal">+56222158858</p>
+                        <p className="text-charcoal">+56222158858</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-body text-charcoal">PGARATE@ABRANTES.CL</p>
+                        <p className="text-charcoal">PGARATE@ABRANTES.CL</p>
                       </div>
                     </div>
                   </div>

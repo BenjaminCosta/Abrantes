@@ -4,8 +4,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import champinonGranel from "@/assets/productos/Champiñon-Blanco-granel-primera-selección.jpg";
 import champinonClamshell from "@/assets/productos/Champiñon-Blanco-Royal-clamshell.jpg";
 import champiñon200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
-import hongos1 from "@/assets/hongos1.png";
-import hongos4 from "@/assets/hongos5.png";
+import hongos2 from "@/assets/hongos2.png";
 
 const products = [
   {
@@ -24,51 +23,36 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section className="py-24 md:py-28 lg:py-32 bg-white relative overflow-hidden">
-      {/* Decorative Background Images */}
-      {/* Hongos1 - Top Left, Subtle */}
-      <div className="absolute -top-12 -left-12 lg:-top-6 lg:-left-16 z-0 opacity-8">
+    <section className="py-32 md:py-40 lg:py-48 bg-beige/30 relative overflow-y-hidden">
+      
+      {/* Hongo decorativo sutil - z-0 para que no se corte */}
+      <div className="absolute -bottom-20 -right-20 opacity-3 pointer-events-none z-0">
         <img 
-          src={hongos1} 
+          src={hongos2} 
           alt="" 
-          className="w-72 h-72 lg:w-96 lg:h-96 object-contain transform rotate-12"
+          className="w-[450px] h-[450px] object-contain transform rotate-12"
         />
       </div>
-
-      {/* Hongos4 - Bottom Right, Subtle */}
-      <div className="absolute -bottom-16 -right-16 lg:-bottom-20 lg:-right-20 z-0 opacity-8">
-        <img 
-          src={hongos4} 
-          alt="" 
-          className="w-80 h-80 lg:w-[420px] lg:h-[420px] object-contain transform -rotate-6"
-        />
-      </div>
-
-      {/* Subtle gradient orbs */}
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-[1400px] mx-auto">
           
-          {/* Header - Centered and Elegant */}
-          <div className="text-center mb-12 lg:mb-16">
+          {/* Header - Centrado y simple */}
+          <div className="text-center mb-20 lg:mb-24">
             <AnimateOnScroll animation="fade-up">
-              <div className="space-y-3">
+              <div className="space-y-6">
                 <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
                   Nuestra Línea
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
                   Nuestros <span className="font-accent italic text-primary">champiñones.</span>
                 </h2>
-                <p className="font-body text-base md:text-lg text-charcoal/75 max-w-2xl mx-auto pt-1">
-                  Frescos, versátiles, en múltiples formatos.
-                </p>
               </div>
             </AnimateOnScroll>
           </div>
 
-          {/* Products Grid - Champiñones como protagonistas */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-5xl mx-auto mb-10">
+          {/* Products Grid - Foco en producto, sin decoraciones */}
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16 max-w-4xl mx-auto">
             {products.map((product, index) => (
               <AnimateOnScroll key={product.name} animation="fade-up" delay={index * 100}>
                 <Link 
@@ -76,31 +60,22 @@ const ProductsSection = () => {
                   className="group block"
                 >
                   <div className="relative max-w-[280px] md:max-w-none mx-auto">
-                    {/* Image Container - Clean, no background */}
-                    <div className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                      <div className="aspect-square overflow-hidden">
+                    {/* Image Container - Clean y simple */}
+                    <div className="relative overflow-hidden shadow-md hover:shadow-xl transition-all duration-500">
+                      <div className="aspect-square overflow-hidden bg-white">
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         />
-                        {/* Subtle overlay on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
-                      
-                      {/* Decorative corner accent */}
-                      <div className="absolute top-3 right-3 w-10 h-10 border-2 border-white/40 rounded-2xl opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
                     </div>
                     
-                    {/* Product Name - Outside container, elegant */}
-                    <div className="mt-5 text-center">
-                      <h3 className="font-heading text-xl md:text-2xl text-charcoal font-semibold group-hover:text-primary transition-colors duration-300">
+                    {/* Product Name - Minimalista */}
+                    <div className="mt-6 text-center">
+                      <h3 className="font-heading text-lg md:text-xl text-charcoal group-hover:text-primary transition-colors duration-300">
                         {product.name}
                       </h3>
-                      <div className="flex items-center justify-center gap-2 text-primary mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="font-body text-sm font-medium">Ver detalles</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" strokeWidth={2.5} />
-                      </div>
                     </div>
                   </div>
                 </Link>

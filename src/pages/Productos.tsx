@@ -1,15 +1,17 @@
 import Layout from "@/components/Layout";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import ChampinonesSection from "@/components/productos/ChampinonesSection";
-import SustratoSection from "@/components/productos/SustratoSection";
+import ProcesoProductivoSection from "@/components/productos/ProcesoProductivoSection";
 import InformacionNutricionalSection from "@/components/productos/InformacionNutricionalSection";
-import productosImg from "@/assets/productos.jpg";
+import RecetasSection from "@/components/productos/RecetasSection";
+import SustratoSection from "@/components/productos/SustratoSection";
+import productosImg from "@/assets/unsplash/muchroom7.jpg";
 
 const Productos = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[580px] overflow-hidden -mt-20">
+      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -17,10 +19,10 @@ const Productos = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center pt-20">
+        <div className="relative h-full flex items-center justify-center">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -46,9 +48,14 @@ const Productos = () => {
         </div>
       </section>
 
+      {/* CHAMPIÑONES */}
       <ChampinonesSection />
-      <SustratoSection />
+      <ProcesoProductivoSection />
       <InformacionNutricionalSection />
+      <RecetasSection />
+      
+      {/* SUSTRATO VEGETAL ORGÁNICO */}
+      <SustratoSection />
     </Layout>
   );
 };

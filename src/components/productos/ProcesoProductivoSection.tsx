@@ -1,7 +1,6 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Factory, Thermometer, Sprout, Eye, Flower2, Scissors, Package } from "lucide-react";
-import hongos5 from "@/assets/hongos7.png";
-import hongos8 from "@/assets/hongos8.png";
+import hongos3 from "@/assets/hongos3.png";
 import proceso1 from "@/assets/proceso/1..jpg";
 import proceso2 from "@/assets/proceso/2..jpg";
 import proceso3 from "@/assets/proceso/3..jpg";
@@ -64,22 +63,16 @@ const ProcesoProductivoSection = () => {
   ];
 
   return (
-    <section id="proceso-productivo" className="py-20 md:py-24 lg:py-28 bg-gradient-to-br from-white via-beige/30 to-white relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background */}
-        <div className="absolute top-0 -left-20 z-0 opacity-6">
-          <img 
-            src={hongos5} 
-            alt="" 
-            className="w-[600px] h-[600px] lg:w-[700px] lg:h-[700px] object-contain transform "
-          />
-        </div>
-        <div className="absolute -bottom-10 -right-20 z-0 opacity-6">
-          <img 
-            src={hongos8} 
-            alt="" 
-            className="w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] object-contain transform "
-          />
-        </div>
+    <section id="procesos" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-y-hidden">
+      
+      {/* Hongo decorativo sutil */}
+      <div className="absolute -bottom-10 -left-20 z-0 opacity-3 pointer-events-none">
+        <img 
+          src={hongos3} 
+          alt="" 
+          className="w-[500px] h-[500px] object-contain"
+        />
+      </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -112,7 +105,7 @@ const ProcesoProductivoSection = () => {
                   
                   {/* Content */}
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-3xl p-8 lg:p-10 hover:bg-white hover:border-primary/20 hover:shadow-xl transition-all duration-500 group">
+                    <div className="bg-cream/30 border border-charcoal/10 rounded-3xl p-8 lg:p-10 hover:bg-cream/50 hover:border-primary/20 hover:shadow-xl transition-all duration-500 group">
                       <div className="flex items-start gap-4 mb-6">
                         <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
                           <step.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
@@ -135,7 +128,7 @@ const ProcesoProductivoSection = () => {
                         <div className="flex items-center gap-3">
                           <div className="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
                             <div 
-                              className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-700 group-hover:w-full"
+                              className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-700 group-hover:w-full"
                               style={{ width: `${((index + 1) / processSteps.length) * 100}%` }}
                             />
                           </div>
@@ -150,13 +143,13 @@ const ProcesoProductivoSection = () => {
                   {/* Image */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                     <div className="relative group/img">
-                      <div className="aspect-[4/3] overflow-hidden shadow-2xl border border-primary/10">
+                      <div className="aspect-[4/3] overflow-hidden shadow-2xl border border-charcoal/10">
                         <img
                           src={step.image}
                           alt={step.title}
                           className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent opacity-60 group-hover/img:opacity-40 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40 group-hover/img:opacity-20 transition-opacity duration-500" />
                         
                         {/* Floating step number on image */}
                         <div className="absolute top-6 left-6 w-16 h-16 bg-white/95 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg">
@@ -167,7 +160,7 @@ const ProcesoProductivoSection = () => {
                       </div>
                       
                       {/* Decorative elements */}
-                      <div className={`absolute -z-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl transition-all duration-700 group-hover/img:bg-primary/20 ${
+                      <div className={`absolute -z-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl transition-all duration-700 group-hover/img:bg-primary/10 ${
                         index % 2 === 0 ? '-bottom-12 -right-12' : '-top-12 -left-12'
                       }`} />
                     </div>

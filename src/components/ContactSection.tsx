@@ -41,7 +41,7 @@ const ContactSection = () => {
           <div className="fade-in-up">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-heading text-foreground mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Nombre completo
                 </label>
                 <Input
@@ -55,7 +55,7 @@ const ContactSection = () => {
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-heading text-foreground mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
                   <Input
@@ -68,7 +68,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-heading text-foreground mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Teléfono
                   </label>
                   <Input
@@ -81,7 +81,7 @@ const ContactSection = () => {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-heading text-foreground mb-2">
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Mensaje
                 </label>
                 <Textarea
@@ -112,7 +112,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-foreground mb-1">Dirección</h4>
-                    <p className="font-body text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       Camino Las Nieves S/N, Buin<br />
                       Región Metropolitana, Chile
                     </p>
@@ -124,7 +124,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-foreground mb-1">Teléfono</h4>
-                    <p className="font-body text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       +56 2 2821 7000
                     </p>
                   </div>
@@ -135,7 +135,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-foreground mb-1">Email</h4>
-                    <p className="font-body text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       contacto@abrantes.cl
                     </p>
                   </div>
@@ -146,7 +146,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-heading text-foreground mb-1">Horario</h4>
-                    <p className="font-body text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       Lunes a Viernes: 08:00 - 18:00
                     </p>
                   </div>

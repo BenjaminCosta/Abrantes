@@ -3,17 +3,16 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import EmpresaSection from "@/components/nosotros/EmpresaSection";
 import MisionVisionSection from "@/components/nosotros/MisionVisionSection";
 import CertificacionesSection from "@/components/nosotros/CertificacionesSection";
-import ProcesoProductivoSection from "@/components/nosotros/ProcesoProductivoSection";
 import ResponsabilidadSection from "@/components/nosotros/ResponsabilidadSection";
 import CodigoEticaSection from "@/components/nosotros/CodigoEticaSection";
 import PoliticaSeguridadSection from "@/components/nosotros/PoliticaSeguridadSection";
-import empresa3 from "@/assets/Empresa3.jpg";
+import empresa3 from "@/assets/trabaja_nosotros.jpg";
 
 const Nosotros = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[580px] overflow-hidden -mt-20">
+      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -21,10 +20,10 @@ const Nosotros = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center pt-20">
+        <div className="relative h-full flex items-center justify-center">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -53,7 +52,6 @@ const Nosotros = () => {
       <EmpresaSection />
       <MisionVisionSection />
       <CertificacionesSection />
-      <ProcesoProductivoSection />
       <ResponsabilidadSection />
       <CodigoEticaSection />
       <PoliticaSeguridadSection />

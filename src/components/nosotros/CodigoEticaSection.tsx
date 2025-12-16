@@ -72,21 +72,21 @@ const CodigoEticaSection = () => {
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
-              <p className="font-body text-lg text-charcoal/80 leading-relaxed mb-6">
+              <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                 El presente Código de Ética tiene como objeto establecer, definir y dar a conocer los valores, 
                 principios éticos y las pautas de conducta que orientan las acciones, relaciones y decisiones de 
-                <span className="font-semibold text-primary"> Empresas Sutil y sus filiales</span> y de sus colaboradores 
+                <span className="text-primary"> Empresas Sutil y sus filiales</span> y de sus colaboradores 
                 y que son de estricto cumplimiento en el ejercicio de sus funciones tanto al interior de las instalaciones 
                 de la empresa como en las actividades que se desarrollen fuera de ella.
               </p>
-              <p className="font-body text-base text-charcoal/70 leading-relaxed mb-6">
+              <p className="text-base text-charcoal/70 leading-relaxed mb-6">
                 Empresas Sutil reconoce que la sumatoria de las conductas éticas individuales y colectivas contribuye a 
                 la construcción de la imagen y distinción de Empresas Sutil como una compañía íntegra y confiable.
               </p>
-              <p className="font-body text-base text-charcoal/70 leading-relaxed">
+              <p className="text-base text-charcoal/70 leading-relaxed">
                 Este documento representa el compromiso de Empresas Sutil con un comportamiento ético en sus relaciones 
                 laborales, comerciales y, en general, en todas las actuaciones en que intervenga alguna de las empresas 
-                del Grupo y sus colaboradores, en tanto reconoce la <span className="font-semibold text-primary">ética en 
+                del Grupo y sus colaboradores, en tanto reconoce la <span className="text-primary">ética en 
                 los negocios como un pilar fundamental</span> para su desarrollo sostenible en los entornos y mercados en 
                 que opera.
               </p>
@@ -116,7 +116,7 @@ const CodigoEticaSection = () => {
                           </span>
                         )}
                       </div>
-                      <p className="font-body text-sm text-charcoal/60 mb-4">
+                      <p className="text-sm text-charcoal/60 mb-4">
                         {doc.description}
                       </p>
                       <div className="flex items-center gap-2 text-primary font-semibold text-sm">

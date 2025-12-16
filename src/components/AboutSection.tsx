@@ -2,7 +2,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import empresa3 from "@/assets/Empresa3.jpg";
-import hongos1 from "@/assets/hongos6.png";
+import hongos1 from "@/assets/hongos1.png";
 
 const menuItems = [
   { label: "Empresa", href: "/nosotros" },
@@ -15,27 +15,18 @@ const menuItems = [
 
 const AboutSection = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-40 relative overflow-hidden">
-      {/* Background Image with Strong Beige Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-100"
-        style={{ backgroundImage: `url(${empresa3})` }}
-      />
+    <section className="py-32 md:py-40 lg:py-48 bg-white relative overflow-hidden">
       
-      {/* Strong beige overlay - more opacity to see less background */}
-      <div className="absolute inset-0 bg-beige/95" />
-      <div className="absolute inset-0 bg-gradient-to-br from-beige/98 via-beige/96 to-beige/92" />
-      
-      {/* Decorative Logo - Top right corner, very subtle */}
-      <div className="absolute hidden lg:block lg:-top-6 lg:-right-16 z-0">
+      {/* Hongos decorativo sutil - solo 1 */}
+      <div className="absolute -bottom-20 -right-20 opacity-4 pointer-events-none">
         <img 
           src={hongos1} 
           alt="" 
-          className="w-64 h-64 lg:w-96 lg:h-96 object-contain opacity-8"
+          className="w-[400px] h-[400px] object-contain"
         />
       </div>
 
-      <div className="w-full px-4 md:px-6 lg:pr-12 lg:pl-8 relative z-10">
+      <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             

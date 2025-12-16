@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import logoAbrantes from "@/assets/logo.png";
-import logoSutil from "@/assets/logo_sutil.png";
-import sistemaB from "@/assets/sistema_B.webp";
 
 interface DropdownItem {
   label: string;
-  href: string;
+  href?: string;
+  submenu?: DropdownItem[];
 }
 
 interface NavItem {
   label: string;
   href?: string;
   dropdown?: DropdownItem[];
+  external?: boolean;
 }
 
 const navItems: NavItem[] = [
@@ -21,59 +21,50 @@ const navItems: NavItem[] = [
     label: "Nosotros",
     dropdown: [
       { label: "Empresa", href: "/nosotros#empresa" },
-      { label: "Misión / Visión", href: "/nosotros#mision-vision" },
+      { label: "Misión y Visión", href: "/nosotros#mision-vision" },
       { label: "Certificaciones", href: "/nosotros#certificaciones" },
-      { label: "Proceso Productivo", href: "/nosotros#proceso-productivo" },
       { label: "Responsabilidad Social Empresarial", href: "/nosotros#responsabilidad-social" },
-      { label: "Código de Ética y Conducta Empresas Sutil", href: "/nosotros#codigo-etica" },
-      { label: "Política de seguridad de la información", href: "/nosotros#politica-seguridad" },
+      { label: "Código de Ética y Conducta", href: "/nosotros#codigo-etica" },
+      { label: "Política de Seguridad de la Información", href: "/nosotros#politica-seguridad" },
     ],
   },
-  { label: "Sustentabilidad", href: "/sustentabilidad" },
   {
     label: "Productos",
     dropdown: [
-      { label: "Champiñones", href: "/productos#champinones" },
-      { label: "Sustrato vegetal orgánico", href: "/productos#sustrato" },
-      { label: "Información nutricional", href: "/productos#informacion-nutricional" },
+      { 
+        label: "Champiñones", 
+        href: "/productos#champinones",
+        submenu: [
+          { label: "Procesos", href: "/productos#procesos" },
+          { label: "Información Nutricional", href: "/productos#informacion-nutricional" },
+          { label: "Ventajas del Consumo", href: "/productos#ventajas" },
+          { label: "Recetas", href: "/productos#recetas" },
+        ]
+      },
+      { label: "Sustrato Vegetal Orgánico", href: "/productos#sustrato" },
     ],
   },
-  { label: "Recetas", href: "/recetas" },
-  { label: "Trabaja con Nosotros", href: "/trabaja-con-nosotros" },
+  { label: "Sustentabilidad", href: "/sustentabilidad" },
   { label: "Contacto", href: "/contacto" },
+  { label: "Canal de Denuncias", href: "https://empresassutil.eticaenlinea.cl/denuncias", external: true },
 ];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    handleScroll(); // Check initial state
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href?: string) => {
+    if (!href) return false;
+    return location.pathname === href || location.pathname === href.split('#')[0];
+  };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ease-out ${
-      isScrolled 
-        ? 'bg-charcoal shadow-2xl' 
-        : 'bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-[2px]'
-    }`}>
-      {/* Thin accent line at bottom when scrolled */}
-      {isScrolled && (
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50 transition-opacity duration-200" />
-      )}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-charcoal/5">
       
-      <div className="w-full px-8 md:px-10 lg:px-4 xl:px-10 2xl:px-20">
-        <div className="flex items-center justify-between h-24 lg:h-28 w-full">
+      <div className="w-full px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
+        <div className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link 
             to="/" 
@@ -83,16 +74,12 @@ const Navbar = () => {
             <img 
               src={logoAbrantes} 
               alt="Abrantes - La calidad tiene nombre" 
-              className="h-12 lg:h-12 xl:h-14 2xl:h-20 w-auto transition-all duration-300"
-              style={{
-  filter: 'brightness(0) saturate(100%) invert(19%) sepia(72%) saturate(2100%) hue-rotate(355deg) brightness(90%) contrast(102%)'
-}}
-
+              className="h-16 lg:h-20 xl:h-22 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-7 2xl:gap-10 flex-1 justify-end">
+          <div className="hidden lg:flex items-center gap-10 xl:gap-12 2xl:gap-14">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -102,169 +89,267 @@ const Navbar = () => {
               >
                 {item.dropdown ? (
                   <button 
-                    className={`relative flex items-center gap-1 xl:gap-1.5 text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
+                    className={`relative flex items-center gap-2 text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 ${
                       item.dropdown.some(sub => isActive(sub.href.split('#')[0])) 
-                        ? 'text-primary' 
-                        : 'text-white hover:text-primary'
+                        ? 'text-abrantes-red' 
+                        : 'text-charcoal/80 hover:text-abrantes-red'
                     }`}
                   >
-                    {item.label}
-                    <ChevronDown className="w-3.5 xl:w-4 2xl:w-4 h-3.5 xl:h-4 2xl:h-4 transition-transform duration-300 group-hover:rotate-180" />
-                    {/* Underline effect */}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                    <span className="relative">
+                      {item.label}
+                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-abrantes-red transition-all duration-300 ${
+                        item.dropdown.some(sub => isActive(sub.href.split('#')[0])) 
+                          ? 'w-full' 
+                          : 'w-0 group-hover:w-full'
+                      }`} />
+                    </span>
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" strokeWidth={2.5} />
                   </button>
+                ) : item.external ? (
+                  <a
+                    href={item.href || "/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 text-charcoal/80 hover:text-abrantes-red group"
+                  >
+                    <span className="relative">
+                      {item.label}
+                      <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-abrantes-red transition-all duration-300 group-hover:w-full" />
+                    </span>
+                  </a>
                 ) : (
                   <Link
                     to={item.href || "/"}
-                    className={`relative text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 ${
-                      isActive(item.href || '/') ? 'text-primary' : 'text-white hover:text-primary'
-                    } inline-block group`}
+                    className={`relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group ${
+                      isActive(item.href || '/') 
+                        ? 'text-abrantes-red' 
+                        : 'text-charcoal/80 hover:text-abrantes-red'
+                    }`}
                   >
-                    {item.label}
-                    {/* Underline effect */}
-                    <span className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                      isActive(item.href || '/') ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`} />
+                    <span className="relative">
+                      {item.label}
+                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-abrantes-red transition-all duration-300 ${
+                        isActive(item.href || '/') 
+                          ? 'w-full' 
+                          : 'w-0 group-hover:w-full'
+                      }`} />
+                    </span>
                   </Link>
                 )}
 
-                {/* Dropdown */}
+                {/* Dropdown - Premium Style with Nested Submenu */}
                 {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-3 z-[100]">
-                    <div className="bg-charcoal/95 backdrop-blur-md border border-primary/20 rounded-lg shadow-2xl min-w-[220px] overflow-hidden opacity-0 animate-[fadeIn_0.15s_ease-out_forwards]">
+                  <div className="absolute top-full left-0 pt-4 z-[100]">
+                    <div className="bg-white border border-charcoal/10 rounded-2xl shadow-2xl min-w-[300px] overflow-visible">
                       {item.dropdown.map((subItem, index) => (
-                        <Link
+                        <div
                           key={subItem.label}
-                          to={subItem.href}
-                          onClick={(e) => {
-                            // Handle anchor navigation
-                            if (subItem.href.includes('#')) {
-                              const [path, hash] = subItem.href.split('#');
-                              if (location.pathname === path) {
-                                e.preventDefault();
-                                const element = document.getElementById(hash);
-                                if (element) {
-                                  element.scrollIntoView({ behavior: 'smooth' });
-                                }
-                              }
-                            }
-                          }}
-                          className="relative block px-5 py-3 text-base text-white/90 hover:text-primary hover:bg-primary/5 border-l-4 border-transparent hover:border-primary transition-all duration-150 group"
+                          className="relative group/submenu"
+                          onMouseEnter={() => subItem.submenu && setActiveSubmenu(subItem.label)}
+                          onMouseLeave={() => setActiveSubmenu(null)}
                         >
-                          {subItem.label}
-                        </Link>
+                          {subItem.submenu ? (
+                            <>
+                              <Link
+                                to={subItem.href || "#"}
+                                onClick={(e) => {
+                                  if (subItem.href?.includes('#')) {
+                                    const [path, hash] = subItem.href.split('#');
+                                    if (location.pathname === path) {
+                                      e.preventDefault();
+                                      const element = document.getElementById(hash);
+                                      if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                      }
+                                    }
+                                  }
+                                }}
+                                className={`flex items-center justify-between px-6 py-4 text-[14px] font-heading text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200 border-l-[3px] border-transparent hover:border-abrantes-red ${
+                                  index === 0 ? 'rounded-t-2xl' : ''
+                                }`}
+                              >
+                                {subItem.label}
+                                <ChevronDown className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/submenu:rotate-180" strokeWidth={2.5} />
+                              </Link>
+                              
+                              {/* Nested Submenu - Below */}
+                              {activeSubmenu === subItem.label && (
+                                <div className="pl-6 pb-2">
+                                  {subItem.submenu.map((nestedItem, nestedIndex) => (
+                                    <Link
+                                      key={nestedItem.label}
+                                      to={nestedItem.href || "#"}
+                                      onClick={(e) => {
+                                        if (nestedItem.href?.includes('#')) {
+                                          const [path, hash] = nestedItem.href.split('#');
+                                          if (location.pathname === path) {
+                                            e.preventDefault();
+                                            const element = document.getElementById(hash);
+                                            if (element) {
+                                              element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                          }
+                                        }
+                                      }}
+                                      className="block px-4 py-2.5 text-[13px] font-heading text-charcoal/60 hover:text-abrantes-red hover:bg-beige/20 transition-all duration-200 rounded-lg mt-1"
+                                    >
+                                      {nestedItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <Link
+                              to={subItem.href || "#"}
+                              onClick={(e) => {
+                                if (subItem.href?.includes('#')) {
+                                  const [path, hash] = subItem.href.split('#');
+                                  if (location.pathname === path) {
+                                    e.preventDefault();
+                                    const element = document.getElementById(hash);
+                                    if (element) {
+                                      element.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                  }
+                                }
+                              }}
+                              className={`block px-6 py-4 text-[14px] font-heading text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200 border-l-[3px] border-transparent hover:border-abrantes-red ${
+                                index === 0 ? 'rounded-t-2xl' : ''
+                              } ${
+                                index === item.dropdown!.length - 1 ? 'rounded-b-2xl' : ''
+                              }`}
+                            >
+                              {subItem.label}
+                            </Link>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
                 )}
               </div>
             ))}
-
-            {/* Canal de Denuncias - External Link */}
-            <a
-              href="https://empresassutil.eticaenlinea.cl/denuncias"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative text-[13px] xl:text-base 2xl:text-lg font-heading font-semibold tracking-wide transition-all duration-300 text-white hover:text-primary inline-block group whitespace-nowrap"
-            >
-              Canal de Denuncias
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-
-            {/* Logos - Sistema B y Sutil */}
-            <div className="flex items-center gap-1.5 xl:gap-2 2xl:gap-3 ml-0.5 xl:ml-1 2xl:ml-2">
-              
-
-              {/* Logo Sutil - External Link */}
-              <a
-                href="https://www.empresassutil.cl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-              >
-                <img 
-                  src={logoSutil} 
-                  alt="Empresas Sutil" 
-                  className="h-4 xl:h-5 2xl:h-7 w-auto"
-                />
-              </a>
-            </div>
-            {/* Logo Sistema B - External Link */}
-              <a
-                href="https://abrantes.cl/wp-content/uploads/2024/06/Abrantes-Carta-certificacion-Empresa-B-Certificada-1.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-                title="Certificación Empresa B"
-              >
-                <img 
-                  src={sistemaB} 
-                  alt="Certificación Sistema B" 
-                  className="h-4 xl:h-5 2xl:h-7 w-auto"
-                />
-              </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2 hover:text-primary transition-colors"
+            className="lg:hidden text-charcoal p-2 hover:text-abrantes-red transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-charcoal/98 backdrop-blur-md border-t border-primary/20 animate-[fadeIn_0.15s_ease-out] shadow-2xl">
-          <div className="px-8 md:px-10 py-6 space-y-2">
+        <div className="lg:hidden bg-cream border-t border-charcoal/10 shadow-xl">
+          <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.label}>
                 {item.dropdown ? (
                   <div>
                     <button
-                      className="flex items-center justify-between w-full py-3 text-white font-heading font-semibold text-base hover:text-primary transition-colors"
+                      className="flex items-center justify-between w-full py-3 text-charcoal font-heading text-base hover:text-abrantes-red transition-colors"
                       onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                     >
                       {item.label}
-                      <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
                     </button>
                     {activeDropdown === item.label && (
-                      <div className="pl-4 pb-2 space-y-1 animate-[fadeIn_0.15s_ease-out]">
+                      <div className="pl-4 pb-2 space-y-1">
                         {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.label}
-                            to={subItem.href}
-                            onClick={(e) => {
-                              setMobileMenuOpen(false);
-                              // Handle anchor navigation
-                              if (subItem.href.includes('#')) {
-                                const [path, hash] = subItem.href.split('#');
-                                if (location.pathname === path) {
-                                  e.preventDefault();
-                                  setTimeout(() => {
-                                    const element = document.getElementById(hash);
-                                    if (element) {
-                                      element.scrollIntoView({ behavior: 'smooth' });
+                          <div key={subItem.label}>
+                            {subItem.submenu ? (
+                              <div>
+                                <button
+                                  className="flex items-center justify-between w-full py-2.5 text-sm text-charcoal/80 hover:text-abrantes-red transition-colors border-l-2 border-transparent hover:border-abrantes-red pl-3"
+                                  onClick={() => {
+                                    // Toggle submenu
+                                    setActiveSubmenu(activeSubmenu === subItem.label ? null : subItem.label);
+                                    // Also navigate to main item
+                                    if (subItem.href) {
+                                      window.location.href = subItem.href;
                                     }
-                                  }, 100);
-                                }
-                              }
-                            }}
-                            className="block py-2.5 text-base text-white/80 hover:text-primary transition-colors duration-150 border-l-2 border-transparent hover:border-primary pl-3"
-                          >
-                            {subItem.label}
-                          </Link>
+                                  }}
+                                >
+                                  {subItem.label}
+                                  <ChevronDown className={`w-3 h-3 transition-transform ${activeSubmenu === subItem.label ? 'rotate-180' : ''}`} />
+                                </button>
+                                {activeSubmenu === subItem.label && (
+                                  <div className="pl-4 pt-1 space-y-1">
+                                    {subItem.submenu.map((nestedItem) => (
+                                      <Link
+                                        key={nestedItem.label}
+                                        to={nestedItem.href || "#"}
+                                        onClick={(e) => {
+                                          setMobileMenuOpen(false);
+                                          setActiveSubmenu(null);
+                                          if (nestedItem.href?.includes('#')) {
+                                            const [path, hash] = nestedItem.href.split('#');
+                                            if (location.pathname === path) {
+                                              e.preventDefault();
+                                              setTimeout(() => {
+                                                const element = document.getElementById(hash);
+                                                if (element) {
+                                                  element.scrollIntoView({ behavior: 'smooth' });
+                                                }
+                                              }, 100);
+                                            }
+                                          }
+                                        }}
+                                        className="block py-2 text-xs text-charcoal/70 hover:text-abrantes-red transition-colors border-l-2 border-transparent hover:border-abrantes-red pl-3"
+                                      >
+                                        {nestedItem.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <Link
+                                to={subItem.href || "#"}
+                                onClick={(e) => {
+                                  setMobileMenuOpen(false);
+                                  if (subItem.href?.includes('#')) {
+                                    const [path, hash] = subItem.href.split('#');
+                                    if (location.pathname === path) {
+                                      e.preventDefault();
+                                      setTimeout(() => {
+                                        const element = document.getElementById(hash);
+                                        if (element) {
+                                          element.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                      }, 100);
+                                    }
+                                  }
+                                }}
+                                className="block py-2.5 text-sm text-charcoal/80 hover:text-abrantes-red transition-colors border-l-2 border-transparent hover:border-abrantes-red pl-3"
+                              >
+                                {subItem.label}
+                              </Link>
+                            )}
+                          </div>
                         ))}
                       </div>
                     )}
                   </div>
+                ) : item.external ? (
+                  <a
+                    href={item.href || "/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-3 font-heading text-base text-charcoal hover:text-abrantes-red transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
                 ) : (
                   <Link
                     to={item.href || "/"}
-                    className={`block py-3 font-heading font-semibold text-base ${
-                      isActive(item.href || '/') ? 'text-primary' : 'text-white hover:text-primary'
+                    className={`block py-3 font-heading text-base ${
+                      isActive(item.href || '/') ? 'text-abrantes-red' : 'text-charcoal hover:text-abrantes-red'
                     } transition-colors`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -273,48 +358,6 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-
-            {/* Canal de Denuncias - Mobile */}
-            <a
-              href="https://empresassutil.eticaenlinea.cl/denuncias"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block py-3 font-heading font-semibold text-base text-white hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Canal de Denuncias
-            </a>
-
-            {/* Logos - Mobile */}
-            <div className="pt-4 pb-2 flex items-center justify-center gap-4 border-t border-white/10 mt-4">
-              <a
-                href="https://abrantes.cl/wp-content/uploads/2024/06/Abrantes-Carta-certificacion-Empresa-B-Certificada-1.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-                onClick={() => setMobileMenuOpen(false)}
-                title="Certificación Empresa B"
-              >
-                <img 
-                  src={sistemaB} 
-                  alt="Certificación Sistema B" 
-                  className="h-6 w-auto"
-                />
-              </a>
-              <a
-                href="https://www.empresassutil.cl/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <img 
-                  src={logoSutil} 
-                  alt="Empresas Sutil" 
-                  className="h-6 w-auto"
-                />
-              </a>
-            </div>
           </div>
         </div>
       )}

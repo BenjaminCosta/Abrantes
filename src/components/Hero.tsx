@@ -1,15 +1,17 @@
 import { ChevronDown, Volume2, VolumeX, Play, Pause } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [posterUrl, setPosterUrl] = useState<string>("");
+  const [showControls, setShowControls] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -18,6 +20,7 @@ const Hero = () => {
     const updateProgress = () => {
       const currentProgress = (video.currentTime / video.duration) * 100;
       setProgress(currentProgress);
+      setCurrentTime(video.currentTime);
     };
 
     const handleLoadedMetadata = () => {
@@ -46,6 +49,35 @@ const Hero = () => {
     };
   }, []);
 
+  // Auto-hide controls after 3 seconds of inactivity
+  useEffect(() => {
+    const handleMouseMove = () => {
+      setShowControls(true);
+      
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      
+      timeoutRef.current = setTimeout(() => {
+        setShowControls(false);
+      }, 2000);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    // Initial timeout
+    timeoutRef.current = setTimeout(() => {
+      setShowControls(false);
+    }, 3000);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
@@ -64,14 +96,10 @@ const Hero = () => {
     }
   };
 
-  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (videoRef.current) {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const width = rect.width;
-      const percentage = clickX / width;
-      videoRef.current.currentTime = percentage * videoRef.current.duration;
-    }
+  const formatTime = (timeInSeconds: number) => {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
   const scrollToContent = () => {
@@ -82,9 +110,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden">
+    <section className="relative h-screen min-h-[600px] flex items-end overflow-hidden pt-24 lg:pt-28">
       {/* Video Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-24 lg:top-28">
         <video
           ref={videoRef}
           autoPlay
@@ -97,24 +125,38 @@ const Hero = () => {
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        {/* Dark overlay top to bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/90" />
-        {/* Additional bottom overlay for content readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 via-transparent to-transparent" />
       </div>
 
-      {/* Video Controls */}
-      <div className="absolute top-32 lg:top-36 right-8 md:right-12 lg:right-16 z-20 flex flex-col gap-3">
+      {/* Dark overlay bottom area for scroll indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none z-10" />
+
+      {/* Video Controls - Bottom Left */}
+      <div className={`absolute bottom-6 left-8 md:left-12 lg:left-16 z-30 flex items-center gap-4 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
         {/* Play/Pause Button */}
         <button
           onClick={togglePlay}
-          className="w-12 h-12 rounded-full bg-charcoal/80 backdrop-blur-sm border border-primary/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg"
+          className="w-10 h-10 flex items-center justify-center text-white hover:text-primary transition-all duration-300"
           aria-label={isPlaying ? "Pausar video" : "Reproducir video"}
         >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+          {isPlaying ? <Pause className="w-6 h-6" fill="white" /> : <Play className="w-6 h-6 ml-0.5" fill="white" />}
         </button>
 
-        {/* Mute/Unmute Button */}
+        {/* Time Display */}
+        <div className="text-white text-sm font-sans tracking-wide">
+          {formatTime(currentTime)} / {formatTime(duration)}
+        </div>
+      </div>
+
+      {/* Progress Bar - Bottom */}
+      <div className={`absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+        <div 
+          className="h-full bg-white transition-all duration-150"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+      {/* Mute/Unmute Button - Top Right */}
+      <div className="absolute top-32 lg:top-36 right-8 md:right-12 lg:right-16 z-20">
         <button
           onClick={toggleMute}
           className="w-12 h-12 rounded-full bg-charcoal/80 backdrop-blur-sm border border-primary/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg"
@@ -124,26 +166,13 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Progress Bar - Shows on hover but not interactive */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 px-8 md:px-12 lg:px-16 pb-2 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        <div className="w-full h-1 bg-black/20 backdrop-blur-sm rounded-full">
-          <div 
-            className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-150"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Scroll Indicator - Dos chevrones animados con brillo */}
+      {/* Scroll Indicator - Dos chevrones animados */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-10 group"
+        className="absolute bottom-8 lg:bottom-8 left-1/2 -translate-x-1/2 z-30 group"
         aria-label="Desplazarse hacia abajo"
       >
         <div className="relative flex flex-col items-center">
-          {/* Glow effect permanente */}
-          <div className="absolute inset-0 -z-10 blur-xl rounded-full scale-150" />
-          
           {/* Contenedor de chevrones */}
           <div className="relative flex flex-col gap-1">
             {/* Chevron 1 */}

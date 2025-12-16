@@ -1,6 +1,6 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import empresa1 from "@/assets/Empresa1.jpg";
-import empresa2 from "@/assets/Empresa2.jpg";
+import empresa2 from "@/assets/unsplash/mushroom-faci.jpg";
 import hongos2 from "@/assets/hongos2.png";
 import { Building2, Users, Award } from "lucide-react";
 
@@ -45,26 +45,26 @@ const EmpresaSection = () => {
             {/* Text Content */}
             <AnimateOnScroll animation="fade-right">
               <div className="space-y-6">
-                <p className="font-body text-lg text-charcoal/80 leading-relaxed">
+                <p className="text-lg text-charcoal/80 leading-relaxed">
                   Champiñones Abrantes es una empresa especialista en el cultivo de champiñones blancos 
                   para el mercado en fresco.
                 </p>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   La compañía fue creada y administrada familiarmente desde 1983 hasta el terremoto del 
                   27 de Febrero del 2010. Luego, con el ingreso de nuevos socios se construyó una nueva 
-                  planta en la zona de Aculeo, la cual adoptó el <span className="font-semibold text-primary">modelo de cultivo Holandés</span>.
+                  planta en la zona de Aculeo, la cual adoptó el <strong className="text-primary">modelo de cultivo Holandés</strong>.
                 </p>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   En esta nueva construcción se incorporó lo último en metodologías y equipos disponibles 
                   en el mundo para el cultivo del champiñón.
                 </p>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   La empresa se preocupó de mantener a parte importante del personal. Hoy cuenta con más 
                   de 200 trabajadores todos ellos de experiencia invaluable en el cultivo. Gracias a nuestro 
-                  capital humano y a la gran inversión tecnológica, <span className="font-semibold text-primary">Abrantes se posiciona 
-                  como una empresa líder en el cultivo de champiñones blancos en Latinoamérica</span>.
+                  capital humano y a la gran inversión tecnológica, <strong className="text-primary">Abrantes se posiciona 
+                  como una empresa líder en el cultivo de champiñones blancos en Latinoamérica</strong>.
                 </p>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   Nuestros productos cuentan con las principales normas de certificación e higiene. Lo anterior 
                   nos da garantía de poder entregar día a día la mejor calidad a los hogares de Chile.
                 </p>
@@ -74,7 +74,7 @@ const EmpresaSection = () => {
             {/* Image */}
             <AnimateOnScroll animation="fade-left" delay={100}>
               <div className="relative group">
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="aspect-[4/3] overflow-hidden shadow-2xl">
                   <img
                     src={empresa1}
                     alt="Instalaciones Abrantes"
@@ -95,7 +95,7 @@ const EmpresaSection = () => {
                   className="bg-secondary/30 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 text-center hover:bg-secondary/50 hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
                 >
                   <item.icon className="w-10 h-10 text-primary mx-auto mb-3" strokeWidth={1.5} />
-                  <p className="font-heading text-sm md:text-base text-charcoal font-semibold">
+                  <p className="text-sm md:text-base text-charcoal">
                     {item.text}
                   </p>
                 </div>
@@ -105,7 +105,7 @@ const EmpresaSection = () => {
 
           {/* Second Image - Full Width */}
           <AnimateOnScroll animation="fade-up" delay={250}>
-            <div className="mt-16 relative rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+            <div className="mt-16 relative overflow-hidden shadow-2xl max-w-5xl mx-auto">
               <div className="aspect-[21/9]">
                 <img
                   src={empresa2}

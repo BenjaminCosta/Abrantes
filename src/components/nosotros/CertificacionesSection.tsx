@@ -38,11 +38,11 @@ const CertificacionesSection = () => {
             <AnimateOnScroll animation="fade-up">
               <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 text-center max-w-4xl mx-auto">
                 <Shield className="w-16 h-16 text-primary mx-auto mb-6" strokeWidth={1.5} />
-                <p className="font-body text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
-                  Al consumir champiñones Abrantes tiene usted la <span className="font-semibold text-primary">garantía 
+                <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
+                  Al consumir champiñones Abrantes tiene usted la <span className="text-primary">garantía 
                   de la inocuidad del producto</span> desde el lugar de origen hasta el punto de consumo.
                 </p>
-                <p className="font-body text-base text-charcoal/70 leading-relaxed">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   Champiñones Abrantes tiene el Certificado de Verificación <span className="font-semibold">HACCP</span>, 
                   que es un procedimiento científico de control de procesos, reconocido internacionalmente, que permite 
                   identificar peligros específicos (biológicos, químicos y físicos) y medidas para su control con el 
@@ -56,7 +56,7 @@ const CertificacionesSection = () => {
               <div className="flex justify-center">
                 <a
                   href="#"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-heading font-semibold text-base md:text-lg rounded-2xl hover:bg-primary/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-sans text-base md:text-lg tracking-wide hover:bg-primary/90 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" strokeWidth={2.5} />
                   <span>Descargar Certificación HACCP</span>
@@ -92,7 +92,7 @@ const CertificacionesSection = () => {
                     <h3 className="font-heading text-lg text-charcoal font-semibold mb-2">
                       {item.title}
                     </h3>
-                    <p className="font-body text-sm text-charcoal/60">
+                    <p className="text-sm text-charcoal/60">
                       {item.description}
                     </p>
                   </div>

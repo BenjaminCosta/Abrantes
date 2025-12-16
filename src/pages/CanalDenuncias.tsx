@@ -52,7 +52,7 @@ const CanalDenuncias = () => {
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg text-foreground mb-2">Confidencialidad</h3>
-                <p className="font-body text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Tu identidad será protegida en todo momento
                 </p>
               </div>
@@ -63,7 +63,7 @@ const CanalDenuncias = () => {
                   <Lock className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg text-foreground mb-2">Seguridad</h3>
-                <p className="font-body text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Canal encriptado y seguro para tu protección
                 </p>
               </div>
@@ -74,7 +74,7 @@ const CanalDenuncias = () => {
                   <AlertTriangle className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg text-foreground mb-2">Sin Represalias</h3>
-                <p className="font-body text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Garantizamos protección contra represalias
                 </p>
               </div>
@@ -91,7 +91,7 @@ const CanalDenuncias = () => {
             <AnimateOnScroll animation="fade-up" delay={100}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-heading text-foreground mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Tipo de denuncia
                   </label>
                   <select
@@ -109,7 +109,7 @@ const CanalDenuncias = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-heading text-foreground mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Descripción detallada
                   </label>
                   <Textarea
@@ -122,7 +122,7 @@ const CanalDenuncias = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-heading text-foreground mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Email de contacto (opcional)
                   </label>
                   <Input
