@@ -159,7 +159,7 @@ const Hero = () => {
       <div className="absolute top-32 lg:top-36 right-8 md:right-12 lg:right-16 z-20">
         <button
           onClick={toggleMute}
-          className="w-12 h-12 rounded-full bg-charcoal/80 backdrop-blur-sm border border-primary/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg"
+          className="w-12 h-12 rounded-full bg-transparent backdrop-blur-lg border border-primary/30 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110 shadow-lg"
           aria-label={isMuted ? "Activar sonido" : "Silenciar"}
         >
           {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}

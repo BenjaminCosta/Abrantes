@@ -235,7 +235,7 @@ const Sustentabilidad = () => {
       </section>
 
       {/* Carbono Neutral Section */}
-      <section className="py-32 md:py-40 lg:py-48 bg-cream relative">
+      <section className="py-32 md:py-40 lg:py-48 bg-white relative">
         
         <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -383,7 +383,7 @@ const Sustentabilidad = () => {
       <section className="min-h-[50vh] lg:min-h-[60vh] flex flex-col lg:flex-row">
         
         {/* Text Column - Left */}
-        <div className="w-full lg:w-1/2 bg-cream flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16 order-2 lg:order-1">
+        <div className="w-full lg:w-1/2 bg-white flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16 order-2 lg:order-1">
           <AnimateOnScroll animation="fade-right">
             <div className="max-w-xl">
               <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Energía Renovable</p>
