@@ -1,10 +1,13 @@
 import Layout from "@/components/Layout";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { Leaf, Sprout, Sun, Play, FileText, Download, Award } from "lucide-react";
+import { Play, Download } from "lucide-react";
+import { Link } from "react-router-dom";
 import sustentabilidadImg from "@/assets/hero-cultivation.jpg";
 import sustainability from "@/assets/sustainability.jpg";
 import empresa2 from "@/assets/Empresa2.jpg";
 import hongos4 from "@/assets/hongos4.png";
+import video1 from "@/assets/unsplash/mushroom-faci3.jpg";
+import video2 from "@/assets/unsplash/farm.jpg";
 // Certificados Carbono Neutral
 import cert2023_1 from "@/assets/sustentanbilidad/6410_Sello1_Huella_2023-300x300.png";
 import cert2023_2 from "@/assets/sustentanbilidad/541_Sello2_Huella_2023-300x300.png";
@@ -53,118 +56,103 @@ const Sustentabilidad = () => {
         </div>
       </section>
 
-      {/* Indicadores que Transforman 2025 - Clean Background */}
+      {/* Indicadores que Transforman - Combined Section */}
       <section className="py-32 md:py-40 lg:py-48 bg-white relative">
         <div className="w-full px-4 md:px-6 lg:px-12 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-7xl mx-auto">
+            
+            {/* Header */}
+            <AnimateOnScroll animation="fade-up">
+              <div className="text-center mb-16 lg:mb-20">
+                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Indicadores que Transforman</p>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-4">
+                  Logros y <span className="font-accent italic text-primary">desafíos</span>
+                </h2>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Two Column Grid */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               
-              {/* Text - Left */}
-              <AnimateOnScroll animation="fade-right">
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Award className="w-6 h-6 text-primary" strokeWidth={2} />
-                    <p className="font-accent italic text-primary/70 text-sm tracking-wide">Indicadores que Transforman</p>
+              {/* 2025 Column */}
+              <AnimateOnScroll animation="fade-up" delay={100}>
+                <div className="space-y-6">
+                  
+                  {/* Video 2025 */}
+                  <div className="relative group">
+                    <div className="aspect-video overflow-hidden shadow-lg bg-white">
+                      <div 
+                        className="w-full h-full bg-cover bg-center relative"
+                        style={{ backgroundImage: `url(${video1})` }}
+                      >
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-charcoal/60 group-hover:bg-charcoal/50 transition-all duration-300" />
+                        
+                        {/* Play Button */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
+                            <Play className="w-8 h-8 text-primary ml-1" strokeWidth={2} fill="currentColor" />
+                          </div>
+                        </div>
+
+                        {/* Duration Badge */}
+                        <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80">
+                          <p className="font-heading text-white text-sm">03:52</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-heading text-4xl md:text-5xl text-charcoal font-bold mb-6">
-                    Logros y desafíos <span className="font-accent italic text-primary">2025</span>
-                  </h3>
-                  <div className="space-y-4 text-charcoal/80 text-lg leading-relaxed">
-                    <p>
-                      Presentamos nuestros <span className="text-charcoal">indicadores de impacto</span> del año 2025, 
+
+                  {/* Text 2025 */}
+                  <div>
+                    <h3 className="font-heading text-3xl md:text-4xl text-charcoal font-bold mb-4">
+                      Año <span className="font-accent italic text-primary">2025</span>
+                    </h3>
+                    <p className="text-base text-charcoal/75 leading-relaxed">
+                      Presentamos nuestros <span className="text-charcoal font-medium">indicadores de impacto</span> del año 2025, 
                       mostrando avances concretos en sustentabilidad, eficiencia operativa y compromiso social.
                     </p>
-                    <p className="text-charcoal/70">
-                      Cada métrica refleja nuestro trabajo constante por mejorar, innovar y generar valor 
-                      compartido con todas nuestras partes interesadas.
-                    </p>
                   </div>
                 </div>
               </AnimateOnScroll>
 
-              {/* Video - Right */}
-              <AnimateOnScroll animation="fade-left" delay={100}>
-                <div className="relative group">
-                  <div className="aspect-video overflow-hidden shadow-lg bg-white">
-                    <div 
-                      className="w-full h-full bg-cover bg-center relative"
-                      style={{ backgroundImage: `url(${sustainability})` }}
-                    >
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-charcoal/60 group-hover:bg-charcoal/50 transition-all duration-300" />
-                      
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
-                          <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
+              {/* 2024 Column */}
+              <AnimateOnScroll animation="fade-up" delay={200}>
+                <div className="space-y-6">
+                  
+                  {/* Video 2024 */}
+                  <div className="relative group">
+                    <div className="aspect-video overflow-hidden shadow-lg bg-white">
+                      <div 
+                        className="w-full h-full bg-cover bg-center relative"
+                        style={{ backgroundImage: `url(${video2})` }}
+                      >
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/40 transition-all duration-300" />
+                        
+                        {/* Play Button */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
+                            <Play className="w-8 h-8 text-primary ml-1" strokeWidth={2} fill="currentColor" />
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Duration Badge */}
-                      <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80 rounded-lg">
-                        <p className="font-heading text-white text-sm">03:52</p>
+                        {/* Duration Badge */}
+                        <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80">
+                          <p className="font-heading text-white text-sm">03:15</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </AnimateOnScroll>
 
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Indicadores que Transforman 2024 - Clean Beige Background */}
-      <section className="py-32 md:py-40 lg:py-48 bg-cream relative">
-        <div className="w-full px-4 md:px-6 lg:px-12 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Video - Left */}
-              <AnimateOnScroll animation="fade-right">
-                <div className="relative group">
-                  <div className="aspect-video overflow-hidden shadow-lg bg-white">
-                    <div 
-                      className="w-full h-full bg-cover bg-center relative"
-                      style={{ backgroundImage: `url(${empresa2})` }}
-                    >
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/40 transition-all duration-300" />
-                      
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
-                          <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
-                        </div>
-                      </div>
-
-                      {/* Duration Badge */}
-                      <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80 rounded-lg">
-                        <p className="font-heading text-white text-sm">03:15</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-
-              {/* Text - Right */}
-              <AnimateOnScroll animation="fade-left" delay={100}>
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Award className="w-6 h-6 text-primary" strokeWidth={2} />
-                    <p className="font-accent italic text-primary/70 text-sm tracking-wide">Indicadores que Transforman</p>
-                  </div>
-                  <h3 className="font-heading text-4xl md:text-5xl text-charcoal font-bold mb-6">
-                    Logros y desafíos <span className="font-accent italic text-primary">2024</span>
-                  </h3>
-                  <div className="space-y-4 text-charcoal/80 text-lg leading-relaxed">
-                    <p>
-                      Revisamos los <span className="text-charcoal">logros alcanzados</span> durante el año 2024, 
+                  {/* Text 2024 */}
+                  <div>
+                    <h3 className="font-heading text-3xl md:text-4xl text-charcoal font-bold mb-4">
+                      Año <span className="font-accent italic text-primary">2024</span>
+                    </h3>
+                    <p className="text-base text-charcoal/75 leading-relaxed">
+                      Revisamos los <span className="text-charcoal font-medium">logros alcanzados</span> durante el año 2024, 
                       un periodo marcado por avances significativos en nuestras metas de sustentabilidad.
-                    </p>
-                    <p className="text-charcoal/70">
-                      Los desafíos enfrentados nos permitieron fortalecer nuestro compromiso con la mejora continua 
-                      y la innovación responsable.
                     </p>
                   </div>
                 </div>
@@ -176,7 +164,7 @@ const Sustentabilidad = () => {
       </section>
 
       {/* Reportes de Sustentabilidad Section */}
-      <section className="py-32 md:py-40 lg:py-48 bg-white relative overflow-y-hidden">
+      <section className="py-12 md:py-16 bg-white relative overflow-y-hidden">
         
         {/* Hongo decorativo sutil - z-0 para que no se corte */}
         <div className="absolute -bottom-10 -right-10 opacity-3 pointer-events-none z-0">
@@ -189,10 +177,7 @@ const Sustentabilidad = () => {
             {/* Header */}
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-20 lg:mb-24">
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <FileText className="w-6 h-6 text-primary" strokeWidth={2} />
-                  <p className="font-accent italic text-primary/70 text-sm tracking-wide">Transparencia y Compromiso</p>
-                </div>
+                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Transparencia y Compromiso</p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-6">
                   Reportes de <span className="font-accent italic text-primary">Sustentabilidad</span>
                 </h2>
@@ -247,10 +232,7 @@ const Sustentabilidad = () => {
             {/* Header */}
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-12 lg:mb-16">
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <Leaf className="w-7 h-7 text-primary" strokeWidth={2} />
-                  <p className="font-accent italic text-primary/70 text-sm tracking-wide">Compromiso Climático</p>
-                </div>
+                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Compromiso Climático</p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-6">
                   Carbono <span className="font-accent italic text-primary">Neutral</span>
                 </h2>
@@ -324,126 +306,128 @@ const Sustentabilidad = () => {
         </div>
       </section>
 
-      {/* Comunidad Section */}
-      <section className="py-32 md:py-40 lg:py-48 bg-white relative">
-        <div className="w-full px-4 md:px-6 lg:px-12 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Video - Left */}
-              <AnimateOnScroll animation="fade-right">
-                <div className="relative group">
-                  <div className="aspect-video overflow-hidden shadow-lg bg-white">
-                    <div 
-                      className="w-full h-full bg-cover bg-center relative"
-                      style={{ backgroundImage: `url(${empresa2})` }}
-                    >
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/40 transition-all duration-300" />
-                      
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
-                          <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
-                        </div>
-                      </div>
+      {/* Comunidad Section - Split Hero */}
+      <section className="min-h-[50vh] lg:min-h-[60vh] flex flex-col lg:flex-row">
+        
+        {/* Video Column - Left */}
+        <div className="w-full lg:w-1/2 h-[40vh] lg:h-auto relative group">
+          <div 
+            className="w-full h-full bg-cover bg-center relative"
+            style={{ backgroundImage: `url(${empresa2})` }}
+          >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/40 transition-all duration-300" />
+            
+            {/* Play Button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 bg-white flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
+                <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
+              </div>
+            </div>
 
-                      {/* Duration Badge */}
-                      <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80 rounded-lg">
-                        <p className="font-heading text-white text-sm">03:39</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-
-              {/* Text - Right */}
-              <AnimateOnScroll animation="fade-left">
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Sprout className="w-6 h-6 text-primary" strokeWidth={2} />
-                    <p className="font-accent italic text-primary/70 text-sm tracking-wide">Impacto Social</p>
-                  </div>
-                  <h3 className="font-heading text-4xl md:text-5xl text-charcoal font-bold mb-6">
-                    Comunidad
-                  </h3>
-                  <div className="space-y-4 text-charcoal/80 text-lg leading-relaxed">
-                    <p>
-                      Nuestro compromiso va más allá de la producción. <span className="text-charcoal">Trabajamos activamente</span> 
-                      con las comunidades locales, generando empleo digno y contribuyendo al desarrollo sostenible de la región.
-                    </p>
-                    <p className="text-charcoal/70">
-                      A través de programas de educación, capacitación y apoyo comunitario, buscamos crear un impacto 
-                      positivo duradero en las vidas de quienes nos rodean.
-                    </p>
-                  </div>
-                </div>
-              </AnimateOnScroll>
-
+            {/* Duration Badge */}
+            <div className="absolute bottom-6 right-6 px-4 py-2 bg-charcoal/80">
+              <p className="font-heading text-white text-sm">03:39</p>
             </div>
           </div>
         </div>
+
+        {/* Text Column - Right */}
+        <div className="w-full lg:w-1/2 bg-white flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16">
+          <AnimateOnScroll animation="fade-left">
+            <div className="max-w-xl">
+              <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Impacto Social</p>
+              
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-8 leading-tight">
+                Comunidad
+              </h2>
+              
+              <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed mb-10">
+                <p>
+                  Nuestro compromiso va más allá de la producción. <span className="text-charcoal font-medium">Trabajamos activamente</span> 
+                  con las comunidades locales, generando empleo digno y contribuyendo al desarrollo sostenible de la región.
+                </p>
+                <p className="text-charcoal/70">
+                  A través de programas de educación, capacitación y apoyo comunitario, buscamos crear un impacto 
+                  positivo duradero en las vidas de quienes nos rodean.
+                </p>
+              </div>
+
+              <Link
+                to="/nosotros#responsabilidad-social"
+                className="inline-flex items-center gap-3 px-10 py-4 border-2 border-charcoal text-charcoal font-sans text-base tracking-wide hover:bg-charcoal hover:text-white transition-all duration-300 group"
+              >
+                <span>Nuestros productos</span>
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </AnimateOnScroll>
+        </div>
+
       </section>
 
-      {/* Energía Limpia Section - Clean Background */}
-      <section className="py-32 md:py-40 lg:py-48 bg-cream relative">
-        <div className="w-full px-4 md:px-6 lg:px-12 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Energía Limpia Section - Split Hero */}
+      <section className="min-h-[50vh] lg:min-h-[60vh] flex flex-col lg:flex-row">
+        
+        {/* Text Column - Left */}
+        <div className="w-full lg:w-1/2 bg-cream flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16 order-2 lg:order-1">
+          <AnimateOnScroll animation="fade-right">
+            <div className="max-w-xl">
+              <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Energía Renovable</p>
               
-              {/* Text - Left */}
-              <AnimateOnScroll animation="fade-right">
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <Sun className="w-6 h-6 text-primary" strokeWidth={2} />
-                    <p className="font-accent italic text-primary/70 text-sm tracking-wide">Energía Renovable</p>
-                  </div>
-                  <h3 className="font-heading text-4xl md:text-5xl text-charcoal font-bold mb-6">
-                    Energía <span className="font-accent italic text-primary">Limpia</span>
-                  </h3>
-                  <div className="space-y-4 text-charcoal/80 text-lg leading-relaxed">
-                    <p>
-                      Hemos invertido en <span className="text-charcoal">tecnología de energía renovable</span> para 
-                      reducir nuestra dependencia de combustibles fósiles y minimizar nuestra huella de carbono.
-                    </p>
-                    <p className="text-charcoal/70">
-                      Nuestro compromiso con la energía limpia no solo beneficia al medio ambiente, sino que también 
-                      nos permite operar de manera más eficiente y sostenible a largo plazo.
-                    </p>
-                  </div>
-                </div>
-              </AnimateOnScroll>
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-8 leading-tight">
+                Energía <span className="font-accent italic text-primary">Limpia</span>
+              </h2>
+              
+              <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed mb-10">
+                <p>
+                  Hemos invertido en <span className="text-charcoal font-medium">tecnología de energía renovable</span> para 
+                  reducir nuestra dependencia de combustibles fósiles y minimizar nuestra huella de carbono.
+                </p>
+                <p className="text-charcoal/70">
+                  Nuestro compromiso con la energía limpia no solo beneficia al medio ambiente, sino que también 
+                  nos permite operar de manera más eficiente y sostenible a largo plazo.
+                </p>
+              </div>
 
-              {/* Video - Right */}
-              <AnimateOnScroll animation="fade-left">
-                <div className="relative group">
-                  <div className="aspect-video overflow-hidden shadow-lg bg-white">
-                    <div 
-                      className="w-full h-full bg-cover bg-center relative"
-                      style={{ backgroundImage: `url(${sustainability})` }}
-                    >
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-charcoal/60 group-hover:bg-charcoal/50 transition-all duration-300" />
-                      
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
-                          <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
-                        </div>
-                      </div>
+              <Link
+                to="/nosotros#responsabilidad-social"
+                className="inline-flex items-center gap-3 px-10 py-4 border-2 border-charcoal text-charcoal font-sans text-base tracking-wide hover:bg-charcoal hover:text-white transition-all duration-300 group"
+              >
+                <span>Nuestros productos</span>
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </AnimateOnScroll>
+        </div>
 
-                      {/* Duration Badge */}
-                      <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-charcoal/80 rounded-lg">
-                        <p className="font-heading text-white text-sm">02:45</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimateOnScroll>
+        {/* Video Column - Right */}
+        <div className="w-full lg:w-1/2 h-[40vh] lg:h-auto relative group order-1 lg:order-2">
+          <div 
+            className="w-full h-full bg-cover bg-center relative"
+            style={{ backgroundImage: `url(${sustainability})` }}
+          >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-charcoal/60 group-hover:bg-charcoal/50 transition-all duration-300" />
+            
+            {/* Play Button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 bg-white flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer">
+                <Play className="w-10 h-10 text-primary ml-1" strokeWidth={2} fill="currentColor" />
+              </div>
+            </div>
 
+            {/* Duration Badge */}
+            <div className="absolute bottom-6 right-6 px-4 py-2 bg-charcoal/80">
+              <p className="font-heading text-white text-sm">02:45</p>
             </div>
           </div>
         </div>
+
       </section>
       
     </Layout>

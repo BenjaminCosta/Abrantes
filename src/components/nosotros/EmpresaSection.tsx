@@ -2,12 +2,15 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import empresa1 from "@/assets/Empresa1.jpg";
 import empresa2 from "@/assets/unsplash/mushroom-faci.jpg";
 import hongos2 from "@/assets/hongos2.png";
-import { Building2, Users, Award } from "lucide-react";
+import { Building2, Users, Award, Leaf, Target, Shield } from "lucide-react";
 
 const highlights = [
   { icon: Building2, text: "Líderes en Latinoamérica" },
-  { icon: Users, text: "Más de 200 trabajadores especializados" },
+  { icon: Users, text: "+200 trabajadores especializados" },
   { icon: Award, text: "Modelo de cultivo holandés" },
+  { icon: Leaf, text: "Calidad premium garantizada" },
+  { icon: Target, text: "Desde 1983" },
+  { icon: Shield, text: "Certificaciones de calidad" },
 ];
 
 const EmpresaSection = () => {
@@ -26,7 +29,7 @@ const EmpresaSection = () => {
         <div className="max-w-7xl mx-auto">
           
           {/* Header */}
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-12 lg:mb-16">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-3">
                 <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
@@ -40,33 +43,24 @@ const EmpresaSection = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
             
-            {/* Text Content */}
+            {/* Text Content - Reducido */}
             <AnimateOnScroll animation="fade-right">
-              <div className="space-y-6">
-                <p className="text-lg text-charcoal/80 leading-relaxed">
-                  Champiñones Abrantes es una empresa especialista en el cultivo de champiñones blancos 
-                  para el mercado en fresco.
+              <div className="space-y-5">
+                <p className="text-lg text-charcoal/80 leading-relaxed font-medium">
+                  Especialistas en el cultivo de champiñones blancos para el mercado en fresco, 
+                  combinamos tradición familiar con innovación tecnológica.
                 </p>
                 <p className="text-base text-charcoal/70 leading-relaxed">
-                  La compañía fue creada y administrada familiarmente desde 1983 hasta el terremoto del 
-                  27 de Febrero del 2010. Luego, con el ingreso de nuevos socios se construyó una nueva 
-                  planta en la zona de Aculeo, la cual adoptó el <strong className="text-primary">modelo de cultivo Holandés</strong>.
+                  Fundada en 1983 y reinventada tras el terremoto de 2010, adoptamos el 
+                  <strong className="text-primary"> modelo de cultivo holandés</strong> con la última 
+                  tecnología disponible a nivel mundial.
                 </p>
                 <p className="text-base text-charcoal/70 leading-relaxed">
-                  En esta nueva construcción se incorporó lo último en metodologías y equipos disponibles 
-                  en el mundo para el cultivo del champiñón.
-                </p>
-                <p className="text-base text-charcoal/70 leading-relaxed">
-                  La empresa se preocupó de mantener a parte importante del personal. Hoy cuenta con más 
-                  de 200 trabajadores todos ellos de experiencia invaluable en el cultivo. Gracias a nuestro 
-                  capital humano y a la gran inversión tecnológica, <strong className="text-primary">Abrantes se posiciona 
-                  como una empresa líder en el cultivo de champiñones blancos en Latinoamérica</strong>.
-                </p>
-                <p className="text-base text-charcoal/70 leading-relaxed">
-                  Nuestros productos cuentan con las principales normas de certificación e higiene. Lo anterior 
-                  nos da garantía de poder entregar día a día la mejor calidad a los hogares de Chile.
+                  Nuestro equipo de más de 200 expertos y nuestra inversión en innovación nos 
+                  posicionan como <strong className="text-primary">líderes en Latinoamérica</strong>, 
+                  entregando calidad certificada a los hogares chilenos.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -74,7 +68,7 @@ const EmpresaSection = () => {
             {/* Image */}
             <AnimateOnScroll animation="fade-left" delay={100}>
               <div className="relative group">
-                <div className="aspect-[4/3] overflow-hidden shadow-2xl">
+                <div className="aspect-[4/3] overflow-hidden shadow-xl rounded-lg">
                   <img
                     src={empresa1}
                     alt="Instalaciones Abrantes"
@@ -86,33 +80,45 @@ const EmpresaSection = () => {
             </AnimateOnScroll>
           </div>
 
-          {/* Highlights */}
-          <AnimateOnScroll animation="fade-up" delay={200}>
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
-              {highlights.map((item, index) => (
-                <div 
-                  key={index}
-                  className="bg-secondary/30 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 text-center hover:bg-secondary/50 hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
-                >
-                  <item.icon className="w-10 h-10 text-primary mx-auto mb-3" strokeWidth={1.5} />
-                  <p className="text-sm md:text-base text-charcoal">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-
-          {/* Second Image - Full Width */}
-          <AnimateOnScroll animation="fade-up" delay={250}>
-            <div className="mt-16 relative overflow-hidden shadow-2xl max-w-5xl mx-auto">
-              <div className="aspect-[21/9]">
+          {/* Second Image Full Width con Highlights Overlay */}
+          <AnimateOnScroll animation="fade-up" delay={150}>
+            <div className="mt-12 relative overflow-hidden rounded-xl shadow-xl max-w-6xl mx-auto">
+              <div className="aspect-[21/8] lg:aspect-[21/7] relative">
                 <img
                   src={empresa2}
-                  alt="Planta Abrantes"
+                  alt="Planta de producción Abrantes"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent" />
+                
+                {/* Overlay para mejor legibilidad */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+                
+                {/* Highlights sobre la imagen */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4">
+                    {highlights.map((item, index) => (
+                      <div 
+                        key={index}
+                        className="bg-white/90 backdrop-blur-sm rounded-lg p-3 lg:p-4 text-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg"
+                      >
+                        <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary mx-auto mb-1 lg:mb-2" strokeWidth={1.5} />
+                        <p className="text-xs lg:text-sm font-medium text-charcoal leading-tight">
+                          {item.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Título sobre imagen */}
+                <div className="absolute top-6 left-6 lg:top-8 lg:left-8">
+                  <h3 className="font-heading text-xl lg:text-2xl text-white font-bold">
+                    Innovación y Tradición
+                  </h3>
+                  <p className="text-white/80 text-sm lg:text-base">
+                    Más de 40 años de excelencia
+                  </p>
+                </div>
               </div>
             </div>
           </AnimateOnScroll>

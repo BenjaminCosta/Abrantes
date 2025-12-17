@@ -1,6 +1,6 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Download, FileText, Globe } from "lucide-react";
-import hongos6 from "@/assets/hongos6.png";
+import hongos6 from "@/assets/hongos3.png";
 
 const documents = [
   {
