@@ -3,8 +3,8 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Link } from "react-router-dom";
 import mushroomsMacro from "@/assets/proceso/2..jpg";
 import mushroom4 from "@/assets/unsplash/mushrooms4.jpg";
-import empresa2 from "@/assets/unsplash/mushroom-faci2.jpg";
-import hongos3 from "@/assets/hongos3.png";
+import mushroom8 from "@/assets/unsplash/mushroom8.jpg";
+import hongos5 from "@/assets/hongos5.png";
 
 const ProcessSection = () => {
   return (
@@ -78,19 +78,70 @@ const ProcessSection = () => {
       </div>
     </section>
 
-    {/* Full Width Image Section - Empresa2 */}
-    <section className="relative overflow-hidden">
-      <AnimateOnScroll animation="fade-up">
-        <div className="relative w-full h-[280px] lg:h-[550px]">
-          <img
-            src={empresa2}
-            alt="Instalaciones Abrantes"
-            className="w-full h-full object-cover"
-          />
-          {/* Subtle overlay for elegance */}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent" />
+    {/* Full Width Premium Product Section */}
+    <section className="relative overflow-hidden bg-charcoal">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={mushroom8}
+          alt="Fondo de champiñones frescos"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-charcoal/60" />
+      </div>
+
+      <div className="relative w-full px-4 md:px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto py-12 md:py-16 lg:py-20">
+          <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[450px]">
+            
+            
+
+            {/* Text Content - Centered */}
+            <AnimateOnScroll animation="fade-up">
+              <div className="text-center max-w-3xl mx-auto space-y-6 px-4 md:px-8">
+                
+                {/* Main Title */}
+                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-bold uppercase tracking-tight leading-[1.1]">
+                  CONSUMO DIARIO,<br />
+                  CALIDAD NATURAL
+                </h2>
+
+                {/* Subtitle */}
+                <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-light italic">
+                  Champiñones frescos producidos bajo procesos controlados.
+                </p>
+
+                {/* Bullets */}
+                <div className="space-y-3 pt-4 max-w-2xl mx-auto">
+                  <p className="text-base md:text-lg text-white/85 leading-relaxed">
+                    + Producción continua durante todo el año.
+                  </p>
+                  <p className="text-base md:text-lg text-white/85 leading-relaxed">
+                    + Bajo en grasas y naturalmente nutritivo.
+                  </p>
+                  <p className="text-base md:text-lg text-white/85 leading-relaxed">
+                    + Calidad y frescura garantizadas.
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="pt-6">
+                  <Link
+                    to="/productos"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-charcoal font-sans text-base tracking-wide hover:bg-white/90 transition-all duration-300"
+                  >
+                    <span>Conocé nuestros productos</span>
+                    <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
+                  </Link>
+                </div>
+
+              </div>
+            </AnimateOnScroll>
+
+          </div>
         </div>
-      </AnimateOnScroll>
+
+      </div>
     </section>
     </>
   );

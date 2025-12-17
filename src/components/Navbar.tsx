@@ -63,8 +63,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-charcoal/5">
       
-      <div className="w-full px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
-        <div className="flex items-center justify-between h-24 lg:h-28">
+      <div className="w-full py-2 px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link 
             to="/" 
@@ -74,7 +74,7 @@ const Navbar = () => {
             <img 
               src={logoAbrantes} 
               alt="Abrantes - La calidad tiene nombre" 
-              className="h-16 lg:h-20 xl:h-22 w-auto"
+              className="h-12 md:h-14 lg:h-16 xl:h-[4.5rem] w-auto"
             />
           </Link>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
                     href={item.href || "/"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 text-charcoal/80 hover:text-abrantes-red group"
+                    className={`relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group `}
                   >
                     <span className="relative">
                       {item.label}
