@@ -73,7 +73,7 @@ const RecetasSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="recetas" className="py-32 md:py-40 lg:py-48 bg-beige/30 relative scroll-mt-28">
+    <section id="recetas" className="py-32 md:py-40 lg:py-48 bg-white relative scroll-mt-28">
       
       {/* Hongo decorativo sutil - z-0 para que no se corte */}
       <div className="absolute top-20 -right-20 opacity-3 pointer-events-none z-0">
@@ -91,7 +91,7 @@ const RecetasSection = () => {
           <div className="text-center mb-20 lg:mb-24">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-4">
-                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
+                <p className="text-primary/70 text-sm md:text-base tracking-wide font-sans">
                   Desarrolladas en conjunto con el
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">

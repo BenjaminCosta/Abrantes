@@ -6,13 +6,13 @@ import CertificacionesSection from "@/components/nosotros/CertificacionesSection
 import ResponsabilidadSection from "@/components/nosotros/ResponsabilidadSection";
 import CodigoEticaSection from "@/components/nosotros/CodigoEticaSection";
 import PoliticaSeguridadSection from "@/components/nosotros/PoliticaSeguridadSection";
-import empresa3 from "@/assets/trabaja_nosotros.jpg";
+import empresa3 from "@/assets/unsplash/mushroom8.jpg";
 
 const Nosotros = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
+      <section className="relative h-[580px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -23,7 +23,7 @@ const Nosotros = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative h-full flex items-center justify-center pb-20">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               

@@ -244,7 +244,7 @@ const RecetaDetalle = () => {
             {/* Header */}
             <div className="text-center mb-12 lg:mb-16">
               <AnimateOnScroll animation="fade-up">
-                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-3">
+                <p className="text-primary/70 text-sm md:text-base tracking-wide mb-3 font-sans">
                   Recetas
                 </p>
                 <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-4">

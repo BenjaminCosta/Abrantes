@@ -35,7 +35,7 @@ const CanalDenuncias = () => {
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <p className="font-accent italic text-xl text-cream/75 max-w-2xl">
+            <p className="text-xl text-cream/75 font-sans max-w-2xl">
               Un espacio seguro y confidencial para reportar irregularidades
             </p>
           </AnimateOnScroll>

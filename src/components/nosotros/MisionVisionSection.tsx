@@ -4,14 +4,13 @@ import hongos3 from "@/assets/hongos3.png";
 
 const MisionVisionSection = () => {
   return (
-    <section id="mision-vision" className="py-20 md:py-24 lg:py-28 bg-gradient-to-br from-secondary via-secondary/95 to-beige relative overflow-hidden scroll-mt-24">
+    <section id="mision-vision" className="py-20 md:py-24 lg:py-28 bg-cream relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
       <div className="absolute -bottom-16 -left-16 z-0 opacity-8">
         <img 
           src={hongos3} 
           alt="" 
           className="w-80 h-80 lg:w-[450px] lg:h-[450px] object-contain transform rotate-12"
-          style={{ filter: 'hue-rotate(80deg) saturate(1.2)' }}
         />
       </div>
 
@@ -22,7 +21,7 @@ const MisionVisionSection = () => {
           <div className="text-center mb-16 lg:mb-20">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-3">
-                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
+                <p className="text-primary/70 text-sm md:text-base tracking-wide font-sans">
                   Nuestro Propósito
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">

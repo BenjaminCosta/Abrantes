@@ -16,7 +16,7 @@ const Sustentabilidad = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
+      <section className="relative h-[580px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -27,7 +27,7 @@ const Sustentabilidad = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative h-full flex items-center justify-center pb-20">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -115,7 +115,7 @@ const Sustentabilidad = () => {
       </section>
 
       {/* Indicadores que Transforman 2024 - Clean Beige Background */}
-      <section className="py-32 md:py-40 lg:py-48 bg-beige/30 relative">
+      <section className="py-32 md:py-40 lg:py-48 bg-cream relative">
         <div className="w-full px-4 md:px-6 lg:px-12 relative">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -176,7 +176,7 @@ const Sustentabilidad = () => {
       </section>
 
       {/* Reportes de Sustentabilidad Section */}
-      <section className="py-32 md:py-40 lg:py-48 bg-white relative">
+      <section className="py-32 md:py-40 lg:py-48 bg-white relative overflow-y-hidden">
         
         {/* Hongo decorativo sutil - z-0 para que no se corte */}
         <div className="absolute -bottom-10 -right-10 opacity-3 pointer-events-none z-0">
@@ -386,7 +386,7 @@ const Sustentabilidad = () => {
       </section>
 
       {/* Energía Limpia Section - Clean Background */}
-      <section className="py-32 md:py-40 lg:py-48 bg-beige/30 relative">
+      <section className="py-32 md:py-40 lg:py-48 bg-cream relative">
         <div className="w-full px-4 md:px-6 lg:px-12 relative">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">

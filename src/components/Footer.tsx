@@ -57,7 +57,7 @@ const Footer = () => {
                   <p className="font-heading text-white text-sm">
                     Empresa Certificada
                   </p>
-                  <p className="font-accent italic text-white/60 text-xs">
+                  <p className="text-white/60 text-xs font-sans">
                     Sistema B
                   </p>
                 </div>

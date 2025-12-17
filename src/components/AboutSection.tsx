@@ -15,7 +15,7 @@ const menuItems = [
 
 const AboutSection = () => {
   return (
-    <section className="py-32 md:py-40 lg:py-48 bg-white relative overflow-hidden">
+    <section className="py-32 md:py-40 lg:py-48 bg-cream relative overflow-hidden">
       
       {/* Hongos decorativo sutil - solo 1 */}
       <div className="absolute -bottom-20 -right-20 opacity-4 pointer-events-none">

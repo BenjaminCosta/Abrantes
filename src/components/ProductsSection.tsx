@@ -23,7 +23,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section className="py-32 md:py-40 lg:py-48 bg-beige/30 relative overflow-y-hidden">
+    <section className="py-32 md:py-40 lg:py-48 bg-white relative overflow-y-hidden">
       
       {/* Hongo decorativo sutil - z-0 para que no se corte */}
       <div className="absolute -bottom-20 -right-20 opacity-3 pointer-events-none z-0">

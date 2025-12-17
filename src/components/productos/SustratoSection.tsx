@@ -6,7 +6,7 @@ import hongos3 from "@/assets/hongos3.png";
 
 const SustratoSection = () => {
   return (
-    <section id="sustrato" className="py-32 md:py-40 lg:py-48 bg-beige/30 relative scroll-mt-28">
+    <section id="sustrato" className="py-32 md:py-40 lg:py-48 bg-cream relative scroll-mt-28">
       
       {/* Hongo decorativo sutil - z-0 para que no se corte */}
       <div className="absolute top-1/2 -translate-y-1/2 -right-20 opacity-3 pointer-events-none z-0">

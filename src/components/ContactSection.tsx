@@ -31,7 +31,7 @@ const ContactSection = () => {
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
             Contacto
           </h2>
-          <p className="font-accent italic text-lg md:text-xl text-primary max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-primary font-sans max-w-2xl mx-auto">
             Estamos aquí para atenderte
           </p>
         </div>

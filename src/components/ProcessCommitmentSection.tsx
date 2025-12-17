@@ -28,7 +28,8 @@ const ProcessCommitmentSection = () => {
                 <img 
                   src={abrantesLogo} 
                   alt="Abrantes Premium Design" 
-                  className="w-64 md:w-80 lg:w-96 h-auto opacity-90"
+                  className="w-80 md:w-96 lg:w-[500px] xl:w-[600px] h-auto"
+                  style={{ filter: 'brightness(0) saturate(100%) invert(93%) sepia(8%) saturate(387%) hue-rotate(347deg) brightness(103%) contrast(92%)' }}
                 />
               </div>
             </AnimateOnScroll>
@@ -42,7 +43,7 @@ const ProcessCommitmentSection = () => {
                     Enfoque en proceso y consistencia
                   </h2>
                   
-                  <p className="font-heading text-xl md:text-2xl text-white/90 italic">
+                  <p className="text-xl md:text-2xl text-white/90 font-sans">
                     Calidad que no depende del azar.
                   </p>
                 </div>
@@ -50,7 +51,7 @@ const ProcessCommitmentSection = () => {
 
               <AnimateOnScroll animation="fade-left" delay={100}>
                 <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-                  En Abrantes trabajamos con <strong>procesos controlados</strong> y <span className="font-accent italic">producción continua</span>, garantizando frescura, seguridad y un estándar constante en cada entrega.
+                  En Abrantes trabajamos con <strong>procesos controlados</strong> y producción continua, garantizando frescura, seguridad y un estándar constante en cada entrega.
                 </p>
               </AnimateOnScroll>
 

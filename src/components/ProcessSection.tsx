@@ -32,7 +32,7 @@ const ProcessSection = () => {
 
               <AnimateOnScroll animation="fade-up" delay={100}>
                 <p className="text-lg text-charcoal/75 leading-relaxed">
-                  <span className="font-accent italic">Compostaje, cultivo, cosecha y envasado</span>, con <strong>trazabilidad total</strong>.
+                  Compostaje, cultivo, cosecha y envasado, con <strong>trazabilidad total</strong>.
                 </p>
               </AnimateOnScroll>
 

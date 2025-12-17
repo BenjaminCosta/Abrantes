@@ -6,8 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import contactoImg from "@/assets/contacto.jpg";
+import contactoImg from "@/assets/trabaja_nosotros.jpg";
 import empresa1 from "@/assets/Empresa1.jpg";
+import mushroomBg from "@/assets/unsplash/mushroom-faci3.jpg";
 
 const Contacto = () => {
   const { toast } = useToast();
@@ -29,7 +30,7 @@ const Contacto = () => {
   return (
     <Layout>
       {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[680px] overflow-hidden pt-24 lg:pt-28">
+      <section className="relative h-[580px] overflow-hidden pt-24 lg:pt-28">
         {/* Background Image - Full Height including Navbar */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -40,7 +41,7 @@ const Contacto = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
         
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative h-full flex items-center justify-center pb-20">
           <div className="w-full px-4 md:px-6 lg:px-12">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -67,7 +68,7 @@ const Contacto = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             
@@ -189,6 +190,65 @@ const Contacto = () => {
               </AnimateOnScroll>
 
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección Contacto Institucional */}
+      <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${mushroomBg})` }}
+        />
+        
+        {/* Overlay suave */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Content Container */}
+        <div className="relative w-full px-4 md:px-6 lg:px-12">
+          <div className="max-w-2xl mx-auto">
+            
+            {/* White Card */}
+            <AnimateOnScroll animation="fade-up">
+              <div className="bg-white px-8 md:px-12 lg:px-16 py-10 md:py-14 lg:py-16 shadow-xl">
+                
+                {/* Título - Mayúsculas sin negrita */}
+                <h2 className="font-heading text-2xl md:text-3xl text-charcoal text-center mb-6 tracking-wider uppercase">
+                  Contacto institucional
+                </h2>
+
+                {/* Texto descriptivo */}
+                <p className="text-base md:text-lg text-charcoal/70 text-center leading-relaxed mb-10 max-w-xl mx-auto">
+                  Estamos disponibles para consultas comerciales, información sobre nuestros productos y alianzas estratégicas.
+                </p>
+
+                {/* Datos de contacto - Sin emojis ni iconos */}
+                <div className="space-y-3 mb-10 text-center">
+                  <p className="text-base text-charcoal/80">
+                    RESERVA PERALILLO, HIJUELA 4 Y 5, PAINE
+                  </p>
+                  <p className="text-base text-charcoal/80">
+                    +56222158858
+                  </p>
+                  <p className="text-base text-charcoal/80">
+                    PGARATE@ABRANTES.CL
+                  </p>
+                </div>
+
+                {/* CTA - Outline */}
+                <div className="text-center">
+                  <a
+                    href="#contacto"
+                    className="inline-flex items-center gap-3 px-10 py-4 bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white font-sans text-base tracking-wide transition-all duration-300"
+                  >
+                    Enviar consulta
+                  </a>
+                </div>
+
+              </div>
+            </AnimateOnScroll>
+
           </div>
         </div>
       </section>
