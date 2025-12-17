@@ -1,8 +1,7 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import empresa3 from "@/assets/Empresa3.jpg";
-import hongos1 from "@/assets/hongos1.png";
+import hongos1 from "@/assets/hongos10.jpg";
 
 const menuItems = [
   { label: "Empresa", href: "/nosotros" },
@@ -15,18 +14,9 @@ const menuItems = [
 
 const AboutSection = () => {
   return (
-    <section className="py-32 md:py-40 lg:py-48 bg-cream relative overflow-hidden">
+    <section className="py-32 md:py-32 lg:py-40 bg-white relative overflow-hidden">
       
-      {/* Hongos decorativo sutil - solo 1 */}
-      <div className="absolute -bottom-20 -right-20 opacity-4 pointer-events-none">
-        <img 
-          src={hongos1} 
-          alt="" 
-          className="w-[400px] h-[400px] object-contain"
-        />
-      </div>
-
-      <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
+      <div className="w-full px-4 md:px-6 lg:px-12 md:pb-12 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             
@@ -58,7 +48,7 @@ const AboutSection = () => {
                     <AnimateOnScroll key={item.label} animation="fade-right" delay={index * 50}>
                       <Link
                         to={item.href}
-                        className="group flex items-center justify-between py-4 px-6 rounded-xl hover:bg-white/40 transition-all duration-300 border-l-4 border-transparent hover:border-primary"
+                        className="group flex items-center justify-between py-4 px-6 rounded-xl hover:bg-cream/50 transition-all duration-300 border-l-4 border-transparent hover:border-primary"
                       >
                         <span className="font-heading text-lg md:text-xl text-charcoal/70 group-hover:text-primary font-medium transition-colors duration-300">
                           {item.label}
@@ -74,6 +64,16 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Imagen de hongos abajo ocupando todo el ancho - como en la referencia */}
+      <div className="absolute -bottom-16 left-0 right-0 h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden z-0">
+        <img 
+          src={hongos1} 
+          alt="Hongos decorativos" 
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
     </section>
   );
 };

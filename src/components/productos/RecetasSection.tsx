@@ -91,7 +91,7 @@ const RecetasSection = () => {
           <div className="text-center mb-20 lg:mb-24">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-4">
-                <p className="text-primary/70 text-sm md:text-base tracking-wide font-sans">
+                <p className="text-primary/70 text-sm md:text-base tracking-wide font-accent italic">
                   Desarrolladas en conjunto con el
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">

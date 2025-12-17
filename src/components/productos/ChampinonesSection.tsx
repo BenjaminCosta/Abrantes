@@ -1,6 +1,4 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { Package } from "lucide-react";
-import hongos1 from "@/assets/hongos1.png";
 import hongos2 from "@/assets/hongos2.png";
 import blanco200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
 import blanco400g from "@/assets/productos/Champiñon-Blanco-400-gramos.jpg";
@@ -12,37 +10,37 @@ import blancoGrandeGranel from "@/assets/productos/Champiñon-Blanco-granel-gran
 
 const productos = [
   {
-    nombre: "Champiñón Blanco",
+    nombre: "CHAMPIÑÓN BLANCO",
     formato: "200 gramos",
     image: blanco200g,
   },
   {
-    nombre: "Champiñón Blanco",
+    nombre: "CHAMPIÑÓN BLANCO",
     formato: "400 gramos",
     image: blanco400g,
   },
   {
-    nombre: "Champiñón Blanco",
-    formato: "Royal clamshell (8 unidades)",
+    nombre: "CHAMPIÑÓN BLANCO",
+    formato: "Royal clamshell",
     image: blancoRoyal,
   },
   {
-    nombre: "Champiñón Blanco",
+    nombre: "CHAMPIÑÓN BLANCO",
     formato: "Clamshell 1.5 KG",
     image: blancoClamshell,
   },
   {
-    nombre: "Champiñón Blanco",
-    formato: "Granel primera selección",
+    nombre: "CHAMPIÑÓN BLANCO",
+    formato: "Primera selección",
     image: blancoPrimera,
   },
   {
-    nombre: "Champiñón Blanco",
-    formato: "Granel segunda selección",
+    nombre: "CHAMPIÑÓN BLANCO",
+    formato: "Segunda selección",
     image: blancoSegunda,
   },
   {
-    nombre: "Champiñón Blanco",
+    nombre: "CHAMPIÑÓN BLANCO",
     formato: "Granel Royal",
     image: blancoGrandeGranel,
   },
@@ -54,18 +52,18 @@ const ChampinonesSection = () => {
       {/* Anchor for Procesos (same section) */}
       <div id="procesos" className="absolute top-0" />
       
-      <div className="absolute bottom-0 -right-24 opacity-3 pointer-events-none z-0">
+      <div className="absolute bottom-0 -right-24 opacity-5 pointer-events-none z-0">
         <img 
           src={hongos2} 
           alt="" 
-          className="w-[450px] h-[450px] object-contain transform -rotate-12"
+          className="w-[400px] h-[400px] object-contain transform -rotate-12"
         />
       </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
           
-          {/* Header */}
+          {/* Header - Manteniendo el estilo original */}
           <div className="text-center mb-16 lg:mb-20">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-3">
@@ -82,40 +80,49 @@ const ChampinonesSection = () => {
             </AnimateOnScroll>
           </div>
 
-          {/* Products Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Products Grid - 4 columnas en desktop (2 filas con 4 + 3 centrados) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
             {productos.map((producto, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 50}>
-                <div className="group bg-white border border-primary/10 overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-500 hover:-translate-y-2">
-                  {/* Image */}
-                  <div className="aspect-[4/3] overflow-hidden">
+                <div className="group bg-transparent hover:bg-cream/20 transition-all duration-300 p-2 md:p-3">
+                  {/* Imagen minimalista - más grande */}
+                  <div className="aspect-square overflow-hidden mb-3 bg-transparent">
                     <img
                       src={producto.image}
                       alt={`${producto.nombre} ${producto.formato}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Package className="w-5 h-5 text-primary" strokeWidth={2} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-heading text-xl text-charcoal font-bold mb-1">
-                          {producto.nombre}
-                        </h3>
-                        <p className="text-base text-charcoal/60">
-                          {producto.formato}
-                        </p>
-                      </div>
+                  {/* Contenido minimalista */}
+                  <div>
+                    <div className="flex flex-col items-center text-center space-y-1">
+                      <h3 className="text-xs font-sans font-medium text-charcoal/80 uppercase tracking-wide leading-tight">
+                        {producto.nombre}
+                      </h3>
+                      <p className="text-[10px] sm:text-xs text-charcoal/50 font-normal leading-tight">
+                        {producto.formato}
+                      </p>
                     </div>
                   </div>
                 </div>
               </AnimateOnScroll>
             ))}
+            
+            {/* Espaciador para centrar la segunda fila de 3 productos */}
+            <div className="hidden lg:block"></div>
           </div>
+
+          {/* Nota informativa */}
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="mt-16 text-center">
+              <div className="inline-block px-4 py-2">
+                <p className="text-xs text-charcoal/40">
+                  Productos disponibles en múltiples formatos para retail y gastronomía profesional
+                </p>
+              </div>
+            </div>
+          </AnimateOnScroll>
 
         </div>
       </div>

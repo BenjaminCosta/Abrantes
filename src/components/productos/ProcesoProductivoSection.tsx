@@ -1,6 +1,6 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Factory, Thermometer, Sprout, Eye, Flower2, Scissors, Package } from "lucide-react";
-import hongos3 from "@/assets/hongos3.png";
+import hongos3 from "@/assets/hongos9.webp";
 import proceso1 from "@/assets/proceso/1..jpg";
 import proceso2 from "@/assets/proceso/2..jpg";
 import proceso3 from "@/assets/proceso/3..jpg";
@@ -63,76 +63,76 @@ const ProcesoProductivoSection = () => {
   ];
 
   return (
-    <section id="procesos" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-y-hidden">
+    <section id="procesos" className="py-16 md:py-20 lg:py-24 bg-white relative overflow-y-hidden">
       
       {/* Hongo decorativo sutil */}
       <div className="absolute -bottom-10 -left-20 z-0 opacity-3 pointer-events-none">
         <img 
           src={hongos3} 
           alt="" 
-          className="w-[500px] h-[500px] object-contain"
+          className="w-[400px] h-[400px] object-contain"
         />
       </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           
-          {/* Header */}
-          <div className="text-center mb-16 lg:mb-20">
+          {/* Header más compacto */}
+          <div className="text-center mb-12 lg:mb-16">
             <AnimateOnScroll animation="fade-up">
-              <div className="space-y-3">
-                <p className="text-primary/70 text-sm md:text-base tracking-wide font-sans">
+              <div className="space-y-2">
+                <p className="text-primary/70 text-sm tracking-wide font-accent italic">
                   Excelencia en Cada Paso
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
+                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-charcoal font-bold leading-tight">
                   Proceso <span className="font-accent italic text-primary">Productivo.</span>
                 </h2>
               </div>
             </AnimateOnScroll>
           </div>
 
-          {/* Process Steps - Editorial Layout */}
-          <div className="space-y-12 lg:space-y-16">
+          {/* Process Steps - Más compacto */}
+          <div className="space-y-10 lg:space-y-12">
             {processSteps.map((step, index) => (
               <AnimateOnScroll 
                 key={index} 
                 animation={index % 2 === 0 ? "fade-right" : "fade-left"} 
-                delay={50}
+                delay={30}
               >
-                <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                <div className={`grid lg:grid-cols-2 gap-6 lg:gap-10 items-center ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}>
                   
-                  {/* Content */}
+                  {/* Content más compacto */}
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="bg-cream/30 border border-charcoal/10 rounded-3xl p-8 lg:p-10 hover:bg-cream/50 hover:border-primary/20 hover:shadow-xl transition-all duration-500 group">
-                      <div className="flex items-start gap-4 mb-6">
-                        <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
-                          <step.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                    <div className="bg-cream/20 border border-charcoal/5 rounded-2xl p-6 lg:p-8 hover:bg-cream/40 hover:border-primary/15 hover:shadow-lg transition-all duration-500 group">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors duration-300">
+                          <step.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
                         </div>
-                        <span className="font-heading text-5xl lg:text-6xl font-bold text-primary/15 group-hover:text-primary/25 transition-colors duration-300">
+                        <span className="font-heading text-4xl lg:text-5xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors duration-300">
                           {step.number}
                         </span>
                       </div>
                       
-                      <h3 className="font-heading text-2xl lg:text-3xl text-charcoal font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                      <h3 className="font-heading text-xl lg:text-2xl text-charcoal font-bold mb-3 group-hover:text-primary transition-colors duration-300">
                         {step.title}
                       </h3>
                       
-                      <p className="text-base lg:text-lg text-charcoal/70 leading-relaxed">
+                      <p className="text-sm lg:text-base text-charcoal/60 leading-relaxed">
                         {step.description}
                       </p>
 
-                      {/* Step indicator */}
-                      <div className="mt-6 pt-6 border-t border-primary/10">
-                        <div className="flex items-center gap-3">
-                          <div className="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                      {/* Step indicator más pequeño */}
+                      <div className="mt-4 pt-4 border-t border-primary/10">
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-1 bg-primary/10 rounded-full overflow-hidden">
                             <div 
-                              className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-700 group-hover:w-full"
+                              className="h-full bg-gradient-to-r from-primary to-primary/80 rounded-full transition-all duration-500 group-hover:w-full"
                               style={{ width: `${((index + 1) / processSteps.length) * 100}%` }}
                             />
                           </div>
-                          <span className="font-heading text-sm text-primary/60 font-semibold">
+                          <span className="font-heading text-xs text-primary/50 font-medium">
                             {index + 1}/{processSteps.length}
                           </span>
                         </div>
@@ -140,29 +140,36 @@ const ProcesoProductivoSection = () => {
                     </div>
                   </div>
 
-                  {/* Image */}
+                  {/* Image con bordes orgánicos irregulares */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
-                    <div className="relative group/img">
-                      <div className="aspect-[4/3] overflow-hidden shadow-2xl border border-charcoal/10">
-                        <img
-                          src={step.image}
-                          alt={step.title}
-                          className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40 group-hover/img:opacity-20 transition-opacity duration-500" />
+                    <div className="relative group/img transition-transform duration-700 hover:scale-105">
+                      {/* Contenedor con forma orgánica irregular */}
+                      <div className="relative aspect-[4/3]">
+                        {/* Fondo decorativo para crear el efecto de borde orgánico */}
+                        <div className="absolute -inset-3 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-[40%_60%_70%_30%_/_40%_50%_60%_70%] transform rotate-1" />
                         
-                        {/* Floating step number on image */}
-                        <div className="absolute top-6 left-6 w-16 h-16 bg-white/95 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg">
-                          <span className="font-heading text-2xl font-bold text-primary">
-                            {step.number}
-                          </span>
+                        {/* Contenedor principal de la imagen con clip-path orgánico */}
+                        <div className="relative w-full h-full overflow-hidden rounded-[35%_65%_65%_35%_/_45%_55%_45%_55%] shadow-lg border border-charcoal/5">
+                          <img
+                            src={step.image}
+                            alt={step.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-tr from-charcoal/15 via-transparent to-primary/10 group-hover/img:from-charcoal/10 transition-colors duration-500" />
+                          
+                          {/* Floating step number on image - adaptado a la forma */}
+                          <div className="absolute top-4 left-4 w-12 h-12 bg-white/95 backdrop-blur-sm rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] flex items-center justify-center shadow-md">
+                            <span className="font-heading text-lg font-bold text-primary">
+                              {step.number}
+                            </span>
+                          </div>
                         </div>
+                        
+                        {/* Elementos decorativos para acentuar la forma */}
+                        <div className={`absolute -z-10 w-56 h-56 bg-primary/5 rounded-full blur-xl transition-all duration-500 group-hover/img:bg-primary/10 ${
+                          index % 2 === 0 ? '-bottom-6 -right-6' : '-top-6 -left-6'
+                        }`} />
                       </div>
-                      
-                      {/* Decorative elements */}
-                      <div className={`absolute -z-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl transition-all duration-700 group-hover/img:bg-primary/10 ${
-                        index % 2 === 0 ? '-bottom-12 -right-12' : '-top-12 -left-12'
-                      }`} />
                     </div>
                   </div>
 
@@ -170,21 +177,6 @@ const ProcesoProductivoSection = () => {
               </AnimateOnScroll>
             ))}
           </div>
-
-          {/* Final CTA */}
-          <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="mt-20 lg:mt-24 text-center max-w-3xl mx-auto">
-              <div className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/10">
-                <h3 className="font-heading text-2xl lg:text-3xl text-white font-bold mb-4">
-                  Tecnología de Punta y Procesos Controlados
-                </h3>
-                <p className="text-white/90 text-base lg:text-lg leading-relaxed">
-                  Nuestras instalaciones de última generación garantizan la máxima calidad en cada etapa del proceso productivo, 
-                  combinando innovación tecnológica con el compromiso de excelencia que nos caracteriza.
-                </p>
-              </div>
-            </div>
-          </AnimateOnScroll>
 
         </div>
       </div>

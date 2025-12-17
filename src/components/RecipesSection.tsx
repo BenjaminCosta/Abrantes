@@ -90,7 +90,7 @@ const RecipesSection = () => {
             <div className="text-center">
               <Link 
                 to="/recetas"
-                className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white font-sans text-base tracking-wide transition-all duration-300 shadow-sm hover:shadow-md"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-cream text-primary border-2 border-primary hover:bg-primary hover:text-white font-sans text-base tracking-wide transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <span>Ver todas las recetas</span>
                 <ArrowRight className="w-5 h-5" strokeWidth={2} />

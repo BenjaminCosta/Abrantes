@@ -1,7 +1,7 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import empresa1 from "@/assets/Empresa1.jpg";
 import empresa2 from "@/assets/unsplash/mushroom-faci.jpg";
-import hongos2 from "@/assets/hongos2.png";
+import hongos2 from "@/assets/hongos11.webp";
 import { Building2, Users, Award, Leaf, Target, Shield } from "lucide-react";
 
 const highlights = [
@@ -15,7 +15,7 @@ const highlights = [
 
 const EmpresaSection = () => {
   return (
-    <section id="empresa" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
+    <section id="empresa" className="pt-20 md:pt-24 lg:pt-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
       <div className="absolute -top-20 -right-20 z-0 opacity-6">
         <img 
@@ -45,10 +45,10 @@ const EmpresaSection = () => {
           {/* Content Grid */}
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
             
-            {/* Text Content - Reducido */}
+            {/* Text Content - Consistente */}
             <AnimateOnScroll animation="fade-right">
-              <div className="space-y-5">
-                <p className="text-lg text-charcoal/80 leading-relaxed font-medium">
+              <div className="space-y-6">
+                <p className="text-base text-charcoal/70 leading-relaxed">
                   Especialistas en el cultivo de champiñones blancos para el mercado en fresco, 
                   combinamos tradición familiar con innovación tecnológica.
                 </p>
@@ -65,66 +65,83 @@ const EmpresaSection = () => {
               </div>
             </AnimateOnScroll>
 
-            {/* Image */}
+            {/* Image con efecto de borde irregular orgánico */}
             <AnimateOnScroll animation="fade-left" delay={100}>
               <div className="relative group">
-                <div className="aspect-[4/3] overflow-hidden shadow-xl rounded-lg">
-                  <img
-                    src={empresa1}
-                    alt="Instalaciones Abrantes"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-charcoal/20 via-transparent to-primary/10" />
+                {/* Contenedor con forma orgánica irregular */}
+                <div className="relative aspect-[4/3]">
+                  {/* Fondo decorativo para crear el efecto de borde orgánico */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-[40%_60%_70%_30%_/_40%_50%_60%_70%] transform rotate-2" />
+                  
+                  {/* Contenedor principal de la imagen con clip-path orgánico */}
+                  <div className="relative w-full h-full overflow-hidden rounded-[35%_65%_65%_35%_/_45%_55%_45%_55%] shadow-xl">
+                    <img
+                      src={empresa1}
+                      alt="Instalaciones Abrantes"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-charcoal/15 via-transparent to-primary/10" />
+                  </div>
+                  
+                  {/* Elementos decorativos adicionales para acentuar la forma */}
+                  <div className="absolute -top-3 -right-3 w-16 h-16 bg-primary/10 rounded-full blur-sm" />
+                  <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-accent/10 rounded-full blur-sm" />
+                  
+                  {/* Efecto de brillo sutil */}
+                  <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full blur-2xl" />
                 </div>
               </div>
             </AnimateOnScroll>
           </div>
 
-          {/* Second Image Full Width con Highlights Overlay */}
-          <AnimateOnScroll animation="fade-up" delay={150}>
-            <div className="mt-12 relative overflow-hidden rounded-xl shadow-xl max-w-6xl mx-auto">
-              <div className="aspect-[21/8] lg:aspect-[21/7] relative">
-                <img
-                  src={empresa2}
-                  alt="Planta de producción Abrantes"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Overlay para mejor legibilidad */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-                
-                {/* Highlights sobre la imagen */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4">
-                    {highlights.map((item, index) => (
-                      <div 
-                        key={index}
-                        className="bg-white/90 backdrop-blur-sm rounded-lg p-3 lg:p-4 text-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg"
-                      >
-                        <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary mx-auto mb-1 lg:mb-2" strokeWidth={1.5} />
-                        <p className="text-xs lg:text-sm font-medium text-charcoal leading-tight">
-                          {item.text}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Título sobre imagen */}
-                <div className="absolute top-6 left-6 lg:top-8 lg:left-8">
-                  <h3 className="font-heading text-xl lg:text-2xl text-white font-bold">
-                    Innovación y Tradición
-                  </h3>
-                  <p className="text-white/80 text-sm lg:text-base">
-                    Más de 40 años de excelencia
-                  </p>
+        </div>
+      </div>
+
+      {/* Second Image Full Width sin padding bottom */}
+      <AnimateOnScroll animation="fade-up" delay={150}>
+        <div className="relative w-full mt-12">
+          <div className="aspect-[21/8] lg:aspect-[21/7] relative">
+            <img
+              src={empresa2}
+              alt="Planta de producción Abrantes"
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Overlay para mejor legibilidad */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+            
+            {/* Highlights sobre la imagen */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+              <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4">
+                  {highlights.map((item, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white/90 backdrop-blur-sm rounded-lg p-3 lg:p-4 text-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg"
+                    >
+                      <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary mx-auto mb-1 lg:mb-2" strokeWidth={1.5} />
+                      <p className="text-xs lg:text-sm font-medium text-charcoal leading-tight">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </AnimateOnScroll>
-
+            
+            {/* Título sobre imagen */}
+            <div className="absolute top-6 left-4 md:left-6 lg:top-8 lg:left-8">
+              <h3 className="font-heading text-xl lg:text-2xl text-white font-bold">
+                Innovación y Tradición
+              </h3>
+              <p className="text-white/80 text-sm lg:text-base">
+                Más de 40 años de excelencia
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </AnimateOnScroll>
+
     </section>
   );
 };

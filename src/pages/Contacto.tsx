@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Send, User, MessageSquare, Building } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import contactoImg from "@/assets/trabaja_nosotros.jpg";
+import contactoImg from "@/assets/unsplash/mush1.jpg";
 import mushroomBg from "@/assets/unsplash/mushroom-faci3.jpg";
 
 const Contacto = () => {
@@ -31,43 +31,58 @@ const Contacto = () => {
 
   return (
     <Layout>
-      {/* Hero Section con Imagen de Fondo */}
-      <section className="relative h-[580px] overflow-hidden pt-24 lg:pt-28">
-        {/* Background Image - Full Height including Navbar */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${contactoImg})` }}
-        />
+      {/* Hero Section con Imagen de Fondo y Ondas */}
+<section className="relative h-[580px] overflow-hidden pt-24 lg:pt-28">
+  {/* Background Image - Full Height including Navbar */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: `url(${contactoImg})` }}
+  />
+  
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
+  
+ {/* Ondas Blancas Superiores - Variante Moderna */}
+<div className="absolute top-0 left-0 right-0 h-32">
+  <svg 
+    viewBox="0 0 1200 120" 
+    preserveAspectRatio="none" 
+    className="w-full h-full"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path 
+      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
+      fill="white"
+    />
+  </svg>
+</div>
+  
+  {/* Content */}
+  <div className="relative h-full flex items-center justify-center pb-20">
+    <div className="w-full px-4 md:px-6 lg:px-12">
+      <div className="max-w-4xl mx-auto text-center">
         
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/20" />
-        
-        {/* Content */}
-        <div className="relative h-full flex items-center justify-center pb-20">
-          <div className="w-full px-4 md:px-6 lg:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-              
-              <AnimateOnScroll animation="fade-up">
-                {/* Simple Top Line - Centered */}
-                <div className="mb-6 flex justify-center">
-                  <div className="h-1 w-44 bg-white" />
-                </div>
-
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
-                  Contacto
-                </h1>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll animation="fade-up" delay={100}>
-                <p className="font-accent italic text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto">
-                  Estamos aquí para atenderte
-                </p>
-              </AnimateOnScroll>
-
-            </div>
+        <AnimateOnScroll animation="fade-up">
+          {/* Simple Top Line - Centered */}
+          <div className="mb-6 flex justify-center">
+            <div className="h-1 w-44 bg-white" />
           </div>
-        </div>
-      </section>
+
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
+            Contacto
+          </h1>
+        </AnimateOnScroll>
+
+        <AnimateOnScroll animation="fade-up" delay={100}>
+          <p className="font-accent italic text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto">
+            Estamos aquí para atenderte
+          </p>
+        </AnimateOnScroll>
+
+      </div>
+    </div>
+  </div>
+</section>
       {/* Formulario Mejorado - Nueva sección separada */}
       <section id="formulario-contacto" className="section-padding bg-cream/20">
         <div className="container mx-auto px-4">

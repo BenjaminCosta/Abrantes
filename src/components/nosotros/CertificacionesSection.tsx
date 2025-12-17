@@ -5,14 +5,6 @@ import hongos4 from "@/assets/hongos4.png";
 const CertificacionesSection = () => {
   return (
     <section id="certificaciones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background */}
-      <div className="absolute hidden md:block top-1/2 -translate-y-1/2 -right-24 z-0 opacity-6">
-        <img 
-          src={hongos4} 
-          alt="" 
-          className="w-[500px] h-[500px] lg:w-[600px] lg:h-[600px] object-contain"
-        />
-      </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">
