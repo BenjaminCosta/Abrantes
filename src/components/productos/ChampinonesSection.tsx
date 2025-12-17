@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import hongos2 from "@/assets/hongos9.webp";
+import hongos2 from "@/assets/hongos12.webp";
 import blanco200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
 import blanco400g from "@/assets/productos/Champiñon-Blanco-400-gramos.jpg";
 import blancoRoyal from "@/assets/productos/Champiñon-Blanco-Royal-clamshell.jpg";
@@ -57,10 +57,9 @@ const ChampinonesSection = () => {
           className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform -rotate-12"
         />
       </div>
-      {/* Anchor for Procesos (same section) */}
-      <div id="procesos" className="absolute top-0" />
+    
       
-      <div className="absolute bottom-0 -right-24 opacity-5 pointer-events-none z-0">
+      <div className="absolute bottom-10 -right-24 opacity-5 pointer-events-none z-0">
         <img 
           src={hongos2} 
           alt="" 

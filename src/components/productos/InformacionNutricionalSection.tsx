@@ -81,7 +81,7 @@ const minerales = [
 
 const InformacionNutricionalSection = () => {
   return (
-    <section id="informacion-nutricional" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
+    <section id="informacion-nutricional" className="py-28 md:py-36 lg:py-40 bg-white relative overflow-hidden scroll-mt-24">
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
