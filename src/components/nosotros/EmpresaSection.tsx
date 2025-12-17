@@ -2,6 +2,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 import empresa1 from "@/assets/Empresa1.jpg";
 import empresa2 from "@/assets/unsplash/mushroom-faci.jpg";
 import hongos2 from "@/assets/hongos11.webp";
+import abrantesLogo from "@/assets/abrantes_logo2.png";
 import { Building2, Users, Award, Leaf, Target, Shield } from "lucide-react";
 
 const highlights = [
@@ -97,7 +98,7 @@ const EmpresaSection = () => {
         </div>
       </div>
 
-      {/* Second Image Full Width sin padding bottom */}
+      {/* Second Image Full Width */}
       <AnimateOnScroll animation="fade-up" delay={150}>
         <div className="relative w-full mt-12">
           <div className="aspect-[21/8] lg:aspect-[21/7] relative">
@@ -108,7 +109,19 @@ const EmpresaSection = () => {
             />
             
             {/* Overlay para mejor legibilidad */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
+            
+            {/* Logo Abrantes centrado en la parte superior */}
+            <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="flex flex-col items-center">
+                <img 
+                  src={abrantesLogo} 
+                  alt="Abrantes Logo" 
+                  className="h-16 md:h-24 lg:h-32 w-auto"
+                style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }}
+                />
+              </div>
+            </div>
             
             {/* Highlights sobre la imagen */}
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
@@ -130,7 +143,7 @@ const EmpresaSection = () => {
             </div>
             
             {/* Título sobre imagen */}
-            <div className="absolute top-6 left-4 md:left-6 lg:top-8 lg:left-8">
+            <div className="absolute top-4 left-4 md:left-6 lg:top-4 lg:left-8">
               <h3 className="font-heading text-xl lg:text-2xl text-white font-bold">
                 Innovación y Tradición
               </h3>
