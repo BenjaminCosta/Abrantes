@@ -6,16 +6,8 @@ import hongos3 from "@/assets/hongos3.png";
 
 const SustratoSection = () => {
   return (
-    <section id="sustrato" className="py-32 md:py-40 lg:py-48 bg-cream relative scroll-mt-28">
+    <section id="sustrato" className="py-32 md:py-40 lg:py-48 bg-white relative scroll-mt-28">
       
-      {/* Hongo decorativo sutil - z-0 para que no se corte */}
-      <div className="absolute top-1/2 -translate-y-1/2 -right-20 opacity-3 pointer-events-none z-0">
-        <img 
-          src={hongos3} 
-          alt="" 
-          className="w-[450px] h-[450px] object-contain transform rotate-12"
-        />
-      </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -27,8 +19,8 @@ const SustratoSection = () => {
                 <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
                   Economía Circular
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Sustrato Vegetal <span className="font-accent italic text-primary">Orgánico.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Sustrato Vegetal Orgánico
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -111,7 +103,7 @@ const SustratoSection = () => {
                     href="#"
                     className={`flex items-center justify-center gap-2 px-6 py-3 font-sans text-sm tracking-wide hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 group ${
                       num === 2 || num === 4 
-                        ? 'bg-white text-charcoal border border-charcoal/20 hover:border-charcoal/40 hover:bg-white/90 shadow-sm' 
+                        ? '"inline-flex items-center gap-2 px-6 py-3 bg-white text-charcoal hover:text-white border border-charcoal font-sans text-sm tracking-wide hover:bg-charcoal hover:shadow-lg transition-all duration-300 group"' 
                         : 'bg-primary text-white hover:bg-primary/90'
                     }`}
                   >

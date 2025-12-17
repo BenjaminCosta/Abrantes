@@ -69,9 +69,13 @@ const Navbar = () => {
     return location.pathname === href || location.pathname === href.split('#')[0];
   };
 
+  const isIndexAtTop = location.pathname === '/' && !isScrolled;
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
-      isScrolled ? 'shadow-sm' : ''
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isIndexAtTop 
+        ? 'bg-gradient-to-b from-black/60 via-black/40 to-transparent backdrop-blur-sm' 
+        : `bg-white ${isScrolled ? 'shadow-sm' : ''}`
     }`}>
       
       <div className="w-full py-2 px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
@@ -100,46 +104,58 @@ const Navbar = () => {
               >
                 {item.dropdown ? (
                   <button 
-                    className={`relative flex items-center gap-2 text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 ${
+                    className={`relative flex items-center gap-2 text-[13.5px] lg:text-[13.5px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 ${
                       item.dropdown.some(sub => isActive(sub.href.split('#')[0])) 
                         ? 'text-abrantes-red' 
-                        : 'text-charcoal/80 hover:text-abrantes-red'
+                        : isIndexAtTop
+                          ? 'text-white hover:text-white/80'
+                          : 'text-charcoal/80 hover:text-abrantes-red'
                     }`}
                   >
                     <span className="relative">
                       {item.label}
-                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-abrantes-red transition-all duration-300 ${
+                      <span className={`absolute -bottom-1 left-0 h-[2px] transition-all duration-300 ${
+                        isIndexAtTop ? 'bg-white' : 'bg-abrantes-red'
+                      } ${
                         item.dropdown.some(sub => isActive(sub.href.split('#')[0])) 
                           ? 'w-full' 
                           : 'w-0 group-hover:w-full'
                       }`} />
                     </span>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" strokeWidth={2.5} />
+                    <ChevronDown className="w-3.5 h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 transition-transform duration-300 group-hover:rotate-180" strokeWidth={2.5} />
                   </button>
                 ) : item.external ? (
                   <a
                     href={item.href || "/"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group `}
+                    className={`relative text-[13.5px] lg:text-[13.5px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group ${
+                      isIndexAtTop ? 'text-white hover:text-white/80' : 'text-charcoal/80 hover:text-abrantes-red'
+                    }`}
                   >
                     <span className="relative">
                       {item.label}
-                      <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-abrantes-red transition-all duration-300 group-hover:w-full" />
+                      <span className={`absolute -bottom-1 left-0 w-0 h-[2px] transition-all duration-300 group-hover:w-full ${
+                        isIndexAtTop ? 'bg-white' : 'bg-abrantes-red'
+                      }`} />
                     </span>
                   </a>
                 ) : (
                   <Link
                     to={item.href || "/"}
-                    className={`relative text-[15px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group ${
+                    className={`relative text-[13.5px] lg:text-[13.5px] xl:text-[16px] font-heading uppercase tracking-[0.08em] transition-all duration-300 py-2 group ${
                       isActive(item.href || '/') 
                         ? 'text-abrantes-red' 
-                        : 'text-charcoal/80 hover:text-abrantes-red'
+                        : isIndexAtTop
+                          ? 'text-white hover:text-white/80'
+                          : 'text-charcoal/80 hover:text-abrantes-red'
                     }`}
                   >
                     <span className="relative">
                       {item.label}
-                      <span className={`absolute -bottom-1 left-0 h-[2px] bg-abrantes-red transition-all duration-300 ${
+                      <span className={`absolute -bottom-1 left-0 h-[2px] transition-all duration-300 ${
+                        isIndexAtTop ? 'bg-white' : 'bg-abrantes-red'
+                      } ${
                         isActive(item.href || '/') 
                           ? 'w-full' 
                           : 'w-0 group-hover:w-full'
@@ -151,7 +167,7 @@ const Navbar = () => {
                 {/* Dropdown - Premium Style with Nested Submenu */}
                 {item.dropdown && activeDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-4 z-[100]">
-                    <div className="bg-white rounded-2xl min-w-[300px] overflow-visible">
+                    <div className="bg-white min-w-[300px] overflow-visible">
                       {item.dropdown.map((subItem, index) => (
                         <div
                           key={subItem.label}
@@ -175,9 +191,7 @@ const Navbar = () => {
                                     }
                                   }
                                 }}
-                                className={`flex items-center justify-between px-6 py-4 text-[14px] font-heading uppercase tracking-wide text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200 ${
-                                  index === 0 ? 'rounded-t-2xl' : ''
-                                }`}
+                                className="flex items-center justify-between px-6 py-4 text-[14px] font-heading uppercase tracking-wide text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200"
                               >
                                 {subItem.label}
                                 <ChevronDown className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/submenu:rotate-180" strokeWidth={2.5} />
@@ -202,7 +216,7 @@ const Navbar = () => {
                                           }
                                         }
                                       }}
-                                      className="block px-4 py-2.5 text-[13px] font-heading uppercase tracking-wide text-charcoal/60 hover:text-abrantes-red hover:bg-beige/20 transition-all duration-200 rounded-lg mt-1"
+                                      className="block px-4 py-2.5 text-[13px] font-heading uppercase tracking-wide text-charcoal/60 hover:text-abrantes-red hover:bg-beige/20 transition-all duration-200 mt-1"
                                     >
                                       {nestedItem.label}
                                     </Link>
@@ -225,11 +239,7 @@ const Navbar = () => {
                                   }
                                 }
                               }}
-                              className={`block px-6 py-4 text-[14px] font-heading uppercase tracking-wide text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200 ${
-                                index === 0 ? 'rounded-t-2xl' : ''
-                              } ${
-                                index === item.dropdown!.length - 1 ? 'rounded-b-2xl' : ''
-                              }`}
+                              className="block px-6 py-4 text-[14px] font-heading uppercase tracking-wide text-charcoal/70 hover:text-abrantes-red hover:bg-beige/30 transition-all duration-200"
                             >
                               {subItem.label}
                             </Link>

@@ -93,8 +93,8 @@ const InformacionNutricionalSection = () => {
                 <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
                   Salud y Nutrición
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Información <span className="font-accent italic text-primary">Nutricional.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Información Nutricional
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -102,7 +102,7 @@ const InformacionNutricionalSection = () => {
 
           {/* Tabla Nutricional */}
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 mb-16 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 p-8 lg:p-12 mb-16 max-w-4xl mx-auto">
               <h3 className="font-heading text-2xl md:text-3xl text-charcoal font-bold mb-8 text-center">
                 Valores Nutricionales
               </h3>
@@ -144,8 +144,8 @@ const InformacionNutricionalSection = () => {
           {/* Ventajas del Consumo */}
           <div id="ventajas" className="mb-16 scroll-mt-28">
             <AnimateOnScroll animation="fade-up">
-              <h3 className="font-heading text-3xl md:text-4xl text-charcoal font-bold mb-4 text-center">
-                Ventajas del <span className="font-accent italic text-primary">Consumo</span>
+              <h3 className="font-heading text-3xl md:text-4xl text-primary font-bold mb-4 text-center">
+                Ventajas del Consumo
               </h3>
               <p className="text-lg text-charcoal/70 text-center max-w-4xl mx-auto mb-12">
                 Los champiñones se deben considerar como alimentos valiosos para el mantenimiento de una buena 

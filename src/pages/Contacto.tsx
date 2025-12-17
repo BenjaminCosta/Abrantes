@@ -68,7 +68,7 @@ const Contacto = () => {
             <div className="h-1 w-44 bg-white" />
           </div>
 
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 font-semibold uppercase tracking-wide">
             Contacto
           </h1>
         </AnimateOnScroll>
@@ -92,7 +92,7 @@ const Contacto = () => {
                 <div className="flex justify-center mb-6">
                   <div className="h-1 w-20 bg-primary" />
                 </div>
-                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">
+                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-charcoal font-bold uppercase tracking-wide mb-4">
                   Contáctanos directamente
                 </h2>
                 <p className="text-charcoal/70 text-lg max-w-2xl mx-auto">
@@ -102,7 +102,7 @@ const Contacto = () => {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" delay={100}>
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-charcoal/10">
+              <div className="bg-white  shadow-xl overflow-hidden border border-charcoal/10">
                 <div className="p-8 md:p-12 lg:p-16">
                   <form onSubmit={handleSubmit} className="space-y-8">
                     

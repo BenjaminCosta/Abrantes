@@ -1,6 +1,6 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Factory, Thermometer, Sprout, Eye, Flower2, Scissors, Package } from "lucide-react";
-import hongos3 from "@/assets/hongos9.webp";
+import hongos3 from "@/assets/hongos11.webp";
 import proceso1 from "@/assets/proceso/1..jpg";
 import proceso2 from "@/assets/proceso/2..jpg";
 import proceso3 from "@/assets/proceso/3..jpg";
@@ -84,8 +84,8 @@ const ProcesoProductivoSection = () => {
                 <p className="text-primary/70 text-sm tracking-wide font-accent italic">
                   Excelencia en Cada Paso
                 </p>
-                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-charcoal font-bold leading-tight">
-                  Proceso <span className="font-accent italic text-primary">Productivo.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Proceso Productivo
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -105,7 +105,7 @@ const ProcesoProductivoSection = () => {
                   
                   {/* Content más compacto */}
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <div className="bg-cream/20 border border-charcoal/5 rounded-2xl p-6 lg:p-8 hover:bg-cream/40 hover:border-primary/15 hover:shadow-lg transition-all duration-500 group">
+                    <div className="p-6 lg:p-8 hover:bg-cream/40 transition-all duration-500 group">
                       <div className="flex items-start gap-4 mb-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors duration-300">
                           <step.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />

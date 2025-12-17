@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import hongos2 from "@/assets/hongos2.png";
+import hongos2 from "@/assets/hongos9.webp";
 import blanco200g from "@/assets/productos/Champiñon-Blanco-200-gramos.jpg";
 import blanco400g from "@/assets/productos/Champiñon-Blanco-400-gramos.jpg";
 import blancoRoyal from "@/assets/productos/Champiñon-Blanco-Royal-clamshell.jpg";
@@ -49,6 +49,14 @@ const productos = [
 const ChampinonesSection = () => {
   return (
     <section id="champinones" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-y-hidden">
+      {/* Decorative Background */}
+      <div className="absolute hidden md:block -bottom-20 -right-20 z-0 opacity-6">
+        <img 
+          src={hongos2} 
+          alt="" 
+          className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform -rotate-12"
+        />
+      </div>
       {/* Anchor for Procesos (same section) */}
       <div id="procesos" className="absolute top-0" />
       
@@ -70,8 +78,8 @@ const ChampinonesSection = () => {
                 <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
                   Nuestra Línea
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Champiñones <span className="font-accent italic text-primary">Premium.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Champiñones <span className="text-primary">Premium</span>
                 </h2>
                 <p className="text-lg text-charcoal/70 max-w-3xl mx-auto pt-2">
                   Frescura y calidad en cada formato para satisfacer todas tus necesidades

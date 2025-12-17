@@ -43,14 +43,6 @@ const documents = [
 const CodigoEticaSection = () => {
   return (
     <section id="codigo-etica" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background */}
-      <div className="absolute bottom-0 right-0 z-0 opacity-6">
-        <img 
-          src={hongos6} 
-          alt="" 
-          className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform rotate-6"
-        />
-      </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -62,8 +54,8 @@ const CodigoEticaSection = () => {
                 <p className="text-primary/70 text-sm md:text-base tracking-wide font-accent italic">
                   Integridad y Transparencia
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Código de Ética y <span className="font-accent italic text-primary">Conducta.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Código de Ética y Conducta
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -79,11 +71,11 @@ const CodigoEticaSection = () => {
                 y que son de estricto cumplimiento en el ejercicio de sus funciones tanto al interior de las instalaciones 
                 de la empresa como en las actividades que se desarrollen fuera de ella.
               </p>
-              <p className="text-base text-charcoal/70 leading-relaxed mb-6">
+              <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                 Empresas Sutil reconoce que la sumatoria de las conductas éticas individuales y colectivas contribuye a 
                 la construcción de la imagen y distinción de Empresas Sutil como una compañía íntegra y confiable.
               </p>
-              <p className="text-base text-charcoal/70 leading-relaxed">
+              <p className="text-lg text-charcoal/80 leading-relaxed">
                 Este documento representa el compromiso de Empresas Sutil con un comportamiento ético en sus relaciones 
                 laborales, comerciales y, en general, en todas las actuaciones en que intervenga alguna de las empresas 
                 del Grupo y sus colaboradores, en tanto reconoce la <span className="text-primary">ética en 

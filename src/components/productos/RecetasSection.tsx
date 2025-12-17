@@ -94,8 +94,8 @@ const RecetasSection = () => {
                 <p className="text-primary/70 text-sm md:text-base tracking-wide font-accent italic">
                   Desarrolladas en conjunto con el
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Recetas <span className="font-accent italic text-primary">Gourmet.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Recetas Gourmet
                 </h2>
                 <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
                   Instituto Internacional de Artes Culinarias y Servicios

@@ -4,15 +4,7 @@ import hongos3 from "@/assets/hongos3.png";
 
 const MisionVisionSection = () => {
   return (
-    <section id="mision-vision" className="py-20 md:py-24 lg:py-28 bg-cream relative overflow-hidden scroll-mt-24">
-      {/* Decorative Background */}
-      <div className="absolute -bottom-16 -left-16 z-0 opacity-8">
-        <img 
-          src={hongos3} 
-          alt="" 
-          className="w-80 h-80 lg:w-[450px] lg:h-[450px] object-contain transform rotate-12"
-        />
-      </div>
+    <section id="mision-vision" className="py-20 md:py-24 lg:py-28 bg-white relative overflow-hidden scroll-mt-24">
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -24,8 +16,8 @@ const MisionVisionSection = () => {
                 <p className="text-primary/70 text-sm md:text-base font-accent italic tracking-wide">
                   Nuestro Propósito
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Misión & <span className="font-accent italic text-primary">Visión.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Misión & Visión
                 </h2>
               </div>
             </AnimateOnScroll>

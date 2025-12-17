@@ -47,7 +47,7 @@ const Productos = () => {
                   <div className="h-1 w-44 bg-white" />
                 </div>
 
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
+                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-semibold uppercase tracking-wide mb-4">
                   Nuestros Productos
                 </h1>
               </AnimateOnScroll>

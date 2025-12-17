@@ -16,8 +16,8 @@ const CertificacionesSection = () => {
                 <p className="text-primary/70 text-sm md:text-base tracking-wide font-accent italic">
                   Calidad Garantizada
                 </p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                  Nuestras <span className="font-accent italic text-primary">Certificaciones.</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                  Nuestras Certificaciones
                 </h2>
               </div>
             </AnimateOnScroll>

@@ -55,7 +55,7 @@ const Sustentabilidad = () => {
                   <div className="h-1 w-44 bg-white" />
                 </div>
 
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4">
+                <h1 className="font-heading text-4xl md:text-5xl font-semibold uppercase tracking-wide lg:text-6xl xl:text-7xl text-white mb-4">
                   Sustentabilidad
                 </h1>
               </AnimateOnScroll>
@@ -80,8 +80,8 @@ const Sustentabilidad = () => {
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-16 lg:mb-20">
                 <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Indicadores que Transforman</p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-4">
-                  Logros y <span className="font-accent italic text-primary">desafíos</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-4">
+                  Logros y desafíos
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -181,10 +181,6 @@ const Sustentabilidad = () => {
       {/* Reportes de Sustentabilidad Section */}
       <section className="py-12 md:py-16 bg-white relative overflow-y-hidden">
         
-        {/* Hongo decorativo sutil - z-0 para que no se corte */}
-        <div className="absolute -bottom-10 -right-10 opacity-3 pointer-events-none z-0">
-          <img src={hongos4} alt="" className="w-[400px] h-[400px] object-contain" />
-        </div>
 
         <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -193,8 +189,8 @@ const Sustentabilidad = () => {
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-20 lg:mb-24">
                 <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Transparencia y Compromiso</p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-6">
-                  Reportes de <span className="font-accent italic text-primary">Sustentabilidad</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-6">
+                  Reportes de <span className="text-primary">Sustentabilidad</span>
                 </h2>
                 <p className="text-lg text-charcoal/75 max-w-3xl mx-auto leading-relaxed">
                   Anualmente, Champiñones Abrantes presenta los resultados de su gestión productiva, social y medioambiental, 
@@ -209,11 +205,11 @@ const Sustentabilidad = () => {
                 <AnimateOnScroll key={year} animation="fade-up" delay={index * 100}>
                   <a
                     href={`#reporte-${year}`}
-                    className="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-charcoal/5"
+                    className="group block bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-charcoal/5"
                   >
                     <div className="p-6">
                       <div className="flex items-center justify-center mb-4">
-                        <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                        <div className="w-16 h-16 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                           <Download className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={2} />
                         </div>
                       </div>
@@ -248,13 +244,13 @@ const Sustentabilidad = () => {
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-12 lg:mb-16">
                 <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Compromiso Climático</p>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-6">
-                  Carbono <span className="font-accent italic text-primary">Neutral</span>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-6">
+                  Carbono Neutral
                 </h2>
                 <p className="text-lg md:text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed mb-4">
                   Champiñones Abrantes ha reducido a cero sus emisiones de CO₂e de acuerdo a los requerimientos del CarbonNeutral Protocol.
                 </p>
-                <p className="text-base text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-charcoal/80 max-w-3xl mx-auto leading-relaxed">
                   Además de los esfuerzos realizados por disminuir la emisión de gases de efecto invernadero en la operación, 
                   el remanente de emisiones fue neutralizado mediante la adquisición de créditos verificados de Carbono 
                   desde un portafolio de proyectos basados en la naturaleza.
@@ -273,7 +269,7 @@ const Sustentabilidad = () => {
               ].map((cert, index) => (
                 <AnimateOnScroll key={index} animation="fade-up" delay={index * 80}>
                   <div className="group">
-                    <div className="bg-white rounded-2xl p-4 border border-charcoal/10 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                    <div className="bg-white  p-4 border border-charcoal/10 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:scale-105">
                       <div className="aspect-square bg-beige/30 overflow-hidden mb-3">
                         <img
                           src={cert.img}
@@ -295,21 +291,21 @@ const Sustentabilidad = () => {
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="#certificacion-2020"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-sans text-sm tracking-wide hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary hover:text-white border border-primary font-sans text-sm tracking-wide hover:bg-primary hover:shadow-lg transition-all duration-300 group"
                 >
                   <Download className="w-4 h-4" strokeWidth={2.5} />
                   <span>Certificación 2020</span>
                 </a>
                 <a
                   href="#certificacion-2021"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-charcoal border border-charcoal/20 hover:border-charcoal/40 font-sans text-sm tracking-wide hover:bg-white/90 hover:shadow-lg transition-all duration-300 group shadow-sm"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-charcoal border border-charcoal font-sans text-sm tracking-wide hover:bg-charcoal hover:text-white hover:shadow-lg transition-all duration-300 group shadow-sm"
                 >
                   <Download className="w-4 h-4" strokeWidth={2.5} />
                   <span>Certificación 2021</span>
                 </a>
                 <a
                   href="#certificacion-2022"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-sans text-sm tracking-wide hover:bg-primary/90 hover:shadow-lg transition-all duration-300 group"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary hover:text-white border border-primary font-sans text-sm tracking-wide hover:bg-primary hover:shadow-lg transition-all duration-300 group"
                 >
                   <Download className="w-4 h-4" strokeWidth={2.5} />
                   <span>Certificación 2022</span>
@@ -353,7 +349,7 @@ const Sustentabilidad = () => {
             <div className="max-w-xl">
               <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Impacto Social</p>
               
-              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-8 leading-tight">
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-8 leading-tight">
                 Comunidad
               </h2>
               
@@ -392,8 +388,8 @@ const Sustentabilidad = () => {
             <div className="max-w-xl">
               <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Energía Renovable</p>
               
-              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold mb-8 leading-tight">
-                Energía <span className="font-accent italic text-primary">Limpia</span>
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-8 leading-tight">
+                Energía Limpia
               </h2>
               
               <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed mb-10">

@@ -8,7 +8,7 @@ import mushroom4 from "@/assets/unsplash/mushrooms4.jpg";
 const ProcessSection = () => {
   return (
     <>
-      <section className="py-32 md:py-40 lg:py-48 bg-white relative">
+      <section className="py-32 md:py-36 lg:py-40 bg-white relative">
         
         <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
           <div className="max-w-[1200px] mx-auto">
@@ -18,12 +18,8 @@ const ProcessSection = () => {
               <div className="space-y-10">
                 <AnimateOnScroll animation="fade-up">
                   <div className="space-y-6">
-                    <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
-                      Nuestro Proceso
-                    </p>
-                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold leading-tight">
-                      Un proceso <br />
-                      <span className="font-accent italic text-primary">preciso.</span>
+                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
+                      Un proceso preciso<br />
                     </h2>
                   </div>
                 </AnimateOnScroll>

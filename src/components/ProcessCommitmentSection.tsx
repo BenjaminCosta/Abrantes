@@ -39,7 +39,7 @@ const ProcessCommitmentSection = () => {
               
               <AnimateOnScroll animation="fade-left">
                 <div className="space-y-4">
-                  <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  <h2 className="font-heading uppercase text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">
                     Enfoque en proceso y consistencia
                   </h2>
                   

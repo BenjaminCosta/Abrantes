@@ -16,8 +16,8 @@ const ResponsabilidadSection = () => {
                   <p className="text-beige/70 text-sm md:text-base tracking-wide font-accent italic mb-4">
                     Compromiso con la Comunidad
                   </p>
-                  <h2 className="font-heading text-4xl md:text-5xl text-cream font-bold leading-tight mb-6">
-                    Responsabilidad Social <span className="font-accent italic text-cream">Empresarial.</span>
+                  <h2 className="font-heading text-4xl md:text-5xl text-cream font-bold uppercase tracking-wide mb-6">
+                    Responsabilidad Social Empresarial
                   </h2>
                   <p className="text-lg text-beige/80 leading-relaxed">
                     En Abrantes creemos firmemente en retribuir a nuestra comunidad. Nuestro compromiso 
