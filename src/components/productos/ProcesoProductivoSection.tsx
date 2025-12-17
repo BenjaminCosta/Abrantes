@@ -112,7 +112,7 @@ const ProcesoProductivoSection = () => {
             <div className="relative flex flex-col lg:flex-row items-center justify-center min-h-[500px] md:min-h-[550px] gap-8 lg:gap-12">
               
               {/* Contenido a la izquierda */}
-              <div className="w-full lg:w-1/2 p-6 lg:p-8 hover:bg-cream/40 transition-all duration-500 group">
+              <div className="w-full lg:w-1/2 p-6 lg:p-8 transition-all duration-500 group">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors duration-300">
                     <span className="font-heading text-xl font-bold text-primary">
@@ -163,7 +163,7 @@ const ProcesoProductivoSection = () => {
                     </div>
                     
                     {/* Efecto de brillo suave */}
-                    <div className="absolute -z-10 w-full h-full bg-primary/5 rounded-lg blur-xl transition-all duration-500 group-hover/img:bg-primary/10" />
+                    <div className="absolute -z-10 w-full h-full bg-primary/2 rounded-lg blur-xl transition-all duration-500 " />
                   </div>
                 </div>
               </div>

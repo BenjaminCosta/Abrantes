@@ -265,7 +265,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-cream">
+        <div className="lg:hidden bg-white">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.label}>
