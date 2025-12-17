@@ -13,7 +13,7 @@ const ResponsabilidadSection = () => {
             <AnimateOnScroll animation="fade-right">
               <div className="flex items-center h-full">
                 <div>
-                  <p className="text-beige/70 text-sm md:text-base tracking-wide font-sans mb-4">
+                  <p className="text-beige/70 text-sm md:text-base tracking-wide font-accent italic mb-4">
                     Compromiso con la Comunidad
                   </p>
                   <h2 className="font-heading text-4xl md:text-5xl text-cream font-bold leading-tight mb-6">

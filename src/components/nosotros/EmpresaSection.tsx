@@ -17,7 +17,7 @@ const EmpresaSection = () => {
   return (
     <section id="empresa" className="pt-20 md:pt-24 lg:pt-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute -top-20 -right-20 z-0 opacity-6">
+      <div className="absolute hidden md:block -top-20 -right-20 z-0 opacity-6">
         <img 
           src={hongos2} 
           alt="" 
