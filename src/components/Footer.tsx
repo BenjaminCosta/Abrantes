@@ -4,16 +4,17 @@ import logoAbrantes from "@/assets/abrantes_logo2.png";
 import sistemaB from "@/assets/sistema_B.webp";
 import logoSutil from "@/assets/sutil2.png";
 
+
 const footerLinks = {
   empresa: [
     { label: "Nosotros", href: "/nosotros" },
     { label: "Productos", href: "/productos" },
-    { label: "Recetas", href: "/recetas" },
+    { label: "Recetas", href: "/productos#recetas" },
     { label: "Sustentabilidad", href: "/sustentabilidad" },
   ],
   contacto: [
     { label: "Contacto", href: "/contacto" },
-    { label: "Trabaja con Nosotros", href: "/trabaja-con-nosotros" },
+    { label: "Certificaciones", href: "/nosotros#certificaciones" },
     { label: "Canal de Denuncias", href: "https://empresassutil.eticaenlinea.cl/denuncias", external: true },
   ],
 };
@@ -186,7 +187,7 @@ const Footer = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 xl:px-16 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/40 text-xs">
-              © {new Date().getFullYear()} Abrantes Premium. Todos los derechos reservados.
+              © {new Date().getFullYear()} Abrantes. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link 
