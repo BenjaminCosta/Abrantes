@@ -1,5 +1,5 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { Download, FileText, Globe } from "lucide-react";
+import { Download, FileText, } from "lucide-react";
 import hongos6 from "@/assets/hongos3.png";
 
 const documents = [
@@ -13,7 +13,7 @@ const documents = [
   {
     title: "Code of Ethics and Conduct",
     description: "English Version",
-    icon: Globe,
+    icon: FileText,
     link: "#",
     language: "EN"
   },
@@ -64,7 +64,7 @@ const CodigoEticaSection = () => {
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
             <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
-              <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+              <p className="text-lg text-charcoal/80 text-justifyleading-relaxed mb-6">
                 El presente Código de Ética tiene como objeto establecer, definir y dar a conocer los valores, 
                 principios éticos y las pautas de conducta que orientan las acciones, relaciones y decisiones de 
                 <span className="text-primary"> Empresas Sutil y sus filiales</span> y de sus colaboradores 

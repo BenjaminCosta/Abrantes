@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { Play, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import sustentabilidadImg from "@/assets/hero-cultivation.jpg";
+import sustentabilidadImg from "@/assets/unsplash/mushroooms6.jpg";
 import sustainability from "@/assets/sustainability.jpg";
 import empresa2 from "@/assets/Empresa2.jpg";
 import hongos4 from "@/assets/hongos4.png";
@@ -353,7 +353,7 @@ const Sustentabilidad = () => {
                 Comunidad
               </h2>
               
-              <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed mb-10">
+              <div className="space-y-6 text-charcoal/80 text-lg text-justify leading-relaxed mb-10">
                 <p>
                   Nuestro compromiso va más allá de la producción. <span className="text-charcoal font-medium">Trabajamos activamente</span> 
                   con las comunidades locales, generando empleo digno y contribuyendo al desarrollo sostenible de la región.
@@ -392,7 +392,7 @@ const Sustentabilidad = () => {
                 Energía Limpia
               </h2>
               
-              <div className="space-y-6 text-charcoal/80 text-lg leading-relaxed mb-10">
+              <div className="space-y-6 text-charcoal/80 text-lg text-justify leading-relaxed mb-10">
                 <p>
                   Hemos invertido en <span className="text-charcoal font-medium">tecnología de energía renovable</span> para 
                   reducir nuestra dependencia de combustibles fósiles y minimizar nuestra huella de carbono.

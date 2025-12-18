@@ -28,7 +28,7 @@ const CertificacionesSection = () => {
             
             {/* Introduction */}
             <AnimateOnScroll animation="fade-up">
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 text-center max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 text-center max-w-4xl mx-auto ">
                 <Shield className="w-16 h-16 text-primary mx-auto mb-6" strokeWidth={1.5} />
                 <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
                   Al consumir champiñones Abrantes tiene usted la <span className="text-primary">garantía 

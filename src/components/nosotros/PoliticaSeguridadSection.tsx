@@ -48,7 +48,7 @@ const PoliticaSeguridadSection = () => {
 
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto text-justify">
               <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                 La presente política describe pautas y disposiciones de <span className="text-primary">Champiñones 
                 Abrantes S.A.</span> para reservar la seguridad de su infraestructura de datos y tecnología.

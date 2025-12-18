@@ -10,7 +10,6 @@ const highlights = [
   { icon: Building2, text: "Líderes en Latinoamérica" },
   { icon: Users, text: "+200 trabajadores especializados" },
   { icon: Award, text: "Modelo de cultivo holandés" },
-  { icon: Leaf, text: "Calidad premium garantizada" },
   { icon: Target, text: "Desde 1983" },
   { icon: Shield, text: "Certificaciones de calidad" },
 ];
@@ -49,7 +48,7 @@ const EmpresaSection = () => {
             
             {/* Text Content - Consistente */}
             <AnimateOnScroll animation="fade-right">
-              <div className="space-y-6 ">
+              <div className="space-y-6 text-justify ">
                 <p className="text-lg text-charcoal/70 leading-relaxed">
                   Especialistas en el cultivo de champiñones blancos para el mercado en fresco, 
                   combinamos tradición familiar con innovación tecnológica.
@@ -124,7 +123,7 @@ const EmpresaSection = () => {
             {/* Highlights sobre la imagen */}
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
               <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
                   {highlights.map((item, index) => (
                     <div 
                       key={index}

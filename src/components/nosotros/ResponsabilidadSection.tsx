@@ -13,13 +13,13 @@ const ResponsabilidadSection = () => {
             <AnimateOnScroll animation="fade-right">
               <div className="flex items-center h-full">
                 <div>
-                  <p className="text-beige/70 text-sm md:text-base tracking-wide font-accent italic mb-4">
+                  <p className="text-white text-sm md:text-base tracking-wide font-accent italic mb-4">
                     Compromiso con la Comunidad
                   </p>
-                  <h2 className="font-heading text-4xl md:text-5xl text-cream font-bold uppercase tracking-wide mb-6">
+                  <h2 className="font-heading text-4xl md:text-5xl text-white font-bold uppercase tracking-wide mb-6">
                     Responsabilidad Social Empresarial
                   </h2>
-                  <p className="text-lg text-beige/80 leading-relaxed">
+                  <p className="text-lg text-white text-justify leading-relaxed">
                     En Abrantes creemos firmemente en retribuir a nuestra comunidad. Nuestro compromiso 
                     con la responsabilidad social empresarial se refleja en cada una de nuestras acciones, 
                     desde el trato con nuestros colaboradores hasta nuestro impacto en el entorno.
