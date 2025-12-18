@@ -163,7 +163,7 @@ const RecipesSection = () => {
           <AnimateOnScroll animation="fade-up" delay={400}>
             <div className="text-center">
               <Link 
-                to="/recetas"
+                to="/productos#recetas"
                 className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white font-sans text-base tracking-wide transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <span>Ver todas las recetas</span>
