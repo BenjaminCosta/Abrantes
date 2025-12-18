@@ -78,7 +78,7 @@ const Navbar = () => {
         : `bg-white ${isScrolled ? 'shadow-sm' : ''}`
     }`}>
       
-      <div className="w-full py-2 px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
+      <div className="w-full py-2 px-6 md:px-10 lg:px-12 2xl:px-24">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link
@@ -95,7 +95,7 @@ const Navbar = () => {
 
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10 xl:gap-12 2xl:gap-14">
+          <div className="hidden lg:flex items-center gap-10 xl:gap-8 2xl:gap-14">
             {navItems.map((item) => (
               <div
                 key={item.label}

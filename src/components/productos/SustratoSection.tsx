@@ -75,7 +75,7 @@ const SustratoSection = () => {
                   <img
                     src={compost}
                     alt="Sustrato vegetal orgánico"
-                    className="w-full h-[40vh] object-cover"
+                    className="w-full h-auto lg:h-[55vh] 2xl:h-[40vh] object-cover"
                   />
                 </div>
               </AnimateOnScroll>

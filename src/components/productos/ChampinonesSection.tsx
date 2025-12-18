@@ -54,7 +54,7 @@ const ChampinonesSection = () => {
         <img 
           src={hongos2} 
           alt="" 
-          className="w-96 h-96 lg:w-[550px] lg:h-[550px] object-contain transform -rotate-12"
+          className="w-96 h-96 lg:w-[500px] lg:h-[500px] 2xl:w-[550px] 2xl:h-[550px] object-contain transform -rotate-12"
         />
       </div>
   

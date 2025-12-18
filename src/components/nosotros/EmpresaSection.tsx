@@ -6,23 +6,17 @@ import hongos2 from "@/assets/hongos11.webp";
 import abrantesLogo from "@/assets/abrantes_logo2.png";
 import { Building2, Users, Award, Leaf, Target, Shield } from "lucide-react";
 
-const highlights = [
-  { icon: Building2, text: "Líderes en Latinoamérica" },
-  { icon: Users, text: "+200 trabajadores especializados" },
-  { icon: Award, text: "Modelo de cultivo holandés" },
-  { icon: Target, text: "Desde 1983" },
-  { icon: Shield, text: "Certificaciones de calidad" },
-];
+
 
 const EmpresaSection = () => {
   return (
     <section id="empresa" className="pt-20 md:pt-24 lg:pt-28 bg-white relative overflow-hidden scroll-mt-24">
       {/* Decorative Background */}
-      <div className="absolute hidden md:block -top-20 -right-20 z-0 opacity-6">
+      <div className="absolute hidden md:block -top-28 -right-20 z-0 opacity-6">
         <img 
           src={hongos2} 
           alt="" 
-          className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform -rotate-12"
+          className="w-96 h-96 lg:w-[450px] lg:h-[450px] 2xl:w-[500px] 2xl:h-[500px] object-contain transform -rotate-12"
         />
       </div>
 
@@ -109,42 +103,24 @@ const EmpresaSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
             
             {/* Logo Abrantes centrado en la parte superior */}
-            <div className="absolute top-1/2 md:top-1/4 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 z-20">
               <div className="flex flex-col items-center">
                 <img 
                   src={abrantesLogo} 
                   alt="Abrantes Logo" 
-                  className="h-16 md:h-24 lg:h-32 w-auto"
+                  className="h-16 md:h-24 lg:h-40 w-auto"
                 style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }}
                 />
               </div>
             </div>
-            
-            {/* Highlights sobre la imagen */}
-            <div className="absolute hidden md:block bottom-0 left-0 right-0 p-6 lg:p-8">
-              <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
-                  {highlights.map((item, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white/90 backdrop-blur-sm  p-3 lg:p-4 text-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-lg"
-                    >
-                      <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary mx-auto mb-1 lg:mb-2" strokeWidth={1.5} />
-                      <p className="text-xs lg:text-sm font-medium text-charcoal leading-tight">
-                        {item.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+
             
             {/* Título sobre imagen */}
             <div className="absolute top-4 left-4 md:left-6 lg:top-4 lg:left-8">
               <h3 className="font-heading text-xl lg:text-2xl text-white font-bold">
                 Innovación y Tradición
               </h3>
-              <p className="text-white/80 text-sm lg:text-base">
+              <p className="text-white/80 text-sm lg:text-base font-semibold">
                 Más de 40 años de excelencia
               </p>
             </div>

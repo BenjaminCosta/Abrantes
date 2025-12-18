@@ -146,7 +146,7 @@ const InformacionNutricionalSection = () => {
               <img
                 src={mushrooms4}
                 alt=""
-                className="w-full h-[300px] lg:h-[80vh] object-cover"
+                className="w-full h-[300px] 2xl:h-[80vh] lg:h-[100vh] object-cover"
               />
             </div>
 

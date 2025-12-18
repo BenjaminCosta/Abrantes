@@ -86,10 +86,10 @@ const RecetasSection = () => {
         <img
           src={mushrooms4}
           alt=""
-          className="w-full h-[40vh] object-cover"
+          className="w-full h-[40vh] lg:h-[50vh] 2xl:h-[40vh] object-cover"
         />
         {/* Overlay para legibilidad */}
-        <div className="absolute inset-0 h-[40vh] bg-black/40" />
+        <div className="absolute inset-0 bg-black/40 h-[40vh] lg:h-[50vh] 2xl:h-[40vh]" />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-6 lg:px-12 py-16 md:py-20 lg:py-24">
