@@ -74,7 +74,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isIndexAtTop 
-        ? 'bg-gradient-to-b from-black/60 via-black/40 backdrop-blur-md' 
+        ? 'bg-black/20 backdrop-blur-md' 
         : `bg-white ${isScrolled ? 'shadow-sm' : ''}`
     }`}>
       
