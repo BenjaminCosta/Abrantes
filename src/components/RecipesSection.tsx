@@ -41,7 +41,7 @@ const RecipesSection = () => {
                     <div className="text-center max-w-3xl mx-auto space-y-6 px-4 md:px-8">
                       
                       {/* Main Title */}
-                      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold tracking-wide">
+                      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase font-bold tracking-wide">
                         Consumo Diario<br />
                         Calidad Natural
                       </h2>
