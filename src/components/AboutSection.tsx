@@ -59,12 +59,14 @@ const AboutSection = () => {
           delay={index * 50}
         >
           <div className="py-4 px-6 rounded-xl transition-all duration-300 border-l-4 border-transparent ">
+            <div className="border-l-2 border-primary/30 pl-4">
             <p className="font-heading text-lg md:text-xl text-charcoal font-medium">
               {item.title}
             </p>
             <p className="mt-1 text-sm md:text-base text-charcoal/70 leading-relaxed">
               {item.description}
             </p>
+            </div>
           </div>
         </AnimateOnScroll>
       ))}

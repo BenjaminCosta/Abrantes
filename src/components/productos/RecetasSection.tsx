@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import mushrooms3 from "@/assets/unsplash/mushrooms3.jpg";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import mushrooms3 from "@/assets/13.webp";
+import mushrooms4 from "@/assets/unsplash/mushrooms5.jpg";
 import cevicheImg from "@/assets/recetas/Ceviche-de-champiñones.jpg";
 import ensaladaImg from "@/assets/recetas/Ensalada-fresca-mediterranea.jpg";
 import delMarImg from "@/assets/recetas/Champiñon-del-mar.jpg";
@@ -83,7 +84,7 @@ const RecetasSection = () => {
       {/* Background Image - Full Width */}
       <div className="absolute inset-0 z-0">
         <img
-          src={mushrooms3}
+          src={mushrooms4}
           alt=""
           className="w-full h-[40vh] object-cover"
         />
@@ -166,9 +167,10 @@ const RecetasSection = () => {
             <div className="flex justify-center">
               <button
                 onClick={() => navigate(`/recetas/${recetas[currentSlide].id}`)}
-                className="inline-flex items-center justify-center px-10 py-4 border-2 border-charcoal/40 bg-white text-charcoal font-sans text-base tracking-wide hover:bg-charcoal hover:text-white hover:border-charcoal transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 border-2 border-charcoal text-charcoal font-heading text-base hover:bg-charcoal hover:text-white transition-all duration-300 group"
               >
                 Ver receta completa
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
               </button>
             </div>
           </AnimateOnScroll>

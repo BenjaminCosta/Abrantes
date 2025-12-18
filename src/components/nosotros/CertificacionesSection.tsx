@@ -34,7 +34,7 @@ const CertificacionesSection = () => {
                   Al consumir champiñones Abrantes tiene usted la <span className="text-primary">garantía 
                   de la inocuidad del producto</span> desde el lugar de origen hasta el punto de consumo.
                 </p>
-                <p className="text-base text-charcoal/70 leading-relaxed">
+                <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed">
                   Champiñones Abrantes tiene el Certificado de Verificación <span className="font-semibold">HACCP</span>, 
                   que es un procedimiento científico de control de procesos, reconocido internacionalmente, que permite 
                   identificar peligros específicos (biológicos, químicos y físicos) y medidas para su control con el 
