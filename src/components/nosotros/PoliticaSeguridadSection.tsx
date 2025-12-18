@@ -48,7 +48,7 @@ const PoliticaSeguridadSection = () => {
 
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white/90 backdrop-blur-sm border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto text-justify">
+            <div className="bg-white/90 backdrop-blur-sm border border-primary/10 p-8 lg:p-12 mb-12 max-w-5xl mx-auto text-justify">
               <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
                 La presente política describe pautas y disposiciones de <span className="text-primary">Champiñones 
                 Abrantes S.A.</span> para reservar la seguridad de su infraestructura de datos y tecnología.
@@ -71,7 +71,7 @@ const PoliticaSeguridadSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
             {securityPoints.map((point, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 50}>
-                <div className="bg-white/80 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 text-center hover:bg-white hover:border-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="bg-white rounded-sm p-6 text-center hover:bg-white hover:border-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <point.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                   </div>

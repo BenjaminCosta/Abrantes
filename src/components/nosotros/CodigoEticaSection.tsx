@@ -63,7 +63,7 @@ const CodigoEticaSection = () => {
 
           {/* Introduction */}
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 p-8 lg:p-12 mb-12 max-w-5xl mx-auto">
               <p className="text-lg text-charcoal/80 text-justifyleading-relaxed mb-6">
                 El presente Código de Ética tiene como objeto establecer, definir y dar a conocer los valores, 
                 principios éticos y las pautas de conducta que orientan las acciones, relaciones y decisiones de 
@@ -91,7 +91,7 @@ const CodigoEticaSection = () => {
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 50}>
                 <a
                   href={doc.link}
-                  className="group bg-white border border-primary/10 rounded-2xl p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 block"
+                  className="group bg-white rounded-sm p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 block"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">

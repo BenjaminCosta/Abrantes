@@ -85,7 +85,7 @@ const SustratoSection = () => {
 
           {/* Bloque Análisis Agrolab - Full Width */}
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-cream/30 p-8 md:p-12 lg:p-16">
+            <div className="bg-white border border-primary/10 p-8 md:p-12 lg:p-16">
               <h3 className="font-heading text-2xl md:text-3xl text-charcoal font-bold mb-8 text-center uppercase tracking-wide">
                 Análisis Sustrato Vegetal Agrolab
               </h3>

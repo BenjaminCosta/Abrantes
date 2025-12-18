@@ -28,7 +28,7 @@ const CertificacionesSection = () => {
             
             {/* Introduction */}
             <AnimateOnScroll animation="fade-up">
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 rounded-3xl p-8 lg:p-12 text-center max-w-4xl mx-auto ">
+              <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/10 p-8 lg:p-12 text-center max-w-4xl mx-auto ">
                 <Shield className="w-16 h-16 text-primary mx-auto mb-6" strokeWidth={1.5} />
                 <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-6">
                   Al consumir champiñones Abrantes tiene usted la <span className="text-primary">garantía 
@@ -78,7 +78,7 @@ const CertificacionesSection = () => {
                 ].map((item, index) => (
                   <div 
                     key={index}
-                    className="bg-secondary/30 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 text-center hover:bg-white/80 hover:border-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-whitebackdrop-blur-sm rounded-sm p-6 text-center hover:bg-white/80 hover:border-primary/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <item.icon className="w-12 h-12 text-primary mx-auto mb-4" strokeWidth={1.5} />
                     <h3 className="font-heading text-lg text-charcoal font-semibold mb-2">
