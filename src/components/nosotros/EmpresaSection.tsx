@@ -102,14 +102,14 @@ const EmpresaSection = () => {
             <img
               src={empresa3}
               alt="Planta de producción Abrantes"
-              className="w-full h-full object-cover"
+              className="w-full h-[300px] lg:h-full object-cover"
             />
             
             {/* Overlay para mejor legibilidad */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20" />
             
             {/* Logo Abrantes centrado en la parte superior */}
-            <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="absolute top-1/2 md:top-1/4 left-1/2 transform -translate-x-1/2 z-20">
               <div className="flex flex-col items-center">
                 <img 
                   src={abrantesLogo} 
@@ -121,7 +121,7 @@ const EmpresaSection = () => {
             </div>
             
             {/* Highlights sobre la imagen */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+            <div className="absolute hidden md:block bottom-0 left-0 right-0 p-6 lg:p-8">
               <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
                   {highlights.map((item, index) => (

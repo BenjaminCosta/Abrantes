@@ -79,6 +79,14 @@ const ProcesoProductivoSection = () => {
       {/* Anchor for Procesos (same section) */}
       <div id="procesos" className="absolute top-0" />
       
+      {/* Hongo decorativo sutil */}
+      <div className="absolute md:block hidden -bottom-10 -left-20 z-0 opacity-3 pointer-events-none">
+        <img 
+          src={hongos3} 
+          alt="" 
+          className="w-[400px] h-[400px] object-contain"
+        />
+      </div>
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">

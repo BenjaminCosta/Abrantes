@@ -6,6 +6,7 @@ import hongos14 from "@/assets/hongos14.webp";
 import hongos11 from "@/assets/hongos11.webp";
 import hongos13 from "@/assets/13.webp";
 import hongos15 from "@/assets/hongos15.webp";
+import { ArrowRight } from "lucide-react";
 
 interface ProductSlide {
   image: string;
@@ -135,9 +136,10 @@ const ProductsSection = () => {
             <div className="flex justify-center">
               <Link
                 to="/productos"
-                className="inline-flex items-center justify-center px-10 py-4 border-2 border-charcoal/40 bg-white text-charcoal font-sans text-base tracking-wide hover:bg-charcoal hover:text-white hover:border-charcoal transition-all duration-300"
+                className="inline-flex items-center justify-center gap-3 px-10 py-4 border-2 border-charcoal/40 bg-white text-charcoal font-sans text-base tracking-wide hover:bg-charcoal hover:text-white hover:border-charcoal transition-all duration-300 group"
               >
                 Ver nuestros productos
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
               </Link>
             </div>
           </AnimateOnScroll>

@@ -67,10 +67,10 @@ const RecipesSection = () => {
                       {/* CTA */}
                       <AnimateOnScroll animation="fade-left" delay={200}>
                         <Link 
-                          to="/productos"
+                          to="/productos#recetas"
                           className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white/80 text-white font-heading text-base hover:bg-white hover:text-charcoal transition-all duration-300 group"
                         >
-                          <span>Conocé nuestros productos</span>
+                          <span>Conoce nuestras recetas</span>
                           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
                         </Link>
                       </AnimateOnScroll>

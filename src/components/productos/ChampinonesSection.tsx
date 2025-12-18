@@ -54,18 +54,10 @@ const ChampinonesSection = () => {
         <img 
           src={hongos2} 
           alt="" 
-          className="w-96 h-96 lg:w-[500px] lg:h-[500px] object-contain transform -rotate-12"
+          className="w-96 h-96 lg:w-[550px] lg:h-[550px] object-contain transform -rotate-12"
         />
       </div>
-    
-      
-      <div className="absolute bottom-10 -right-24 opacity-5 pointer-events-none z-0">
-        <img 
-          src={hongos2} 
-          alt="" 
-          className="w-[400px] h-[400px] object-contain transform -rotate-12"
-        />
-      </div>
+  
 
       <div className="w-full px-4 md:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
