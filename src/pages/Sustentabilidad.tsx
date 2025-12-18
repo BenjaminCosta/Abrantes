@@ -79,7 +79,7 @@ const Sustentabilidad = () => {
             {/* Header */}
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-16 lg:mb-20">
-                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Indicadores que Transforman</p>
+                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-4">Indicadores que Transforman</p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-4">
                   Logros y desafíos
                 </h2>
@@ -188,7 +188,7 @@ const Sustentabilidad = () => {
             {/* Header */}
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-20 lg:mb-24">
-                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Transparencia y Compromiso</p>
+                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-4">Transparencia y Compromiso</p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-6">
                   Reportes de <span className="text-primary">Sustentabilidad</span>
                 </h2>
@@ -243,7 +243,7 @@ const Sustentabilidad = () => {
             {/* Header */}
             <AnimateOnScroll animation="fade-up">
               <div className="text-center mb-12 lg:mb-16">
-                <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-4">Compromiso Climático</p>
+                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-4">Compromiso Climático</p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-6">
                   Carbono Neutral
                 </h2>
@@ -347,7 +347,7 @@ const Sustentabilidad = () => {
         <div className="w-full lg:w-1/2 bg-white flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16">
           <AnimateOnScroll animation="fade-left">
             <div className="max-w-xl">
-              <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Impacto Social</p>
+              <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-6">Impacto Social</p>
               
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-8 leading-tight">
                 Comunidad
@@ -386,7 +386,7 @@ const Sustentabilidad = () => {
         <div className="w-full lg:w-1/2 bg-white flex items-center justify-center py-16 lg:py-20 px-6 md:px-12 lg:px-16 order-2 lg:order-1">
           <AnimateOnScroll animation="fade-right">
             <div className="max-w-xl">
-              <p className="font-accent italic text-primary/70 text-sm tracking-wide mb-6">Energía Renovable</p>
+              <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide mb-6">Energía Renovable</p>
               
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal uppercase tracking-wide font-bold mb-8 leading-tight">
                 Energía Limpia

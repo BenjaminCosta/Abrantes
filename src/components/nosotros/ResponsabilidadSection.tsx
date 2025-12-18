@@ -16,7 +16,7 @@ const ResponsabilidadSection = () => {
                   <p className="text-white text-sm md:text-base tracking-wide font-accent italic mb-4">
                     Compromiso con la Comunidad
                   </p>
-                  <h2 className="font-heading text-4xl md:text-5xl text-white font-bold uppercase tracking-wide mb-6">
+                  <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold uppercase tracking-wide mb-6">
                     Responsabilidad Social Empresarial
                   </h2>
                   <p className="text-lg text-white text-justify leading-relaxed">

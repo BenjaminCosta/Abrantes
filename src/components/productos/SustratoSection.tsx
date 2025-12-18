@@ -13,7 +13,7 @@ const SustratoSection = () => {
           <div className="text-center mb-16 lg:mb-24">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-4">
-                <p className="font-accent italic text-primary/70 text-xs md:text-sm tracking-wide">
+                <p className="font-accent italic text-primary/70 text-sm md:text-base tracking-wide">
                   Economía Circular
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">

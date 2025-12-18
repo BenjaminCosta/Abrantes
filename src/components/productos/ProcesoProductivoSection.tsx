@@ -95,7 +95,7 @@ const ProcesoProductivoSection = () => {
           <div className="text-center mb-12 lg:mb-16">
             <AnimateOnScroll animation="fade-up">
               <div className="space-y-2">
-                <p className="text-primary/70 text-sm tracking-wide font-accent italic">
+                <p className="text-primary/70 text-sm md:text-base tracking-wide font-accent italic">
                   Excelencia en Cada Paso
                 </p>
                 <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-charcoal font-bold uppercase tracking-wide">
