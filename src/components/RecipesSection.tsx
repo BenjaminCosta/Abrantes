@@ -41,13 +41,13 @@ const RecipesSection = () => {
                     <div className="text-center max-w-3xl mx-auto space-y-6 px-4 md:px-8">
                       
                       {/* Main Title */}
-                      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white uppercase font-bold tracking-wide">
+                      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold tracking-wide">
                         Consumo Diario<br />
                         Calidad Natural
                       </h2>
     
                       {/* Subtitle */}
-                      <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-accent tracking-wide font-light italic">
+                      <p className="text-xl md:text-2xl text-white/85 leading-relaxed font-sans">
                         Champiñones frescos producidos bajo procesos controlados.
                       </p>
     
