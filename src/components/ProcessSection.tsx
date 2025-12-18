@@ -33,7 +33,7 @@ const ProcessSection = () => {
                 {/* CTA Button */}
                 <AnimateOnScroll animation="fade-up" delay={200}>
                   <Link 
-                    to="/nosotros#proceso"
+                    to="/productos#procesos"
                     className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-sans text-base tracking-wide hover:bg-primary/90 transition-all duration-300"
                   >
                     <span>Conoce más detalles</span>
