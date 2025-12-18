@@ -74,24 +74,25 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isIndexAtTop 
-        ? 'bg-gradient-to-b from-black/60 via-black/40 to-transparent backdrop-blur-sm' 
+        ? 'bg-gradient-to-b from-black/60 via-black/40 backdrop-blur-md' 
         : `bg-white ${isScrolled ? 'shadow-sm' : ''}`
     }`}>
       
       <div className="w-full py-2 px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link 
-            to="/" 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex-shrink-0 transition-transform duration-300 hover:scale-105"
-          >
-            <img 
-              src={logoAbrantes} 
-              alt="Abrantes - La calidad tiene nombre" 
-              className="h-12 md:h-14 lg:h-16 xl:h-[4.5rem] w-auto"
-            />
-          </Link>
+          <Link
+  to="/"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="flex-shrink-0 transition-transform duration-300 hover:scale-105 isolate"
+>
+  <img
+    src={logoAbrantes}
+    alt="Abrantes - La calidad tiene nombre"
+    className="h-12 md:h-14 lg:h-16 xl:h-[4.5rem] w-auto mix-blend-darken"
+  />
+</Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10 xl:gap-12 2xl:gap-14">
